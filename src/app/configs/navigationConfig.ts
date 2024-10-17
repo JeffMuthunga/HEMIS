@@ -217,7 +217,7 @@ const navigationConfig: FuseNavItemType[] = [
 			},
 			{
 				id: 'apps.profile',
-				title: 'Profile',
+				title: 'Students profile',
 				type: 'item',
 				icon: 'heroicons-outline:user-circle',
 				url: '/apps/profile'
