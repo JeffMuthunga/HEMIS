@@ -9,15 +9,14 @@ import _ from '@lodash';
 import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
-import clsx from 'clsx';
 import Button from '@mui/material/Button';
-import { FacilitiesProduct, useDeleteFacilitiesProductsMutation, useGetFacilitiesProductsQuery } from '../FacilitiesApi';
+import { StaffProduct, useDeleteStaffProductsMutation, useGetStaffProductsQuery } from '../StaffApi';
 
-function FacilitiesTable() {
-	const { data: products, isLoading } = useGetFacilitiesProductsQuery();
-	const [removeProducts] = useDeleteFacilitiesProductsMutation();
+function StaffTable() {
+	const { data: products, isLoading } = useGetStaffProductsQuery();
+	const [removeProducts] = useDeleteStaffProductsMutation();
 
-	const columns = useMemo<MRT_ColumnDef<FacilitiesProduct>[]>(() => [
+	const columns = useMemo<MRT_ColumnDef<StaffProduct>[]>(() => [
 		{
 			accessorFn: (row) => row.featuredImageId,
 			id: 'featuredImageId',
@@ -32,80 +31,73 @@ function FacilitiesTable() {
 						<img
 							className="w-full max-h-36 max-w-36 block rounded"
 							src={_.find(row.original.images, { id: row.original.featuredImageId })?.url}
-							alt={row.original.HEIName}
+							alt={row.original.StaffName}
 						/>
 					) : (
 						<img
 							className="w-full max-h-36 max-w-36 block rounded"
-							src="assets/images/apps/facilities/product-image-placeholder.png"
-							alt={row.original.HEIName}
+							src="assets/images/apps/staff/product-image-placeholder.png"
+							alt={row.original.StaffName}
 						/>
 					)}
 				</div>
 			)
 		},
 		{
-			accessorKey: 'name',
-			header: 'Name',
+			accessorKey: 'Name',
+			header: 'First Name',
 			Cell: ({ row }) => (
 				<Typography
 					component={Link}
-					to={`/apps/facilities/products/${row.original.id}/${row.original.handle}`}
+					to={`/apps/staff/products/${row.original.id}/${row.original.StaffName}`}
 					className="underline"
 					color="secondary"
 					role="button"
 				>
-					{row.original.HEIName}
+					{row.original.StaffName}
 				</Typography>
 			)
 		},
 		{
-			accessorKey: 'campusName',
-			header: 'Campus Name',
+			accessorKey: 'Surname',
+			header: 'Surname',
 			accessorFn: (row) => (
-				<Typography>{row.campusName}</Typography>
+				<Typography>{row.Surname}</Typography>
 			)
 		},
 		{
-			accessorKey: 'buildingName',
-			header: 'Building Name',
+			accessorKey: 'Sex',
+			header: 'Gender',
 			accessorFn: (row) => (
-				<Typography>{row.buildingName}</Typography>
+				<Typography>{row.Sex}</Typography>
 			)
 		},
 		{
-			accessorKey: 'roomNumber',
-			header: 'Room Number',
+			accessorKey: 'DateOfBirth',
+			header: 'Date of Birth',
 			accessorFn: (row) => (
-				<Typography>{row.roomNumber}</Typography>
+				<Typography>{row.DateOfBirth}</Typography>
 			)
 		},
 		{
-			accessorKey: 'occupancyCapacity',
-			header: 'Occupancy Capacity',
+			accessorKey: 'ContactInformation',
+			header: 'Contact Info',
 			accessorFn: (row) => (
-				<Typography>{row.occupancyCapacity}</Typography>
+				<Typography>{row.ContactInformation}</Typography>
 			)
 		},
 		{
-			accessorKey: 'condition',
-			header: 'Condition',
+			accessorKey: 'Qualification',
+			header: 'Qualification',
 			accessorFn: (row) => (
-				<Typography>{row.condition}</Typography>
+				<Typography>{row.Qualification}</Typography>
 			)
 		},
 		{
-			accessorKey: 'assignableArea',
-			header: 'Assignable Area',
+			accessorKey: 'AcademicEmploymentFunction',
+			header: 'Academic Function',
 			accessorFn: (row) => (
-				<Typography>{row.assignableArea}</Typography>
-			)
-		},
-		{
-			accessorKey: 'usageType',
-			header: 'Usage Type',
-			accessorFn: (row) => (
-				<Typography>{row.usageType}</Typography>
+				<Typography>{row.AcademicEmploymentFunction}</Typography>
 			)
 		},
 		{
@@ -183,4 +175,4 @@ function FacilitiesTable() {
 	);
 }
 
-export default FacilitiesTable;
+export default StaffTable;

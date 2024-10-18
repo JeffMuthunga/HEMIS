@@ -9,15 +9,14 @@ import _ from '@lodash';
 import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
-import clsx from 'clsx';
 import Button from '@mui/material/Button';
-import { FacilitiesProduct, useDeleteFacilitiesProductsMutation, useGetFacilitiesProductsQuery } from '../FacilitiesApi';
+import { ResearchProduct, useDeleteResearchProductsMutation, useGetResearchProductsQuery } from '../ResearchApi';
 
-function FacilitiesTable() {
-	const { data: products, isLoading } = useGetFacilitiesProductsQuery();
-	const [removeProducts] = useDeleteFacilitiesProductsMutation();
+function ResarchTable() {
+	const { data: products, isLoading } = useGetResearchProductsQuery();
+	const [removeProducts] = useDeleteResearchProductsMutation();
 
-	const columns = useMemo<MRT_ColumnDef<FacilitiesProduct>[]>(() => [
+	const columns = useMemo<MRT_ColumnDef<ResearchProduct>[]>(() => [
 		{
 			accessorFn: (row) => row.featuredImageId,
 			id: 'featuredImageId',
@@ -32,88 +31,123 @@ function FacilitiesTable() {
 						<img
 							className="w-full max-h-36 max-w-36 block rounded"
 							src={_.find(row.original.images, { id: row.original.featuredImageId })?.url}
-							alt={row.original.HEIName}
+							alt={row.original.researchTitle}
 						/>
 					) : (
 						<img
 							className="w-full max-h-36 max-w-36 block rounded"
-							src="assets/images/apps/facilities/product-image-placeholder.png"
-							alt={row.original.HEIName}
+							src="assets/images/apps/research/product-image-placeholder.png"
+							alt={row.original.researchTitle}
 						/>
 					)}
 				</div>
 			)
 		},
 		{
-			accessorKey: 'name',
-			header: 'Name',
+			accessorKey: 'researchTitle',
+			header: 'Research Title',
 			Cell: ({ row }) => (
 				<Typography
 					component={Link}
-					to={`/apps/facilities/products/${row.original.id}/${row.original.handle}`}
+					to={`/apps/research/products/${row.original.id}/${row.original.researchTitle}`}
 					className="underline"
 					color="secondary"
 					role="button"
 				>
-					{row.original.HEIName}
+					{row.original.researchTitle}
 				</Typography>
 			)
 		},
 		{
-			accessorKey: 'campusName',
-			header: 'Campus Name',
-			accessorFn: (row) => (
-				<Typography>{row.campusName}</Typography>
+			accessorKey: 'typeOfResearchOutcome',
+			header: 'Type of Research',
+			Cell: ({ row }) => (
+				<Typography>{row.original.typeOfResearchOutcome}</Typography>
 			)
 		},
 		{
-			accessorKey: 'buildingName',
-			header: 'Building Name',
-			accessorFn: (row) => (
-				<Typography>{row.buildingName}</Typography>
+			accessorKey: 'namesOfResearchers',
+			header: 'Researchers',
+			Cell: ({ row }) => (
+				<Typography>{row.original.namesOfResearchers}</Typography>
 			)
 		},
 		{
-			accessorKey: 'roomNumber',
-			header: 'Room Number',
-			accessorFn: (row) => (
-				<Typography>{row.roomNumber}</Typography>
+			accessorKey: 'areasfResearch',
+			header: 'Research Areas',
+			Cell: ({ row }) => (
+				<Typography>{row.original.areasfResearch}</Typography>
 			)
 		},
 		{
-			accessorKey: 'occupancyCapacity',
-			header: 'Occupancy Capacity',
-			accessorFn: (row) => (
-				<Typography>{row.occupancyCapacity}</Typography>
+			accessorKey: 'academicYear',
+			header: 'Academic Year',
+			Cell: ({ row }) => (
+				<Typography>{row.original.academicYear}</Typography>
 			)
 		},
 		{
-			accessorKey: 'condition',
-			header: 'Condition',
-			accessorFn: (row) => (
-				<Typography>{row.condition}</Typography>
+			accessorKey: 'heiDetails',
+			header: 'HEI Details',
+			Cell: ({ row }) => (
+				<Typography>{row.original.heiDetails}</Typography>
 			)
 		},
 		{
-			accessorKey: 'assignableArea',
-			header: 'Assignable Area',
-			accessorFn: (row) => (
-				<Typography>{row.assignableArea}</Typography>
+			accessorKey: 'publicationDate',
+			header: 'Publication Date',
+			Cell: ({ row }) => (
+				<Typography>{row.original.publicationDate}</Typography>
 			)
 		},
 		{
-			accessorKey: 'usageType',
-			header: 'Usage Type',
-			accessorFn: (row) => (
-				<Typography>{row.usageType}</Typography>
+			accessorKey: 'journalConferenceDate',
+			header: 'Journal/Conference Date',
+			Cell: ({ row }) => (
+				<Typography>{row.original.journalConferenceDate}</Typography>
+			)
+		},
+		{
+			accessorKey: 'volumeIssue',
+			header: 'Volume/Issue',
+			Cell: ({ row }) => (
+				<Typography>{row.original.volumeIssue}</Typography>
+			)
+		},
+		{
+			accessorKey: 'pages',
+			header: 'Pages',
+			Cell: ({ row }) => (
+				<Typography>{row.original.pages}</Typography>
+			)
+		},
+		{
+			accessorKey: 'DOI',
+			header: 'DOI',
+			Cell: ({ row }) => (
+				<Typography>{row.original.DOI}</Typography>
+			)
+		},
+		{
+			accessorKey: 'fundingScore',
+			header: 'Funding Score',
+			Cell: ({ row }) => (
+				<Typography>{row.original.fundingScore}</Typography>
+			)
+		},
+		{
+			accessorKey: 'abstract',
+			header: 'Abstract',
+			Cell: ({ row }) => (
+				<Typography>{row.original.abstract}</Typography>
 			)
 		},
 		{
 			accessorKey: 'active',
 			header: 'Active',
-			accessorFn: (row) => (
+			Cell: ({ row }) => (
 				<div className="flex items-center">
-					{row.active ? (
+					{row.original.active ? (
 						<FuseSvgIcon className="text-green" size={20}>
 							heroicons-outline:check-circle
 						</FuseSvgIcon>
@@ -183,4 +217,4 @@ function FacilitiesTable() {
 	);
 }
 
-export default FacilitiesTable;
+export default ResarchTable;

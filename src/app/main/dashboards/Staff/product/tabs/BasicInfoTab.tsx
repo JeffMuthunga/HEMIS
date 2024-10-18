@@ -1,7 +1,7 @@
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Controller, useFormContext } from 'react-hook-form';
-import { EcommerceProduct } from '../../ECommerceApi';
+import { StaffProduct } from '../../StaffApi';
 
 /**
  * The basic info tab.
@@ -30,7 +30,7 @@ function BasicInfoTab() {
 						helperText={errors?.name?.message as string}
 					/>
 				)}
-			/>ss
+			/>
 
 			<Controller
 				name="description"
@@ -60,7 +60,7 @@ function BasicInfoTab() {
 						multiple
 						freeSolo
 						options={[]}
-						value={value as EcommerceProduct['categories']}
+						value={value as StaffProduct['categories']}
 						onChange={(event, newValue) => {
 							onChange(newValue);
 						}}
@@ -89,7 +89,7 @@ function BasicInfoTab() {
 						multiple
 						freeSolo
 						options={[]}
-						value={value as EcommerceProduct['tags']}
+						value={value as StaffProduct['tags']}
 						onChange={(event, newValue) => {
 							onChange(newValue);
 						}}

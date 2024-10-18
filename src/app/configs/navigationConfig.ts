@@ -45,13 +45,6 @@ const navigationConfig: FuseNavItemType[] = [
 				url: '/dashboards/finance'
 			},
 			{
-				id: 'dashboards.crypto',
-				title: 'Crypto',
-				type: 'item',
-				icon: 'heroicons-outline:currency-dollar',
-				url: '/dashboards/crypto'
-			},
-			{
 				id: 'dashboards.institutions',
 				title: 'Institutions',
 				type: 'item',

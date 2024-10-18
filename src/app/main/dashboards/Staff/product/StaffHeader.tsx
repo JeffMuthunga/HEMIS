@@ -7,22 +7,22 @@ import _ from '@lodash';
 import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
 import PageBreadcrumb from 'app/shared-components/PageBreadcrumb';
 import {
-	Indicator,
-	useCreateIndicatorMutation,
-	useDeleteIndicatorMutation,
-	useUpdateIndicatorMutation
-} from '../IndicatorsApi';
+	StaffProduct,
+	useCreateStaffProductMutation,
+	useDeleteStaffProductMutation,
+	useUpdateStaffProductMutation
+} from '../StaffApi';
 
 /**
  * The product header.
  */
-function IndicatorHeader() {
+function ProductHeader() {
 	const routeParams = useParams();
 	const { productId } = routeParams;
 
-	const [createProduct] = useCreateIndicatorMutation();
-	const [saveProduct] = useUpdateIndicatorMutation();
-	const [removeProduct] = useDeleteIndicatorMutation();
+	const [createProduct] = useCreateStaffProductMutation();
+	const [saveProduct] = useUpdateStaffProductMutation();
+	const [removeProduct] = useDeleteStaffProductMutation();
 
 	const methods = useFormContext();
 	const { formState, watch, getValues } = methods;
@@ -30,23 +30,23 @@ function IndicatorHeader() {
 
 	const navigate = useNavigate();
 
-	const { name, images, featuredImageId } = watch() as Indicator;
+	const { name, images, featuredImageId } = watch() as StaffProduct;
 
 	function handleSaveProduct() {
-		saveProduct(getValues() as Indicator);
+		saveProduct(getValues() as StaffProduct);
 	}
 
 	function handleCreateProduct() {
-		createProduct(getValues() as Indicator)
+		createProduct(getValues() as StaffProduct)
 			.unwrap()
 			.then((data) => {
-				navigate(`/dashboards/indicators/indicators/${data.id}`);
+				navigate(`/apps/e-commerce/products/${data.id}`);
 			});
 	}
 
 	function handleRemoveProduct() {
 		removeProduct(productId);
-		navigate('/dashboards/indicators/indicators');
+		navigate('/apps/e-commerce/products');
 	}
 
 	return (
@@ -81,7 +81,7 @@ function IndicatorHeader() {
 						) : (
 							<img
 								className="w-32 sm:w-48 rounded"
-								src="assets/images/apps/ecommerce/product-image-placeholder.png"
+								src="assets/images/apps/staff/product-image-placeholder.png"
 								alt={name}
 							/>
 						)}
@@ -92,13 +92,13 @@ function IndicatorHeader() {
 						animate={{ x: 0, transition: { delay: 0.3 } }}
 					>
 						<Typography className="text-15 sm:text-2xl truncate font-semibold">
-							{name || 'New Indicator'}
+							{name || 'New Product'}
 						</Typography>
 						<Typography
 							variant="caption"
 							className="font-medium"
 						>
-							Indicator's Detail
+							Product Detail
 						</Typography>
 					</motion.div>
 				</div>
@@ -145,4 +145,4 @@ function IndicatorHeader() {
 	);
 }
 
-export default IndicatorHeader;
+export default ProductHeader;

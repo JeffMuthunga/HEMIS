@@ -13,14 +13,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import FuseTabs from 'app/shared-components/tabs/FuseTabs';
 import FuseTab from 'app/shared-components/tabs/FuseTab';
-import IndicatorHeader from './IndicatorHeader';
+import ProductHeader from './StaffHeader';
 import BasicInfoTab from './tabs/BasicInfoTab';
-import ContactInfoTab from './tabs/ContactInfoTab';
-import PricingTab from './tabs/PricingTab';
-import ProductImagesTab from './tabs/ProductImagesTab';
-import ShippingTab from './tabs/ShippingTab';
-import { useGetIndicatorQuery } from '../IndicatorsApi';
-import IndicatorModel from './models/IndicatorModel';
+import ProductModel from './models/StaffModel';
+import {useGetStaffProductQuery} from '../StaffApi';
 
 /**
  * Form Validation Schema
@@ -32,7 +28,7 @@ const schema = z.object({
 /**
  * The product page.
  */
-function Indicator() {
+function Product() {
 	const isMobile = useThemeMediaQuery((theme) => theme.breakpoints.down('lg'));
 
 	const routeParams = useParams();
@@ -43,7 +39,7 @@ function Indicator() {
 		data: product,
 		isLoading,
 		isError
-	} = useGetIndicatorQuery(productId, {
+	} = useGetStaffProductQuery(productId, {
 		skip: !productId || productId === 'new'
 	});
 
@@ -61,7 +57,7 @@ function Indicator() {
 
 	useEffect(() => {
 		if (productId === 'new') {
-			reset(IndicatorModel({}));
+			reset(ProductModel({}));
 		}
 	}, [productId, reset]);
 
@@ -105,7 +101,7 @@ function Indicator() {
 					to="/apps/e-commerce/products"
 					color="inherit"
 				>
-					Go to Indicators Page
+					Go to Products Page
 				</Button>
 			</motion.div>
 		);
@@ -121,7 +117,7 @@ function Indicator() {
 	return (
 		<FormProvider {...methods}>
 			<FusePageCarded
-				header={<IndicatorHeader />}
+				header={<ProductHeader />}
 				content={
 					<div className="p-16 sm:p-24 max-w-3xl space-y-24">
 						<FuseTabs
@@ -134,15 +130,15 @@ function Indicator() {
 							/>
 							<FuseTab
 								value="product-images"
-								label="Indicator Image and Docs"
+								label="Product Images"
 							/>
 							<FuseTab
 								value="pricing"
 								label="Pricing"
 							/>
 							<FuseTab
-								value="contact-info"
-								label="Contact Info"
+								value="inventory"
+								label="Inventory"
 							/>
 							<FuseTab
 								value="shipping"
@@ -154,21 +150,7 @@ function Indicator() {
 								<BasicInfoTab />
 							</div>
 
-							<div className={tabValue !== 'product-images' ? 'hidden' : ''}>
-								<ProductImagesTab />
-							</div>
-
-							<div className={tabValue !== 'pricing' ? 'hidden' : ''}>
-								<PricingTab />
-							</div>
-
-							<div className={tabValue !== 'contact-info' ? 'hidden' : ''}>
-								<ContactInfoTab />
-							</div>
-
-							<div className={tabValue !== 'shipping' ? 'hidden' : ''}>
-								<ShippingTab />
-							</div>
+		
 						</div>
 					</div>
 				}
@@ -178,4 +160,4 @@ function Indicator() {
 	);
 }
 
-export default Indicator;
+export default Product;
