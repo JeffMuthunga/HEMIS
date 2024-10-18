@@ -28,6 +28,7 @@ import { settingsApiMocks } from './api/settings-api';
 import { facilitiesApiMocks } from './Facilities-api';
 import { studentApiMocks } from './api/students-api';
 import { institutionApiMocks } from './api/institutions-api';
+import {indicatorApiMocks} from "@mock-api/api/indicators-api";
 
 const mockAdapterOptions = {
 	delayResponse: 0
@@ -73,7 +74,8 @@ function MockAdapterProvider(props: MockAdapterProviderProps) {
 				settingsApiMocks,
 				facilitiesApiMocks,
 				studentApiMocks,
-				institutionApiMocks
+				institutionApiMocks,
+				indicatorApiMocks
 			].forEach((mockSetup) => {
 				mockSetup(mock);
 			});

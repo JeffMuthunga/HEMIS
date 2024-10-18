@@ -112,6 +112,34 @@ const navigationConfig: FuseNavItemType[] = [
 						end: true
 					}
 				]
+			},
+			{
+				id: 'dashboards.indicators',
+				title: 'Performance Management',
+				type: 'collapse',
+				icon: 'heroicons-outline:academic-cap',
+				children: [
+					{
+						id: 'indicators',
+						title: 'Indicators',
+						type: 'item',
+						url: '/dashboards/indicators'
+					},
+					{
+						id: 'indicators-products',
+						title: 'Indicators',
+						type: 'item',
+						url: '/dashboards/indicators/products',
+						end: true
+					},
+					{
+						id: 'indicators-detail',
+						title: 'Indicators Detail',
+						type: 'item',
+						url: '/dashboards/indicators/product/:id',
+						end: true
+					}
+				]
 			}
 		]
 	},
