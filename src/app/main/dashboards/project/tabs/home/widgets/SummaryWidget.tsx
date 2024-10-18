@@ -25,7 +25,7 @@ function SummaryWidget() {
 		return null;
 	}
 
-	const { data, ranges, currentRange: currentRangeDefault } = widget;
+	const { data, title,currentRange: currentRangeDefault } = widget;
 
 	const [currentRange, setCurrentRange] = useState<RangeType>(currentRangeDefault as RangeType);
 
@@ -33,49 +33,90 @@ function SummaryWidget() {
 		setCurrentRange(event.target.value as RangeType);
 	}
 
+
 	return (
 		<Paper className="flex flex-col flex-auto shadow rounded-xl overflow-hidden">
 			<div className="flex items-center justify-between px-8 pt-8">
-				<Select
-					className=""
-					classes={{ select: 'py-0 flex items-center' }}
-					value={currentRange}
-					onChange={handleChangeRange}
-					inputProps={{
-						name: 'currentRange'
-					}}
-					variant="filled"
+				<Typography
+					className="px-12 text-lg font-medium tracking-tight leading-6 truncate"
+					color="text.secondary"
 				>
-					{Object.entries(ranges).map(([key, n]) => {
-						return (
-							<MenuItem
-								key={key}
-								value={key}
-							>
-								{n}
-							</MenuItem>
-						);
-					})}
-				</Select>
+					{title}
+				</Typography>
 				<IconButton aria-label="more">
 					<FuseSvgIcon>heroicons-outline:ellipsis-vertical</FuseSvgIcon>
 				</IconButton>
 			</div>
 			<div className="text-center mt-16">
-				<Typography className="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-blue-500">
-					{data.count[currentRange]}
+				<Typography className="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-green-500">
+					{String(data.count)}
 				</Typography>
-				<Typography className="text-lg font-medium text-blue-600 dark:text-blue-500">{data.name}</Typography>
+				<Typography className="text-lg font-medium text-green-600">{data.name}</Typography>
 			</div>
 			<Typography
 				className="flex items-baseline justify-center w-full mt-20 mb-24 space-x-8"
 				color="text.secondary"
 			>
-				<span className="truncate">{data.extra.name}:</span>
-				<b>{data.extra.count[currentRange]}</b>
+				{/*<span className="truncate">{data.extra.name}:</span>*/}
+				{/*<b>{String(data.extra.count)}</b>*/}
 			</Typography>
 		</Paper>
 	);
+
+	// return (
+	// 	<Paper className="flex flex-col flex-auto shadow rounded-xl overflow-hidden">
+	// 		{/*<div className="flex items-center justify-between px-8 pt-8">*/}
+	// 		{/*	<Select*/}
+	// 		{/*		className=""*/}
+	// 		{/*		classes={{ select: 'py-0 flex items-center' }}*/}
+	// 		{/*		value={currentRange}*/}
+	// 		{/*		onChange={handleChangeRange}*/}
+	// 		{/*		inputProps={{*/}
+	// 		{/*			name: 'currentRange'*/}
+	// 		{/*		}}*/}
+	// 		{/*		variant="filled"*/}
+	// 		{/*	>*/}
+	// 		{/*		{Object.entries(ranges).map(([key, n]) => {*/}
+	// 		{/*			return (*/}
+	// 		{/*				<MenuItem*/}
+	// 		{/*					key={key}*/}
+	// 		{/*					value={key}*/}
+	// 		{/*				>*/}
+	// 		{/*					{n}*/}
+	// 		{/*				</MenuItem>*/}
+	// 		{/*			);*/}
+	// 		{/*		})}*/}
+	// 		{/*	</Select>*/}
+	// 		{/*	<IconButton aria-label="more">*/}
+	// 		{/*		<FuseSvgIcon>heroicons-outline:ellipsis-vertical</FuseSvgIcon>*/}
+	// 		{/*	</IconButton>*/}
+	// 		{/*</div>*/}
+	// 		<div className="flex items-center justify-between px-8 pt-8">
+	// 			<Typography
+	// 				className="px-12 text-lg font-medium tracking-tight leading-6 truncate"
+	// 				color="text.secondary"
+	// 			>
+	// 				{title}
+	// 			</Typography>
+	// 			<IconButton aria-label="more">
+	// 				<FuseSvgIcon>heroicons-outline:ellipsis-vertical</FuseSvgIcon>
+	// 			</IconButton>
+	// 		</div>
+	// 		<div className="text-center mt-16">
+	// 			<Typography className="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-blue-500">
+	// 				{data.count[currentRange]}
+	// 			</Typography>
+	// 			<Typography className="text-lg font-medium text-blue-600 dark:text-blue-500">{data.name}</Typography>
+	// 		</div>
+	// 		<Typography
+	// 			className="flex items-baseline justify-center w-full mt-20 mb-24 space-x-8"
+	// 			color="text.secondary"
+	// 		>
+	// 			<span className="truncate">{data.extra.name}:</span>
+	// 			<b>{data.extra.count[currentRange]}</b>
+	// 		</Typography>
+	// 	</Paper>
+	// );
 }
 
 export default memo(SummaryWidget);

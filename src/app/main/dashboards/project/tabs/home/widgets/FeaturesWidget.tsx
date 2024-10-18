@@ -48,8 +48,8 @@ function FeaturesWidget() {
 				className="flex items-baseline justify-center w-full mt-20 mb-24 space-x-8"
 				color="text.secondary"
 			>
-				<span className="truncate">{data.extra.name}:</span>
-				<b>{String(data.extra.count)}</b>
+				{/*<span className="truncate">{data.extra.name}:</span>*/}
+				{/*<b>{String(data.extra.count)}</b>*/}
 			</Typography>
 		</Paper>
 	);

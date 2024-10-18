@@ -57,7 +57,7 @@ function IndicatorsTable() {
 			},
 			{
 				accessorKey: 'staffCount',
-				header: 'Staff Count',
+				header: 'Staff HeadCount',
 				accessorFn: (row) => `${row.staff_count}`
 			},
 			// {
@@ -77,7 +77,7 @@ function IndicatorsTable() {
 			},
 			{
 				accessorKey: 'outputStudents',
-				header: 'Output Students',
+				header: 'Research Output',
 				accessorFn: (row) => `${row.output_students}`
 			},
 			{

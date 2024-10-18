@@ -26136,19 +26136,11 @@
       "project_dashboard_widgets": {
         "value": {
           "summary": {
-            "ranges": {
-              "DY": "Yesterday",
-              "DT": "Today",
-              "DTM": "Tomorrow"
-            },
+            "title": "Staff",
             "currentRange": "DT",
             "data": {
-              "name": "Due Tasks",
-              "count": {
-                "DY": 21,
-                "DT": 25,
-                "DTM": 19
-              },
+              "name": "Total",
+              "count": 5,
               "extra": {
                 "name": "Completed",
                 "count": {
@@ -26161,9 +26153,9 @@
             "detail": "You can show some detailed information about this widget in here."
           },
           "overdue": {
-            "title": "Overdue",
+            "title": "Institutions",
             "data": {
-              "name": "Tasks",
+              "name": "Total",
               "count": 4,
               "extra": {
                 "name": "Yesterday's overdue",
@@ -26173,10 +26165,10 @@
             "detail": "You can show some detailed information about this widget in here."
           },
           "issues": {
-            "title": "Issues",
+            "title": "Subjects",
             "data": {
-              "name": "Open",
-              "count": 32,
+              "name": "Total",
+              "count": 5,
               "extra": {
                 "name": "Closed today",
                 "count": 0
@@ -26185,10 +26177,10 @@
             "detail": "You can show some detailed information about this widget in here."
           },
           "features": {
-            "title": "Features",
+            "title": "Students",
             "data": {
-              "name": "Proposals",
-              "count": 42,
+              "name": "Total",
+              "count": 5,
               "extra": {
                 "name": "Implemented",
                 "count": 8

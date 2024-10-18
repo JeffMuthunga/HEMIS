@@ -118,26 +118,26 @@ function PageLayoutOverview(props: PageLayoutOverviewProps) {
 							<Box
 								className="w-2/3 h-16 m-24 rounded"
 								sx={{
-									backgroundColor: (theme) => darken(theme.palette.background.default, 0.1)
+									backgroundColor: (theme) => lighten(theme.palette.background.default, 0.1)
 								}}
 							/>
 
 							<Box
 								className="w-3/4 h-16 m-24 rounded"
 								sx={{
-									backgroundColor: (theme) => darken(theme.palette.background.default, 0.1)
+									backgroundColor: (theme) => lighten(theme.palette.background.default, 0.1)
 								}}
 							/>
 							<Box
 								className="w-1/2 h-16 m-24 rounded"
 								sx={{
-									backgroundColor: (theme) => darken(theme.palette.background.default, 0.1)
+									backgroundColor: (theme) => lighten(theme.palette.background.default, 0.1)
 								}}
 							/>
 							<Box
 								className="w-2/3 h-16 m-24 rounded"
 								sx={{
-									backgroundColor: (theme) => darken(theme.palette.background.default, 0.1)
+									backgroundColor: (theme) => lighten(theme.palette.background.default, 0.1)
 								}}
 							/>
 						</Box>
@@ -155,7 +155,7 @@ function PageLayoutOverview(props: PageLayoutOverviewProps) {
 								<Box
 									className="w-24 h-24 rounded-full"
 									sx={{
-										backgroundColor: (theme) => darken(theme.palette.background.default, 0.1)
+										backgroundColor: (theme) => lighten(theme.palette.background.default, 0.1)
 									}}
 								/>
 							</Box>
@@ -176,7 +176,7 @@ function PageLayoutOverview(props: PageLayoutOverviewProps) {
 								<Box
 									className="w-128 h-16 rounded-full"
 									sx={{
-										backgroundColor: (theme) => darken(theme.palette.background.default, 0.1)
+										backgroundColor: (theme) => lighten(theme.palette.background.default, 0.1)
 									}}
 								/>
 							</Box>

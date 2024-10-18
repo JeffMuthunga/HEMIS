@@ -40,15 +40,15 @@ const Transition = forwardRef((props: TransitionProps, ref) => {
 		return null;
 	}
 
-	return (
-		<Slide
-			direction={theme.direction === 'ltr' ? 'left' : 'right'}
-			ref={ref}
-			{...other}
-		>
-			{children}
-		</Slide>
-	);
+	// return (
+	// 	<Slide
+	// 		direction={theme.direction === 'ltr' ? 'left' : 'right'}
+	// 		ref={ref}
+	// 		{...other}
+	// 	>
+	// 		{children}
+	// 	</Slide>
+	// );
 });
 
 type SettingsPanelProps = {
@@ -60,43 +60,43 @@ type SettingsPanelProps = {
 function SettingsPanel(props: SettingsPanelProps) {
 	const { settingsHandlers, onClose, open } = props;
 
-	return (
-		<StyledDialog
-			TransitionComponent={Transition}
-			aria-labelledby="settings-panel"
-			aria-describedby="settings"
-			open={open}
-			onClose={onClose}
-			BackdropProps={{ invisible: true }}
-			classes={{
-				paper: 'shadow-lg'
-			}}
-			{...settingsHandlers}
-		>
-			<FuseScrollbars className="p-16 sm:p-32 space-y-32">
-				<IconButton
-					className="fixed top-0 z-10 ltr:right-0 rtl:left-0"
-					onClick={onClose}
-					size="large"
-				>
-					<FuseSvgIcon>heroicons-outline:x-mark</FuseSvgIcon>
-				</IconButton>
-
-				<Typography
-					className="font-semibold"
-					variant="h6"
-				>
-					Theme Settings
-				</Typography>
-
-				<FuseSettings />
-
-				<div className="py-32">
-					<FuseSettingsViewerDialog />
-				</div>
-			</FuseScrollbars>
-		</StyledDialog>
-	);
+	// return (
+	// 	<StyledDialog
+	// 		TransitionComponent={Transition}
+	// 		aria-labelledby="settings-panel"
+	// 		aria-describedby="settings"
+	// 		open={open}
+	// 		onClose={onClose}
+	// 		BackdropProps={{ invisible: true }}
+	// 		classes={{
+	// 			paper: 'shadow-lg'
+	// 		}}
+	// 		{...settingsHandlers}
+	// 	>
+	// 		<FuseScrollbars className="p-16 sm:p-32 space-y-32">
+	// 			<IconButton
+	// 				className="fixed top-0 z-10 ltr:right-0 rtl:left-0"
+	// 				onClick={onClose}
+	// 				size="large"
+	// 			>
+	// 				<FuseSvgIcon>heroicons-outline:x-mark</FuseSvgIcon>
+	// 			</IconButton>
+	//
+	// 			<Typography
+	// 				className="font-semibold"
+	// 				variant="h6"
+	// 			>
+	// 				Theme Settings
+	// 			</Typography>
+	//
+	// 			<FuseSettings />
+	//
+	// 			<div className="py-32">
+	// 				<FuseSettingsViewerDialog />
+	// 			</div>
+	// 		</FuseScrollbars>
+	// 	</StyledDialog>
+	// );
 }
 
 export default SettingsPanel;
