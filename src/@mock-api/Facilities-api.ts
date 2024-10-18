@@ -2,7 +2,7 @@ import _ from '@lodash';
 import FuseUtils from '@fuse/utils';
 import mockApi from '../mock-api.json';
 import ExtendedMockAdapter, { Params } from '../ExtendedMockAdapter';
-import { FacilitiesOrder, FacilitiesProduct } from '../../app/main/apps/facilities/FacilitiesApi';
+//import { FacilitiesOrder, FacilitiesProduct } from '../../app/main/apps/facilities/FacilitiesApi';
 
 let productsDB = mockApi.components.examples.facilities_products.value as FacilitiesProduct[];
 let ordersDB = mockApi.components.examples.facilities_orders.value as FacilitiesOrder[];
