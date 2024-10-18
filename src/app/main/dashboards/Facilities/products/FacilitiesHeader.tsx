@@ -20,7 +20,7 @@ function ProductsHeader() {
 			>
 				<div>
 					<PageBreadcrumb className="mb-8" />
-					<Typography className="text-4xl font-extrabold leading-none tracking-tight">Products</Typography>
+					<Typography className="text-4xl font-extrabold leading-none tracking-tight">Facilities</Typography>
 				</div>
 			</motion.span>
 

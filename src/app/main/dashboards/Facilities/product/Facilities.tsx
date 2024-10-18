@@ -15,7 +15,7 @@ import FuseTabs from 'app/shared-components/tabs/FuseTabs';
 import FuseTab from 'app/shared-components/tabs/FuseTab';
 import ProductHeader from './FacilitiesHeader';
 import BasicInfoTab from './tabs/BasicInfoTab';
-import ProductModel from './models/ProductModel';
+import ProductModel from './models/FacilitiesModel';
 import {useGetFacilitiesProductQuery} from '../FacilitiesApi';
 
 /**

@@ -1,7 +1,7 @@
 import { apiService as api } from 'app/store/apiService'; // Ensure this path is correct
 import { PartialDeep } from 'type-fest';
-import ProductModel from './product/models/ProductModel'; // Ensure this path is correct
-
+import ProductModel from './product/models/FacilitiesModel'; // Ensure this path is correct
+import { S } from 'vite/dist/node/types.d-aGj9QkWt';
 
 // Define the tag types to invalidate queries
 export const addTagTypes = [
@@ -146,33 +146,23 @@ export type DeleteFacilitiesOrdersApiResponse = unknown;
 export type DeleteFacilitiesOrdersApiArg = string[]; // Orders IDs to delete
 
 // Facilities Product and Order Types
-export type FacilitiesProductImageType = {
-  id: string;
-  url: string;
-  type: string;
-};
-
 export type FacilitiesProduct = {
   id: string;
-  name: string;
-  handle: string;
-  description: string;
-  categories: string[];
-  tags: string[];
-  featuredImageId: string;
-  images: FacilitiesProductImageType[];
-  priceTaxExcl: number;
-  priceTaxIncl: number;
-  taxRate: number;
-  comparedPrice: number;
-  quantity: number;
-  sku: string;
-  width: string;
-  height: string;
-  depth: string;
-  weight: string;
-  extraShippingFee: number;
-  active: boolean;
+  academicYear: string;
+  featuredImageId:string;
+  images:[];
+  handle:string;
+  active:boolean;
+  HEIName: string;
+  HEICode: string;
+  campusName: string;
+  buildingName: string;
+  roomNumber: string;
+  spaceIdentifier: string;
+  condition: string;
+  assignableArea: number; // Adjust type as necessary
+  usageType: string;
+  occupancyCapacity: number; // Adjust type as necessary
 };
 
 export type FacilitiesOrder = {
@@ -203,7 +193,7 @@ export type FacilitiesOrder = {
       lng: number;
     };
   };
-  products: Partial<FacilitiesProduct & { image: string; price: string }>[];
+  products: Partial<FacilitiesProduct & { image: string; price: string }>[]; // Adjust as necessary
   status: {
     id: string;
     name: string;
