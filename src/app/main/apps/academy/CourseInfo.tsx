@@ -25,14 +25,14 @@ function CourseInfo(props: CourseInfoProps) {
 			<div className="flex items-center justify-between mb-16">
 				<CourseCategory slug={course.category} />
 
-				{course.progress.completed > 0 && (
-					<FuseSvgIcon
-						className="text-green-600"
-						size={20}
-					>
-						heroicons-solid:badge-check
-					</FuseSvgIcon>
-				)}
+				{/*{course.progress.completed > 0 && (*/}
+				{/*	<FuseSvgIcon*/}
+				{/*		className="text-green-600"*/}
+				{/*		size={20}*/}
+				{/*	>*/}
+				{/*		heroicons-solid:badge-check*/}
+				{/*	</FuseSvgIcon>*/}
+				{/*)}*/}
 			</div>
 
 			<Typography className="text-15 font-medium">{course.title}</Typography>
@@ -57,9 +57,9 @@ function CourseInfo(props: CourseInfoProps) {
 					color="disabled"
 					size={20}
 				>
-					heroicons-solid:clock
+					heroicons-solid:currency-dollar
 				</FuseSvgIcon>
-				<span className="whitespace-nowrap leading-none">{`${course.duration} minutes`}</span>
+				<span className="whitespace-nowrap leading-none">{`Programme Fees: ${course.subjectFees}`}</span>
 			</Typography>
 			<Typography
 				className="flex items-center space-x-6 text-md mt-8"
@@ -72,10 +72,7 @@ function CourseInfo(props: CourseInfoProps) {
 					heroicons-solid:academic-cap
 				</FuseSvgIcon>
 				<span className="whitespace-nowrap leading-none">
-					{course.progress.completed === 1 && 'Completed once'}
-					{course.progress.completed === 2 && 'Completed twice'}
-					{course.progress.completed > 2 && `Completed ${course.progress.completed} times`}
-					{course.progress.completed <= 0 && 'Never completed'}
+					{`Programme Code: ${course.subjectCode} `}
 				</span>
 			</Typography>
 		</div>
