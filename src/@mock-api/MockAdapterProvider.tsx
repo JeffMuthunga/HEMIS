@@ -78,7 +78,10 @@ function MockAdapterProvider(props: MockAdapterProviderProps) {
 				facilitiesApiMocks,
 				studentApiMocks,
 				institutionApiMocks,
-				indicatorApiMocks
+				indicatorApiMocks,
+				staffApiMocks,
+				facilitiesApiMocks,
+				researchApiMocks
 			].forEach((mockSetup) => {
 				mockSetup(mock);
 			});
