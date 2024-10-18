@@ -26,6 +26,8 @@ import { profileApiMocks } from './api/profile-api';
 import { calendarApiMocks } from './api/calendar-api';
 import { settingsApiMocks } from './api/settings-api';
 import { facilitiesApiMocks } from './Facilities-api';
+import { staffApiMocks } from './Staff-api';
+import { researchApiMocks } from './research-api';
 
 const mockAdapterOptions = {
 	delayResponse: 0
@@ -69,7 +71,9 @@ function MockAdapterProvider(props: MockAdapterProviderProps) {
 				scrumboardApiMocks,
 				tasksApiMocks,
 				settingsApiMocks,
-				facilitiesApiMocks
+				facilitiesApiMocks,
+				staffApiMocks,
+				researchApiMocks
 			].forEach((mockSetup) => {
 				mockSetup(mock);
 			});
