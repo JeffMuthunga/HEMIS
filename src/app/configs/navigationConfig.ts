@@ -6,7 +6,7 @@ import tr from './navigation-i18n/tr';
 import { authRoles } from '../auth';
 import DocumentationNavigation from '../main/documentation/DocumentationNavigation';
 import SettingsAppNavigation from '../main/apps/settings/SettingsAppNavigation';
-
+ 
 i18next.addResourceBundle('en', 'navigation', en);
 i18next.addResourceBundle('tr', 'navigation', tr);
 i18next.addResourceBundle('ar', 'navigation', ar);
@@ -50,7 +50,36 @@ const navigationConfig: FuseNavItemType[] = [
 				type: 'item',
 				icon: 'heroicons-outline:currency-dollar',
 				url: '/dashboards/crypto'
-			}
+			},
+			{
+				id: 'dashboards.facilities',
+				title: 'Facilities Management',
+				type: 'collapse',
+				icon: 'heroicons-outline:academic-cap',
+				children: [
+				  {
+					id: 'facilities',
+					title: 'Facilities',
+					type: 'item',
+					url: '/dashboards/facilities',  
+				  },
+				  {
+					id: 'facilities-products',
+					title: 'Facilities Products',
+					type: 'item',
+					url: '/dashboards/facilities/products',  
+					end: true,
+				  },
+				  {
+					id: 'facilities-detail',
+					title: 'Facilities Detail',
+					type: 'item',
+					url: '/dashboards/facilities/product/:id',  
+					end: true
+				  }
+				]
+			  }
+
 		]
 	},
 	{
