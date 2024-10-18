@@ -103,17 +103,17 @@ function Courses() {
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1, transition: { delay: 0 } }}
 						>
-							<PageBreadcrumb color="secondary" />
+							<PageBreadcrumb color="white" />
 						</motion.div>
 						<motion.div
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1, transition: { delay: 0 } }}
 						>
 							<Typography
-								color="inherit"
+								color="white"
 								className="text-center text-5xl sm:text-48 font-extrabold tracking-tight mt-4"
 							>
-								What do you want to learn today?
+								HEMIS Available Accredited Programmes.
 							</Typography>
 						</motion.div>
 						<motion.div
@@ -121,11 +121,10 @@ function Courses() {
 							animate={{ opacity: 1, transition: { delay: 0.3 } }}
 						>
 							<Typography
-								color="inherit"
+								color="white"
 								className="text-15 sm:text-2xl mt-16 sm:mt-24 opacity-75 tracking-tight max-w-md text-center"
 							>
-								Our courses will step you through the process of a building small applications, or
-								adding new features to existing applications.
+								The programmes meet standards against NCHE's criteria.
 							</Typography>
 						</motion.div>
 					</div>
@@ -203,18 +202,18 @@ function Courses() {
 							/>
 						</div>
 
-						<FormControlLabel
-							label="Hide completed"
-							control={
-								<Switch
-									onChange={(ev) => {
-										setHideCompleted(ev.target.checked);
-									}}
-									checked={hideCompleted}
-									name="hideCompleted"
-								/>
-							}
-						/>
+						{/*<FormControlLabel*/}
+						{/*	label="Hide completed"*/}
+						{/*	control={*/}
+						{/*		<Switch*/}
+						{/*			onChange={(ev) => {*/}
+						{/*				setHideCompleted(ev.target.checked);*/}
+						{/*			}}*/}
+						{/*			checked={hideCompleted}*/}
+						{/*			name="hideCompleted"*/}
+						{/*		/>*/}
+						{/*	}*/}
+						{/*/>*/}
 					</div>
 					{filteredData &&
 						(filteredData.length > 0 ? (

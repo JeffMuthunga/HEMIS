@@ -18003,382 +18003,243 @@
           }
         ]
       },
-      "academy_courses": {
-        "value": [
-          {
-            "id": "694e4e5f-f25f-470b-bd0e-26b1d4f64028",
-            "title": "Basics of Angular",
-            "slug": "basics-of-angular",
-            "description": "Introductory course for Angular and framework basics",
-            "category": "web",
-            "duration": 30,
-            "totalSteps": 11,
-            "updatedAt": "Jun 28, 2021",
-            "featured": true,
-            "progress": {
-              "currentStep": 3,
-              "completed": 2
-            }
-          },
-          {
-            "id": "f924007a-2ee9-470b-a316-8d21ed78277f",
-            "title": "Basics of TypeScript",
-            "slug": "basics-of-typeScript",
-            "description": "Beginner course for Typescript and its basics",
-            "category": "web",
-            "duration": 60,
-            "totalSteps": 11,
-            "updatedAt": "Nov 01, 2021",
-            "featured": true,
-            "progress": {
-              "currentStep": 5,
-              "completed": 3
-            }
-          },
-          {
-            "id": "0c06e980-abb5-4ba7-ab65-99a228cab36b",
-            "title": "Android N: Quick Settings",
-            "slug": "android-n-quick-settings",
-            "description": "Step by step guide for Android N: Quick Settings",
-            "category": "android",
-            "duration": 120,
-            "totalSteps": 11,
-            "updatedAt": "May 08, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 10,
-              "completed": 1
-            }
-          },
-          {
-            "id": "1b9a9acc-9a36-403e-a1e7-b11780179e38",
-            "title": "Build an App for the Google Assistant with Firebase",
-            "slug": "build-an-app-for-the-google-assistant-with-firebase",
-            "description": "Dive deep into Google Assistant apps using Firebase",
-            "category": "firebase",
-            "duration": 30,
-            "totalSteps": 11,
-            "updatedAt": "Jan 09, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 4,
-              "completed": 3
-            }
-          },
-          {
-            "id": "55eb415f-3f4e-4853-a22b-f0ae91331169",
-            "title": "Keep Sensitive Data Safe and Private",
-            "slug": "keep-sensitive-data-safe-and-private",
-            "description": "Learn how to keep your important data safe and private",
-            "category": "android",
-            "duration": 45,
-            "totalSteps": 11,
-            "updatedAt": "Jan 14, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 6,
-              "completed": 0
-            }
-          },
-          {
-            "id": "fad2ab23-1011-4028-9a54-e52179ac4a50",
-            "title": "Manage Your Pivotal Cloud Foundry App's Using Apigee Edge",
-            "slug": "manage-your-pivotal-cloud-foundry-apps-using-apigee-Edge",
-            "description": "Introductory course for Pivotal Cloud Foundry App",
-            "category": "cloud",
-            "duration": 90,
-            "totalSteps": 11,
-            "updatedAt": "Jun 24, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 6,
-              "completed": 0
-            }
-          },
-          {
-            "id": "c4bc107b-edc4-47a7-a7a8-4fb09732e794",
-            "title": "Build a PWA Using Workbox",
-            "slug": "build-a-pwa-using-workbox",
-            "description": "Step by step guide for building a PWA using Workbox",
-            "category": "web",
-            "duration": 120,
-            "totalSteps": 11,
-            "updatedAt": "Nov 19, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 0,
-              "completed": 0
-            }
-          },
-          {
-            "id": "1449f945-d032-460d-98e3-406565a22293",
-            "title": "Cloud Functions for Firebase",
-            "slug": "cloud-functions-for-firebase",
-            "description": "Beginners guide of Firebase Cloud Functions",
-            "category": "firebase",
-            "duration": 45,
-            "totalSteps": 11,
-            "updatedAt": "Jul 11, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 3,
-              "completed": 1
-            }
-          },
-          {
-            "id": "f05e08ab-f3e3-4597-a032-6a4b69816f24",
-            "title": "Building a gRPC Service with Java",
-            "slug": "building-a-grpc-service-with-java",
-            "description": "Learn more about building a gRPC Service with Java",
-            "category": "cloud",
-            "duration": 30,
-            "totalSteps": 11,
-            "updatedAt": "Mar 13, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 0,
-              "completed": 1
-            }
-          },
-          {
-            "id": "181728f4-87c8-45c5-b9cc-92265bcd2f4d",
-            "title": "Looking at Campaign Finance with BigQuery",
-            "slug": "looking-at-campaign-finance-with-bigquery",
-            "description": "Dive deep into BigQuery: Campaign Finance",
-            "category": "cloud",
-            "duration": 60,
-            "totalSteps": 11,
-            "updatedAt": "Nov 01, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 0,
-              "completed": 0
-            }
-          },
-          {
-            "id": "fcbfedbf-6187-4b3b-89d3-1a7cb4e11616",
-            "title": "Personalize Your iOS App with Firebase User Management",
-            "slug": "personalize-your-ios-app-with-firebase-user-management",
-            "description": "Dive deep into User Management on iOS apps using Firebase",
-            "category": "firebase",
-            "duration": 90,
-            "totalSteps": 11,
-            "updatedAt": "Aug 08, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 0,
-              "completed": 0
-            }
-          },
-          {
-            "id": "5213f6a1-1dd7-4b1d-b6e9-ffb7af534f28",
-            "title": "Customize Network Topology with Subnetworks",
-            "slug": "customize-network-topology-with-subnetworks",
-            "description": "Dive deep into Network Topology with Subnetworks",
-            "category": "web",
-            "duration": 45,
-            "totalSteps": 11,
-            "updatedAt": "May 12, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 0,
-              "completed": 0
-            }
-          },
-          {
-            "id": "02992ac9-d1a3-4167-b70e-8a1d5b5ba253",
-            "title": "Building Beautiful UIs with Flutter",
-            "slug": "building-beautiful-uis-with-flutter",
-            "description": "Dive deep into Flutter's hidden secrets for creating beautiful UIs",
-            "category": "web",
-            "duration": 90,
-            "totalSteps": 11,
-            "updatedAt": "Sep 18, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 8,
-              "completed": 2
-            }
-          },
-          {
-            "id": "2139512f-41fb-4a4a-841a-0b4ac034f9b4",
-            "title": "Firebase Android",
-            "slug": "firebase-android",
-            "description": "Beginners guide of Firebase for Android",
-            "category": "android",
-            "duration": 45,
-            "totalSteps": 11,
-            "updatedAt": "Apr 24, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 0,
-              "completed": 0
-            }
-          },
-          {
-            "id": "65e0a0e0-d8c0-4117-a3cb-eb74f8e28809",
-            "title": "Simulating a Thread Network Using OpenThread",
-            "slug": "simulating-a-thread-network-using-openthread",
-            "description": "Introductory course for OpenThread and Simulating a Thread Network",
-            "category": "web",
-            "duration": 45,
-            "totalSteps": 11,
-            "updatedAt": "Jun 05, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 0,
-              "completed": 0
-            }
-          },
-          {
-            "id": "c202ebc9-9be3-433a-9d38-7003b3ed7b7a",
-            "title": "Your First Progressive Web App",
-            "slug": "your-first-progressive-web-app",
-            "description": "Step by step guide for creating a PWA from scratch",
-            "category": "web",
-            "duration": 30,
-            "totalSteps": 11,
-            "updatedAt": "Oct 14, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 0,
-              "completed": 0
-            }
-          },
-          {
-            "id": "980ae7da-9f77-4e30-aa98-1b1ea594e775",
-            "title": "Launch Cloud Datalab",
-            "slug": "launch-cloud-datalab",
-            "description": "From start to finish: Launch Cloud Datalab",
-            "category": "cloud",
-            "duration": 60,
-            "totalSteps": 11,
-            "updatedAt": "Dec 16, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 0,
-              "completed": 0
-            }
-          },
-          {
-            "id": "c9748ea9-4117-492c-bdb2-55085b515978",
-            "title": "Cloud Firestore",
-            "slug": "cloud-firestore",
-            "description": "Step by step guide for setting up Cloud Firestore",
-            "category": "firebase",
-            "duration": 90,
-            "totalSteps": 11,
-            "updatedAt": "Apr 04, 2021",
-            "featured": false,
-            "progress": {
-              "currentStep": 2,
-              "completed": 0
-            }
-          }
-        ]
+
+  "academy_courses": {
+    "value": [
+      {
+        "id": "ec555055-f7de-46fb-bf21-ba856a3d8648",
+        "title": "Quantum Mechanics",
+        "slug": "quantum-mechanics",
+        "description": "Study of quantum phenomena and applications.",
+        "category": "science",
+        "duration": 60,
+        "totalSteps": 10,
+        "updatedAt": "Oct 1, 2024",
+        "featured": false,
+        "progress": {
+          "currentStep": 5,
+          "completed": 2
+        },
+        "subjectCode": "PHY101",
+        "subjectFees": "N$500",
+        "academicYear": 2024,
+        "HEIDetails": "UNAM",
+        "credits": 20,
+        "department": "Physics",
+        "faculty": "Science",
+        "prerequisites": "Basic Physics",
+        "corequisites": "Mathematics"
       },
-      "academy_categories": {
-        "value": [
-          {
-            "id": "9a67dff7-3c38-4052-a335-0cef93438ff6",
-            "title": "Web",
-            "slug": "web",
-            "color": "#2196f3"
-          },
-          {
-            "id": "a89672f5-e00d-4be4-9194-cb9d29f82165",
-            "title": "Firebase",
-            "slug": "firebase",
-            "color": "#ffc107"
-          },
-          {
-            "id": "02f42092-bb23-4552-9ddb-cfdcc235d48f",
-            "title": "Cloud",
-            "slug": "cloud",
-            "color": "#607d8b"
-          },
-          {
-            "id": "5648a630-979f-4403-8c41-fc9790dea8cd",
-            "title": "Android",
-            "slug": "android",
-            "color": "#4caf50"
-          }
-        ]
+      {
+        "id": "d6f620b4-cc7f-45b6-a5b2-e36d1ae3e4e3",
+        "title": "Organic Chemistry",
+        "slug": "organic-chemistry",
+        "description": "Introduction to organic molecules and reactions.",
+        "category": "chemical-sciences",
+        "duration": 45,
+        "totalSteps": 8,
+        "updatedAt": "Sep 15, 2024",
+        "featured": false,
+        "progress": {
+          "currentStep": 4,
+          "completed": 2
+        },
+        "subjectCode": "CHE202",
+        "subjectFees": "N$450",
+        "academicYear": 2024,
+        "HEIDetails": "NUST",
+        "credits": 15,
+        "department": "Chemistry",
+        "faculty": "Science",
+        "prerequisites": "Basic Chemistry",
+        "corequisites": "Biology"
       },
-      "academy_demo_course_content": {
-        "value": "\n<p class=\"lead\">\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam lab et fugiat id magnam minus nemo quam\n    voluptatem. Culpa deleniti explica nisi quod soluta.\n</p>\n<p>\n    Alias animi labque, deserunt distinctio eum excepturi fuga iure labore magni molestias mollitia natus, officia pofro\n    quis sunt temporibus veritatis voluptatem, voluptatum. Aut blanditiis esse et illum maxim, obcaecati possimus\n    voluptate! Accusamus <em>adipisci</em> amet aperiam, assumenda consequuntur fugiat inventore iusto magnam molestias\n    natus necessitatibus, nulla pariatur.\n</p>\n<p>\n    Amet distinctio enim itaque minima minus nesciunt recusandae soluta voluptatibus:\n</p>\n<blockquote>\n    <p>\n        Ad aliquid amet asperiores lab distinctio doloremque <code>eaque</code>, exercitationem explicabo, minus mollitia\n        natus necessitatibus odio omnis pofro rem.\n    </p>\n</blockquote>\n<p>\n    Alias architecto asperiores, dignissimos illum ipsam ipsum itaque, natus necessitatibus officiis, perferendis quae\n    sed ullam veniam vitae voluptas! Magni, nisi, quis! A <code>accusamus</code> animi commodi, consectetur distinctio\n    eaque, eos excepturi illum laboriosam maiores nam natus nulla officiis perspiciatis rem <em>reprehenderit</em> sed\n    tenetur veritatis.\n</p>\n<p>\n    Consectetur <code>dicta enim</code> error eveniet expedita, facere in itaque labore <em>natus</em> quasi? Ad consectetur\n    eligendi facilis magni quae quis, quo temporibus voluptas voluptate voluptatem!\n</p>\n<p>\n    Adipisci alias animi <code>debitis</code> eos et impedit maiores, modi nam nobis officia optio perspiciatis, rerum.\n    Accusantium esse nostrum odit quis quo:\n</p>\n<pre><code>h1 a {\n    display: block;\n    width: 300px;\n    height: 80px;\n}</code></pre>\n<p>\n    Accusantium aut autem, lab deleniti eaque fugiat fugit id ipsa iste molestiae,\n    <a>necessitatibus nemo quasi</a>\n    .\n</p>\n<hr>\n<h2>\n    Accusantium aspernatur autem enim\n</h2>\n<p>\n    Blanditiis, fugit voluptate! Assumenda blanditiis consectetur, labque cupiditate ducimus eaque earum, fugiat illum\n    ipsa, necessitatibus omnis quaerat reiciendis totam. Architecto, <strong>facere</strong> illum molestiae nihil nulla\n    quibusdam quidem vel! Atque <em>blanditiis deserunt</em>.\n</p>\n<p>\n    Debitis deserunt doloremque labore laboriosam magni minus odit:\n</p>\n<ol>\n    <li>Asperiores dicta esse maiores nobis officiis.</li>\n    <li>Accusamus aliquid debitis dolore illo ipsam molettiae possimus.</li>\n    <li>Magnam mollitia pariatur perspiciatis quasi quidem tenetur voluptatem! Adipisci aspernatur assumenda dicta.</li>\n</ol>\n<p>\n    Animi fugit incidunt iure magni maiores molestias.\n</p>\n<h3>\n    Consequatur iusto soluta\n</h3>\n<p>\n    Aliquid asperiores corporis — deserunt dolorum ducimus eius eligendi explicabo quaerat suscipit voluptas.\n</p>\n<p>\n    Deserunt dolor eos et illum laborum magni molestiae mollitia:\n</p>\n<blockquote>\n    <p>Autem beatae consectetur consequatur, facere, facilis fugiat id illo, impedit numquam optio quis sunt ducimus illo.</p>\n</blockquote>\n<p>\n    Adipisci consequuntur doloribus facere in ipsam maxime molestias pofro quam:\n</p>\n<figure>\n    <img\n        src=\"assets/images/apps/help-center/image-1.jpg\"\n        alt=\"\">\n    <figcaption>\n        Accusamus blanditiis labque delectus esse et eum excepturi, impedit ipsam iste maiores minima mollitia, nihil obcaecati\n        placeat quaerat qui quidem sint unde!\n    </figcaption>\n</figure>\n<p>\n    A beatae lab deleniti explicabo id inventore magni nisi omnis placeat praesentium quibusdam:\n</p>\n<ul>\n    <li>Dolorem eaque laboriosam omnis praesentium.</li>\n    <li>Atque debitis delectus distinctio doloremque.</li>\n    <li>Fuga illo impedit minima mollitia neque obcaecati.</li>\n</ul>\n<p>\n    Consequ eius eum excepturi explicabo.\n</p>\n<h2>\n    Adipisicing elit atque impedit?\n</h2>\n<h3>\n    Atque distinctio doloremque ea qui quo, repellendus.\n</h3>\n<p>\n    Delectus deserunt explicabo facilis numquam quasi! Laboriosam, magni, quisquam. Aut, blanditiis commodi distinctio, facere fuga\n    hic itaque iure labore laborum maxime nemo neque provident quos recusandae sequi veritatis illum inventore iure qui rerum sapiente.\n</p>\n<h3>\n    Accusamus iusto sint aperiam consectetur …\n</h3>\n<p>\n    Aliquid assumenda ipsa nam odit pofro quaerat, quasi recusandae sint! Aut, esse explicabo facilis fugit illum iure magni\n    necessitatibus odio quas.\n</p>\n<ul>\n    <li>\n        <p><strong>Dolore natus placeat rem atque dignissimos laboriosam.</strong></p>\n        <p>\n            Amet repudiandae voluptates architecto dignissimos repellendus voluptas dignissimos eveniet itaque maiores natus.\n        </p>\n        <p>\n            Accusamus aliquam debitis delectus dolorem ducimus enim eos, exercitationem fugiat id iusto nostrum quae quos\n            recusandae reiciendis rerum sequi temporibus veniam vero? Accusantium culpa, cupiditate ducimus eveniet id maiores modi\n            mollitia nisi aliquid dolorum ducimus et illo in.\n        </p>\n    </li>\n    <li>\n        <p><strong>Ab amet deleniti dolor, et hic optio placeat.</strong></p>\n        <p>\n            Accusantium ad alias beatae, consequatur consequuntur eos error eveniet expedita fuga laborum libero maxime nulla pofro\n            praesentium rem rerum saepe soluta ullam vero, voluptas? Architecto at debitis, doloribus harum iure libero natus odio\n            optio soluta veritatis voluptate.\n        </p>\n    </li>\n    <li>\n        <p><strong>At aut consectetur nam necessitatibus neque nesciunt.</strong></p>\n        <p>\n            Aut dignissimos labore nobis nostrum optio! Dolor id minima velit voluptatibus. Aut consequuntur eum exercitationem\n            fuga, harum id impedit molestiae natus neque numquam perspiciatis quam rem voluptatum.\n        </p>\n    </li>\n</ul>\n<p>\n    Animi aperiam autem labque dolore enim ex expedita harum hic id impedit ipsa laborum modi mollitia non perspiciatis quae ratione.\n</p>\n<h2>\n    Alias eos excepturi facilis fugit.\n</h2>\n<p>\n    Alias asperiores, aspernatur corporis\n    <a>delectus</a>\n    est\n    <a>facilis</a>\n    inventore dolore\n    ipsa nobis nostrum officia quia, veritatis vero! At dolore est nesciunt numquam quam. Ab animi <em>architecto</em> aut, dignissimos\n    eos est eum explicabo.\n</p>\n<p>\n    Adipisci autem consequuntur <code>labque cupiditate</code> dolor ducimus fuga neque nesciunt:\n</p>\n<pre><code>module.exports = {\n    purge: [],\n    theme: {\n        extend: {},\n    },\n    variants: {},\n    plugins: [],\n}</code></pre>\n<p>\n    Aliquid aspernatur eius fugit hic iusto.\n</p>\n<h3>\n    Dolorum ducimus expedita?\n</h3>\n<p>\n    Culpa debitis explicabo maxime minus quaerat reprehenderit temporibus! Asperiores, cupiditate ducimus esse est expedita fuga hic\n    ipsam necessitatibus placeat possimus? Amet animi aut consequuntur earum eveniet.\n</p>\n<ol>\n    <li>\n        <strong>Aspernatur at beatae corporis debitis.</strong>\n        <ul>\n            <li>\n                Aperiam assumenda commodi lab dicta eius, “fugit ipsam“ itaque iure molestiae nihil numquam, officia omnis quia\n                repellendus sapiente sed.\n            </li>\n            <li>\n                Nulla odio quod saepe accusantium, adipisci autem blanditiis lab doloribus.\n            </li>\n            <li>\n                Explicabo facilis iusto molestiae nisi nostrum obcaecati officia.\n            </li>\n        </ul>\n    </li>\n    <li>\n        <strong>Nobis odio officiis optio quae quis quisquam quos rem.</strong>\n        <ul>\n            <li>Modi pariatur quod totam. Deserunt doloribus eveniet, expedita.</li>\n            <li>Ad beatae dicta et fugit libero optio quaerat rem repellendus./</li>\n            <li>Architecto atque consequuntur corporis id iste magni.</li>\n        </ul>\n    </li>\n    <li>\n        <strong>Deserunt non placeat unde veniam veritatis? Odio quod.</strong>\n        <ul>\n            <li>Inventore iure magni quod repellendus tempora. Magnam neque, quia. Adipisci amet.</li>\n            <li>Consectetur adipisicing elit.</li>\n            <li>labque eum expedita illo inventore iusto laboriosam nesciunt non, odio provident.</li>\n        </ul>\n    </li>\n</ol>\n<p>\n    A aliquam architecto consequatur labque dicta doloremque <code>&lt;li&gt;</code> doloribus, ducimus earum, est <code>&lt;p&gt;</code>\n    eveniet explicabo fuga fugit ipsum minima minus molestias nihil nisi non qui sunt vel voluptatibus? A dolorum illum nihil quidem.\n</p>\n<ul>\n    <li>\n        <p>\n            <strong>Laboriosam nesciunt obcaecati optio qui.</strong>\n        </p>\n        <p>\n            Doloremque magni molestias reprehenderit.\n        </p>\n        <ul>\n            <li>Accusamus aperiam blanditiis <code>&lt;p&gt;</code> commodi</li>\n            <li>Dolorum ea explicabo fugiat in ipsum</li>\n        </ul>\n    </li>\n    <li>\n        <p>\n            <strong>Commodi dolor dolorem dolores eum expedita libero.</strong>\n        </p>\n        <p>\n            Accusamus alias consectetur dolores et, excepturi fuga iusto possimus.\n        </p>\n        <ul>\n            <li>\n                <p>\n                    Accusantium ad alias atque aut autem consequuntur deserunt dignissimos eaque iure <code>&lt;p&gt;</code> maxime.\n                </p>\n                <p>\n                    Dolorum in nisi numquam omnis quam sapiente sit vero.\n                </p>\n            </li>\n            <li>\n                <p>\n                    Adipisci lab in nisi odit soluta sunt vitae commodi excepturi.\n                </p>\n            </li>\n        </ul>\n    </li>\n    <li>\n        <p>\n            Assumenda deserunt distinctio dolor iste mollitia nihil non?\n        </p>\n    </li>\n</ul>\n<p>\n    Consectetur adipisicing elit dicta dolor iste.\n</p>\n<h2>\n    Consectetur ea natus officia omnis reprehenderit.\n</h2>\n<p>\n    Distinctio impedit quaerat sed! Accusamus\n    <a>aliquam aspernatur enim expedita explicabo</a>\n    . Libero molestiae\n    odio quasi unde ut? Ab exercitationem id numquam odio quisquam!\n</p>\n<p>\n    Explicabo facilis nemo quidem natus tempore:\n</p>\n<table class=\"table table-striped table-bordered\">\n    <thead>\n        <tr>\n            <th>Wrestler</th>\n            <th>Origin</th>\n            <th>Finisher</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>Bret “The Hitman” Hart</td>\n            <td>Calgary, AB</td>\n            <td>Sharpshooter</td>\n        </tr>\n        <tr>\n            <td>Stone Cold Steve Austin</td>\n            <td>Austin, TX</td>\n            <td>Stone Cold Stunner</td>\n        </tr>\n        <tr>\n            <td>Randy Savage</td>\n            <td>Sarasota, FL</td>\n            <td>Elbow Drop</td>\n        </tr>\n        <tr>\n            <td>Vader</td>\n            <td>Boulder, CO</td>\n            <td>Vader Bomb</td>\n        </tr>\n        <tr>\n            <td>Razor Ramon</td>\n            <td>Chuluota, FL</td>\n            <td>Razor’s Edge</td>\n        </tr>\n    </tbody>\n</table>\n<p>\n    A aliquid autem lab doloremque, ea earum eum fuga fugit illo ipsa minus natus nisi <code>&lt;span&gt;</code> obcaecati pariatur\n    perferendis pofro <code>suscipit tempore</code>.\n</p>\n<h3>\n    Ad alias atque culpa <code>illum</code> earum optio\n</h3>\n<p>\n    Architecto consequatur eveniet illo in iure laborum minus omnis quibusdam sequi temporibus? Ab aliquid <em>“atque dolores molestiae\n    nemo perferendis”</em> reprehenderit saepe.\n</p>\n<p>\n    Accusantium aliquid eligendi est fuga natus, <code>quos</code> vel? Adipisci aperiam asperiores aspernatur consectetur cupiditate\n    <a><code>@distinctio/doloribus</code></a>\n    et exercitationem expedita, facere facilis illum, impedit inventore\n    ipsa iure iusto magnam, magni minus nesciunt non officia possimus quod reiciendis.\n</p>\n<h4>\n    Cupiditate explicabo <code>hic</code> maiores\n</h4>\n<p>\n    Aliquam amet consequuntur distinctio <code>ea</code> est <code>excepturi</code> facere illum maiores nisi nobis non odit officiis\n    quisquam, similique tempora temporibus, tenetur ullam <code>voluptates</code> adipisci aperiam deleniti <code>doloremque</code>\n    ducimus <code>eos</code>.\n</p>\n<p>\n    Ducimus qui quo tempora. lab enim explicabo <code>hic</code> inventore qui soluta voluptates voluptatum? Asperiores consectetur\n    delectus dolorem fugiat ipsa pariatur, quas <code>quos</code> repellendus <em>repudiandae</em> sunt aut blanditiis.\n</p>\n<h3>\n    Asperiores aspernatur autem error praesentium quidem.\n</h3>\n<h4>\n    Ad blanditiis commodi, doloribus id iste <code>repudiandae</code> vero vitae.\n</h4>\n<p>\n    Atque consectetur lab debitis enim est et, facere fugit impedit, possimus quaerat quibusdam.\n</p>\n<p>\n    Dolorem nihil placeat quibusdam veniam? Amet architecto at consequatur eligendi eveniet excepturi hic illo impedit in iste magni maxime\n    modi nisi nulla odio placeat quidem, quos rem repellat similique suscipit voluptate voluptates nobis omnis quo repellendus.\n</p>\n<p>\n    Assumenda, eum, minima! Autem consectetur fugiat iste sit! Nobis omnis quo repellendus.\n</p>\n"
+      {
+        "id": "a4d2e7a7-56fd-4b9f-9bcb-d94604ffb9b2",
+        "title": "Medieval History",
+        "slug": "medieval-history",
+        "description": "Exploration of medieval European history.",
+        "category": "humanities",
+        "duration": 40,
+        "totalSteps": 6,
+        "updatedAt": "Sep 20, 2024",
+        "featured": false,
+        "progress": {
+          "currentStep": 3,
+          "completed": 1
+        },
+        "subjectCode": "HIS303",
+        "subjectFees": "N$400",
+        "academicYear": 2024,
+        "HEIDetails": "IUM",
+        "credits": 10,
+        "department": "History",
+        "faculty": "Arts",
+        "prerequisites": "None",
+        "corequisites": "None"
       },
+      {
+        "id": "f7e9c908-21d3-4a64-a847-1a1c5942186d",
+        "title": "Electrical Engineering",
+        "slug": "electrical-engineering",
+        "description": "Advanced concepts in electrical engineering.",
+        "category": "engineering-and-technology",
+        "duration": 70,
+        "totalSteps": 12,
+        "updatedAt": "Oct 5, 2024",
+        "featured": false,
+        "progress": {
+          "currentStep": 8,
+          "completed": 4
+        },
+        "subjectCode": "EEE404",
+        "subjectFees": "N$600",
+        "academicYear": 2024,
+        "HEIDetails": "NUST",
+        "credits": 25,
+        "department": "Engineering",
+        "faculty": "Engineering",
+        "prerequisites": "Circuit Theory",
+        "corequisites": "Control Systems"
+      },
+      {
+        "id": "d4c5f9e6-cc7e-470e-93c8-601d7d5a688e",
+        "title": "Business Ethics",
+        "slug": "business-ethics",
+        "description": "Examination of ethical issues in business practices.",
+        "category": "business-commerce",
+        "duration": 50,
+        "totalSteps": 10,
+        "updatedAt": "Oct 10, 2024",
+        "featured": false,
+        "progress": {
+          "currentStep": 6,
+          "completed": 3
+        },
+        "subjectCode": "BUS305",
+        "subjectFees": "N$550",
+        "academicYear": 2024,
+        "HEIDetails": "School of Excellence",
+        "credits": 20,
+        "department": "Business",
+        "faculty": "Commerce",
+        "prerequisites": "Introduction to Business",
+        "corequisites": "Management"
+      }
+    ]
+  },
+
+  "academy_categories": {
+    "value": [
+      {
+        "id": "9a67dff7-3c38-4052-a335-0cef93438ff6",
+        "title": "Science",
+        "slug": "science",
+        "color": "#2196f3"
+      },
+      {
+        "id": "8a67dff7-3c38-4052-a335-0cef93438ff6",
+        "title": "Chemical Sciences",
+        "slug": "chemical-sciences",
+        "color": "#4caf50"
+      },
+      {
+        "id": "02f42092-bb23-4552-9ddb-cfdcc235d48f",
+        "title": "Humanities",
+        "slug": "humanities",
+        "color": "#607d8b"
+      },
+      {
+        "id": "5648a630-979f-4403-8c41-fc9790dea8cd",
+        "title": "Engineering and Technology",
+        "slug": "engineering-and-technology",
+        "color": "#f44336"
+      },
+      {
+        "id": "d1b64784-03f5-4b30-8b36-7e2a4d3b301f",
+        "title": "Business Commerce",
+        "slug": "business-commerce",
+        "color": "#ffc107"
+      }
+    ]
+  },
+
+  "academy_demo_course_content": {
+    "value": "<p class=\"lead\">Welcome to the course! In this module, you'll explore foundational concepts and important topics related to our subject. Let's dive in and learn together.</p>\n<p>This course is designed to help you gain a deep understanding of the material through step-by-step guidance and practical examples. We'll cover essential topics, including concepts that may seem challenging at first but will make more sense as we progress.</p>\n<p><strong>Key topics include:</strong></p>\n<ul>\n  <li>Comprehensive breakdowns, practical demonstrations, and real-world applications to help you master the course content.</li>\n</ul>\n<p><strong>Here are some of the core modules you will learn about:</strong></p>\n<h2>Understanding the Basics</h2>\n<p>We begin by introducing key concepts that form the foundation of the subject. This section will explain essential theories and frameworks you'll need to grasp before moving forward.</p>\n<h2>Real-world Applications</h2>\n<p>In this section, we dive into practical, real-world applications that will help solidify your understanding and show how to apply these concepts in professional scenarios.</p>\n<h3>Interactive Discussions</h3>\n<p>Engage in interactive discussions with your peers and instructors. This will enhance your learning by allowing you to ask questions and share insights.</p>\n<blockquote>\n  <p>\"Learning becomes easier when we collaborate and share ideas.\" - Course Instructor</p>\n</blockquote>\n<h2>Common Challenges and Solutions</h2>\n<p>We'll address some of the common challenges students face and provide solutions to help you overcome these obstacles. By focusing on problem-solving, you'll become better equipped to handle complex issues.</p>\n<h3>Practical Exercises</h3>\n<p>You will be assigned tasks and exercises aimed at reinforcing the topics covered in this module. Hands-on practice is essential for ensuring you can apply what you've learned.</p>\n<h2>Summary and Review</h2>\n<p>We wrap up the module with a summary of the key points, followed by a review session. This is a great opportunity to revisit important sections and ensure you're comfortable with the material before moving forward.</p>\n<h3>Resources</h3>\n<p>Additional resources will be available, including reading materials, videos, and discussion forums where you can engage with other learners.</p>\n<p>You're well on your way to mastering the course! Keep up the great work, and don't hesitate to ask for help if you need it.</p>"
+  },
+
       "academy_demo_course_steps": {
-        "value": [
-          {
-            "order": 0,
-            "title": "Introduction",
-            "subtitle": "Introducing the library and how it works",
-            "content": "<h2 class=\"text-2xl sm:text-3xl\">Introduction</h1>"
-          },
-          {
-            "order": 1,
-            "title": "Get the sample code",
-            "subtitle": "Where to find the sample code and how to access it",
-            "content": "<h2 class=\"text-2xl sm:text-3xl\">Get the sample code</h1>"
-          },
-          {
-            "order": 2,
-            "title": "Create a Firebase project and Set up your app",
-            "subtitle": "How to create a basic Firebase project and how to run it locally",
-            "content": "<h2 class=\"text-2xl sm:text-3xl\">Create a Firebase project and Set up your app</h1>"
-          },
-          {
-            "order": 3,
-            "title": "Install the Firebase Command Line Interface",
-            "subtitle": "Setting up the Firebase CLI to access command line tools",
-            "content": "<h2 class=\"text-2xl sm:text-3xl\">Install the Firebase Command Line Interface</h1>"
-          },
-          {
-            "order": 4,
-            "title": "Deploy and run the web app",
-            "subtitle": "How to build, push and run the project remotely",
-            "content": "<h2 class=\"text-2xl sm:text-3xl\">Deploy and run the web app</h1>"
-          },
-          {
-            "order": 5,
-            "title": "The Functions Directory",
-            "subtitle": "Introducing the Functions and Functions Directory",
-            "content": "<h2 class=\"text-2xl sm:text-3xl\">The Functions Directory</h1>"
-          },
-          {
-            "order": 6,
-            "title": "Import the Cloud Functions and Firebase Admin modules",
-            "subtitle": "Create your first Function and run it to administer your app",
-            "content": "<h2 class=\"text-2xl sm:text-3xl\">Import the Cloud Functions and Firebase Admin modules</h1>"
-          },
-          {
-            "order": 7,
-            "title": "Welcome New Users",
-            "subtitle": "How to create a welcome message for the new users",
-            "content": "<h2 class=\"text-2xl sm:text-3xl\">Welcome New Users</h1>"
-          },
-          {
-            "order": 8,
-            "title": "Images moderation",
-            "subtitle": "How to moderate images; crop, resize, optimize",
-            "content": "<h2 class=\"text-2xl sm:text-3xl\">Images moderation</h1>"
-          },
-          {
-            "order": 9,
-            "title": "New Message Notifications",
-            "subtitle": "How to create and push a notification to a user",
-            "content": "<h2 class=\"text-2xl sm:text-3xl\">New Message Notifications</h1>"
-          },
-          {
-            "order": 10,
-            "title": "Congratulations!",
-            "subtitle": "Nice work, you have created your first application",
-            "content": "<h2 class=\"text-2xl sm:text-3xl\">Congratulations!</h1>"
-          }
-        ]
+    "value": [
+      {
+        "order": 0,
+        "title": "Introduction to Quantum Mechanics",
+        "subtitle": "Overview of quantum phenomena and its importance in science",
+        "content": "<h2 class=\"text-2xl sm:text-3xl\">Introduction to Quantum Mechanics</h2><p>Learn the basics of quantum phenomena and its applications in physics.</p>"
       },
-      "ecommerce_products": {
+      {
+        "order": 1,
+        "title": "Key Concepts in Quantum Mechanics",
+        "subtitle": "Understanding wave-particle duality and superposition",
+        "content": "<h2 class=\"text-2xl sm:text-3xl\">Key Concepts in Quantum Mechanics</h2><p>Dive into the foundational principles of wave-particle duality and the concept of superposition.</p>"
+      },
+      {
+        "order": 2,
+        "title": "Organic Chemistry: Basics",
+        "subtitle": "Introduction to organic molecules and chemical reactions",
+        "content": "<h2 class=\"text-2xl sm:text-3xl\">Organic Chemistry: Basics</h2><p>Understand the structure of organic molecules and the basic chemical reactions involved.</p>"
+      },
+      {
+        "order": 3,
+        "title": "Reactions in Organic Chemistry",
+        "subtitle": "Detailed overview of the key organic reactions",
+        "content": "<h2 class=\"text-2xl sm:text-3xl\">Reactions in Organic Chemistry</h2><p>Explore various organic reactions, focusing on the synthesis of different compounds.</p>"
+      },
+      {
+        "order": 4,
+        "title": "Medieval History Overview",
+        "subtitle": "A look into medieval European history",
+        "content": "<h2 class=\"text-2xl sm:text-3xl\">Medieval History Overview</h2><p>Examine the rise and fall of key empires and kingdoms during the medieval period.</p>"
+      },
+      {
+        "order": 5,
+        "title": "Key Events in Medieval History",
+        "subtitle": "Wars, treaties, and societal changes in medieval Europe",
+        "content": "<h2 class=\"text-2xl sm:text-3xl\">Key Events in Medieval History</h2><p>Learn about the most impactful events that shaped medieval European society.</p>"
+      },
+      {
+        "order": 6,
+        "title": "Electrical Engineering Fundamentals",
+        "subtitle": "Introduction to advanced electrical engineering concepts",
+        "content": "<h2 class=\"text-2xl sm:text-3xl\">Electrical Engineering Fundamentals</h2><p>Learn the foundational principles of electrical circuits and system control.</p>"
+      },
+      {
+        "order": 7,
+        "title": "Circuit Theory and Control Systems",
+        "subtitle": "Detailed look into electrical circuit theory and control systems",
+        "content": "<h2 class=\"text-2xl sm:text-3xl\">Circuit Theory and Control Systems</h2><p>Understand how to analyze and design control systems for electrical circuits.</p>"
+      },
+      {
+        "order": 8,
+        "title": "Business Ethics: An Overview",
+        "subtitle": "Introduction to ethical practices in business",
+        "content": "<h2 class=\"text-2xl sm:text-3xl\">Business Ethics: An Overview</h2><p>Explore the ethical challenges businesses face and how to manage them effectively.</p>"
+      },
+      {
+        "order": 9,
+        "title": "Ethical Decision Making in Business",
+        "subtitle": "Steps for making ethical decisions in business environments",
+        "content": "<h2 class=\"text-2xl sm:text-3xl\">Ethical Decision Making in Business</h2><p>Learn how to approach complex ethical dilemmas in the corporate world.</p>"
+      },
+      {
+        "order": 10,
+        "title": "Course Conclusion: Congratulations!",
+        "subtitle": "Wrap-up of key learnings across courses",
+        "content": "<h2 class=\"text-2xl sm:text-3xl\">Congratulations!</h2><p>You have successfully completed the key courses in science, history, engineering, and business. Well done!</p>"
+      }
+    ]
+  },
+
+"ecommerce_products": {
         "value": [
           {
             "id": "1",
@@ -33365,8 +33226,8 @@
         "academicYear": "2023",
         "studentId": "12345678",
         "emailAddress": "student12@gmail.com",
-        "contactNumber": 1234567890,  
-        "qualificationCode": 23564,     
+        "contactNumber": 1234567890,
+        "qualificationCode": 23564,
         "faculty": "ICT and Engineering"
       }
         }
