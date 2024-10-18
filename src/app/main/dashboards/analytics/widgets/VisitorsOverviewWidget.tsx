@@ -144,7 +144,7 @@ function VisitorsOverviewWidget() {
 							}}
 							className="mr-16 text-2xl md:text-3xl font-semibold tracking-tight leading-7"
 						>
-							Visitors Overview
+							Student's Enrollment Overview
 						</Typography>
 						<Typography
 							className="font-medium"
@@ -152,7 +152,7 @@ function VisitorsOverviewWidget() {
 								color: alpha(contrastTheme.palette.primary.contrastText, 0.7)
 							}}
 						>
-							Number of unique visitors
+							Number of students
 						</Typography>
 					</div>
 					<div className="">

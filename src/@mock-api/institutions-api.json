@@ -1,0 +1,290 @@
+{
+  "institutions": {
+    "value": [
+      {
+        "id": "cd5fa417-b667-482d-b208-798d9da3213fre",
+        "heiName": "University of Namibia",
+        "institutionDesignation": "UNAM",
+        "handle": "UNAM",
+        "typeOfInstitution": "Public",
+        "phone": "+264 61 206 3111",
+        "email": "info@unam.na",
+        "address": "340 Mandume Ndemufayo Ave, Windhoek, Namibia",
+        "yearOfEstablishment": 1992,
+        "numberOfStudents": 25000,
+        "location": "Windhoek",
+        "campuses": 12,
+        "website": "https://www.unam.edu.na",
+        "accreditationStatus": "Accredited",
+        "keyProgramsOffered": [
+          "Engineering",
+          "Law",
+          "Medicine",
+          "Education"
+        ],
+        "featuredImageId": "1",
+        "active": true,
+        "images": [
+          {
+            "id": "0",
+            "url": "assets/images/apps/ecommerce/a-walk-amongst-friends.jpg",
+            "type": "image"
+          },
+          {
+            "id": "1",
+            "url": "assets/images/apps/ecommerce/braies-lake.jpg",
+            "type": "image"
+          },
+          {
+            "id": "2",
+            "url": "assets/images/apps/ecommerce/fall-glow.jpg",
+            "type": "image"
+          },
+          {
+            "id": "3",
+            "url": "assets/images/apps/ecommerce/first-snow.jpg",
+            "type": "image"
+          },
+          {
+            "id": "4",
+            "url": "assets/images/apps/ecommerce/lago-di-braies.jpg",
+            "type": "image"
+          },
+          {
+            "id": "5",
+            "url": "assets/images/apps/ecommerce/lago-di-sorapis.jpg",
+            "type": "image"
+          },
+          {
+            "id": "6",
+            "url": "assets/images/apps/ecommerce/never-stop-changing.jpg",
+            "type": "image"
+          },
+          {
+            "id": "7",
+            "url": "assets/images/apps/ecommerce/reaching.jpg",
+            "type": "image"
+          },
+          {
+            "id": "8",
+            "url": "assets/images/apps/ecommerce/morain-lake.jpg",
+            "type": "image"
+          }
+        ]
+      },
+      {
+        "id": "cd5fa417-b667-482d-b208-798d9da3213ty",
+        "heiName": "University of Namibia",
+        "institutionDesignation": "UNAM",
+        "handle": "UNAM",
+        "typeOfInstitution": "Public",
+        "phone": "+264 61 206 3111",
+        "email": "info@unam.na",
+        "address": "340 Mandume Ndemufayo Ave, Windhoek, Namibia",
+        "yearOfEstablishment": 1992,
+        "numberOfStudents": 25000,
+        "location": "Windhoek",
+        "campuses": 12,
+        "website": "https://www.unam.edu.na",
+        "accreditationStatus": "Accredited",
+        "keyProgramsOffered": [
+          "Engineering",
+          "Law",
+          "Medicine",
+          "Education"
+        ],
+        "featuredImageId": "1",
+        "active": true,
+        "images": [
+          {
+            "id": "0",
+            "url": "assets/images/apps/ecommerce/a-walk-amongst-friends.jpg",
+            "type": "image"
+          },
+          {
+            "id": "1",
+            "url": "assets/images/apps/ecommerce/braies-lake.jpg",
+            "type": "image"
+          },
+          {
+            "id": "2",
+            "url": "assets/images/apps/ecommerce/fall-glow.jpg",
+            "type": "image"
+          },
+          {
+            "id": "3",
+            "url": "assets/images/apps/ecommerce/first-snow.jpg",
+            "type": "image"
+          },
+          {
+            "id": "4",
+            "url": "assets/images/apps/ecommerce/lago-di-braies.jpg",
+            "type": "image"
+          },
+          {
+            "id": "5",
+            "url": "assets/images/apps/ecommerce/lago-di-sorapis.jpg",
+            "type": "image"
+          },
+          {
+            "id": "6",
+            "url": "assets/images/apps/ecommerce/never-stop-changing.jpg",
+            "type": "image"
+          },
+          {
+            "id": "7",
+            "url": "assets/images/apps/ecommerce/reaching.jpg",
+            "type": "image"
+          },
+          {
+            "id": "8",
+            "url": "assets/images/apps/ecommerce/morain-lake.jpg",
+            "type": "image"
+          }
+        ]
+      },
+      {
+        "id": "cd5fa417-b667-482d-b4508-798d9da3213c",
+        "heiName": "Namibia University of Science and Technology",
+        "institutionDesignation": "NUST",
+        "handle": "NUST",
+        "typeOfInstitution": "Public",
+        "phone": "+264 61 207 9111",
+        "email": "info@nust.na",
+        "address": "13 Jackson Kaujeua St, Windhoek, Namibia",
+        "yearOfEstablishment": 1994,
+        "numberOfStudents": 15000,
+        "location": "Windhoek",
+        "campuses": 8,
+        "website": "https://www.nust.na",
+        "accreditationStatus": "Accredited",
+        "keyProgramsOffered": [
+          "Architecture",
+          "IT",
+          "Business Administration",
+          "Engineering"
+        ],
+        "featuredImageId": "1",
+        "active": true,
+        "images": [
+          {
+            "id": "0",
+            "url": "assets/images/apps/ecommerce/a-walk-amongst-friends.jpg",
+            "type": "image"
+          },
+          {
+            "id": "1",
+            "url": "assets/images/apps/ecommerce/braies-lake.jpg",
+            "type": "image"
+          },
+          {
+            "id": "2",
+            "url": "assets/images/apps/ecommerce/fall-glow.jpg",
+            "type": "image"
+          },
+          {
+            "id": "3",
+            "url": "assets/images/apps/ecommerce/first-snow.jpg",
+            "type": "image"
+          },
+          {
+            "id": "4",
+            "url": "assets/images/apps/ecommerce/lago-di-braies.jpg",
+            "type": "image"
+          },
+          {
+            "id": "5",
+            "url": "assets/images/apps/ecommerce/lago-di-sorapis.jpg",
+            "type": "image"
+          },
+          {
+            "id": "6",
+            "url": "assets/images/apps/ecommerce/never-stop-changing.jpg",
+            "type": "image"
+          },
+          {
+            "id": "7",
+            "url": "assets/images/apps/ecommerce/reaching.jpg",
+            "type": "image"
+          },
+          {
+            "id": "8",
+            "url": "assets/images/apps/ecommerce/morain-lake.jpg",
+            "type": "image"
+          }
+        ]
+      },
+      {
+        "id": "cd5fa417-b667-482d-b208-798d9da3213c31234df",
+        "heiName": "International University of Management",
+        "institutionDesignation": "IUM",
+        "handle": "IUM",
+        "typeOfInstitution": "Private",
+        "phone": "+264 61 302 402",
+        "email": "info@ium.edu.na",
+        "address": "21 Beethoven St, Windhoek, Namibia",
+        "yearOfEstablishment": 1993,
+        "numberOfStudents": 10000,
+        "location": "Windhoek",
+        "campuses": 6,
+        "website": "https://www.ium.edu.na",
+        "accreditationStatus": "Accredited",
+        "keyProgramsOffered": [
+          "Business",
+          "IT",
+          "Health Sciences",
+          "Education"
+        ],
+        "featuredImageId": "1",
+        "active": true,
+        "images": [
+          {
+            "id": "0",
+            "url": "assets/images/apps/ecommerce/a-walk-amongst-friends.jpg",
+            "type": "image"
+          },
+          {
+            "id": "1",
+            "url": "assets/images/apps/ecommerce/braies-lake.jpg",
+            "type": "image"
+          },
+          {
+            "id": "2",
+            "url": "assets/images/apps/ecommerce/fall-glow.jpg",
+            "type": "image"
+          },
+          {
+            "id": "3",
+            "url": "assets/images/apps/ecommerce/first-snow.jpg",
+            "type": "image"
+          },
+          {
+            "id": "4",
+            "url": "assets/images/apps/ecommerce/lago-di-braies.jpg",
+            "type": "image"
+          },
+          {
+            "id": "5",
+            "url": "assets/images/apps/ecommerce/lago-di-sorapis.jpg",
+            "type": "image"
+          },
+          {
+            "id": "6",
+            "url": "assets/images/apps/ecommerce/never-stop-changing.jpg",
+            "type": "image"
+          },
+          {
+            "id": "7",
+            "url": "assets/images/apps/ecommerce/reaching.jpg",
+            "type": "image"
+          },
+          {
+            "id": "8",
+            "url": "assets/images/apps/ecommerce/morain-lake.jpg",
+            "type": "image"
+          }
+        ]
+      }
+    ]
+  }
+}
