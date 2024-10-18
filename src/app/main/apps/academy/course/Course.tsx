@@ -44,38 +44,38 @@ function Course() {
 		 * If the course is opened for the first time
 		 * Change ActiveStep to 1
 		 */
-		if (course && course?.progress?.currentStep === 0) {
-			updateCourse({ courseId, data: { progress: { currentStep: 1 } } });
-		}
+		// if (course && course?.progress?.currentStep === 0) {
+		// 	updateCourse({ courseId, data: { progress: { currentStep: 1 } } });
+		// }
 	}, [course]);
 
 	useEffect(() => {
 		setLeftSidebarOpen(!isMobile);
 	}, [isMobile]);
 
-	const currentStep = course?.progress?.currentStep || 0;
+	// const currentStep = course?.progress?.currentStep || 0;
 
-	function updateCurrentStep(index: number) {
-		if (course && (index > course.totalSteps || index < 0)) {
-			return;
-		}
+	// function updateCurrentStep(index: number) {
+	// 	if (course && (index > course.totalSteps || index < 0)) {
+	// 		return;
+	// 	}
+	//
+	// 	updateCourse({ courseId, data: { progress: { currentStep: index } } });
+	// }
 
-		updateCourse({ courseId, data: { progress: { currentStep: index } } });
-	}
+	// function handleNext() {
+	// 	updateCurrentStep(currentStep + 1);
+	// }
+	//
+	// function handleBack() {
+	// 	updateCurrentStep(currentStep - 1);
+	// }
+	//
+	// function handleStepChange(index: number) {
+	// 	updateCurrentStep(index + 1);
+	// }
 
-	function handleNext() {
-		updateCurrentStep(currentStep + 1);
-	}
-
-	function handleBack() {
-		updateCurrentStep(currentStep - 1);
-	}
-
-	function handleStepChange(index: number) {
-		updateCurrentStep(index + 1);
-	}
-
-	const activeStep = currentStep !== 0 ? currentStep : 1;
+	// const activeStep = currentStep !== 0 ? currentStep : 1;
 
 	if (isLoading) {
 		return <FuseLoading />;
@@ -90,10 +90,10 @@ function Course() {
 			content={
 				<div className="w-full">
 					<Hidden lgDown>
-						<CourseProgress
-							className="sticky top-0 z-10"
-							course={course}
-						/>
+						{/*<CourseProgress*/}
+						{/*	className="sticky top-0 z-10"*/}
+						{/*	course={course}*/}
+						{/*/>*/}
 					</Hidden>
 
 					<Hidden lgUp>
@@ -117,9 +117,9 @@ function Course() {
 					</Hidden>
 
 					<SwipeableViews
-						index={activeStep - 1}
+						// index={activeStep - 1}
 						enableMouseEvents
-						onChangeIndex={handleStepChange}
+						// onChangeIndex={handleStepChange}
 					>
 						{course.steps.map((step: { content: string }, index: number) => (
 							<div
@@ -139,30 +139,30 @@ function Course() {
 					</SwipeableViews>
 
 					<Hidden lgDown>
-						<div className="flex justify-center w-full sticky bottom-0 p-16 pb-32 z-10">
-							<ButtonGroup
-								variant="contained"
-								aria-label=""
-								className="rounded-full"
-								color="secondary"
-							>
-								<Button
-									className="rounded-full"
-									startIcon={<FuseSvgIcon>heroicons-outline:arrow-small-left</FuseSvgIcon>}
-									onClick={handleBack}
-								>
-									Prev
-								</Button>
-								<Button className="pointer-events-none">{`${activeStep}/${course.totalSteps}`}</Button>
-								<Button
-									className="rounded-full"
-									endIcon={<FuseSvgIcon>heroicons-outline:arrow-small-right</FuseSvgIcon>}
-									onClick={handleNext}
-								>
-									Next
-								</Button>
-							</ButtonGroup>
-						</div>
+						{/*<div className="flex justify-center w-full sticky bottom-0 p-16 pb-32 z-10">*/}
+						{/*	<ButtonGroup*/}
+						{/*		variant="contained"*/}
+						{/*		aria-label=""*/}
+						{/*		className="rounded-full"*/}
+						{/*		color="secondary"*/}
+						{/*	>*/}
+						{/*		<Button*/}
+						{/*			className="rounded-full"*/}
+						{/*			startIcon={<FuseSvgIcon>heroicons-outline:arrow-small-left</FuseSvgIcon>}*/}
+						{/*			onClick={handleBack}*/}
+						{/*		>*/}
+						{/*			Prev*/}
+						{/*		</Button>*/}
+						{/*		<Button className="pointer-events-none">{`${activeStep}/${course.totalSteps}`}</Button>*/}
+						{/*		<Button*/}
+						{/*			className="rounded-full"*/}
+						{/*			endIcon={<FuseSvgIcon>heroicons-outline:arrow-small-right</FuseSvgIcon>}*/}
+						{/*			onClick={handleNext}*/}
+						{/*		>*/}
+						{/*			Next*/}
+						{/*		</Button>*/}
+						{/*	</ButtonGroup>*/}
+						{/*</div>*/}
 					</Hidden>
 
 					<Hidden lgUp>
@@ -178,20 +178,20 @@ function Course() {
 								<FuseSvgIcon>heroicons-outline:bars-3</FuseSvgIcon>
 							</IconButton>
 
-							<Typography className="mx-8">{`${activeStep}/${course.totalSteps}`}</Typography>
+							{/*<Typography className="mx-8">{`${activeStep}/${course.totalSteps}`}</Typography>*/}
 
 							<CourseProgress
 								className="flex flex-1 mx-8"
 								course={course}
 							/>
 
-							<IconButton onClick={handleBack}>
-								<FuseSvgIcon>heroicons-outline:arrow-small-left</FuseSvgIcon>
-							</IconButton>
+							{/*<IconButton onClick={handleBack}>*/}
+							{/*	<FuseSvgIcon>heroicons-outline:arrow-small-left</FuseSvgIcon>*/}
+							{/*</IconButton>*/}
 
-							<IconButton onClick={handleNext}>
-								<FuseSvgIcon>heroicons-outline:arrow-small-right</FuseSvgIcon>
-							</IconButton>
+							{/*<IconButton onClick={handleNext}>*/}
+							{/*	<FuseSvgIcon>heroicons-outline:arrow-small-right</FuseSvgIcon>*/}
+							{/*</IconButton>*/}
 						</Box>
 					</Hidden>
 				</div>
@@ -224,57 +224,57 @@ function Course() {
 						<CourseInfo course={course} />
 					</div>
 					<Divider />
-					<Stepper
-						classes={{ root: 'p-32' }}
-						activeStep={activeStep - 1}
-						orientation="vertical"
-					>
-						{course.steps.map((step, index) => {
-							return (
-								<Step
-									key={index}
-									sx={{
-										'& .MuiStepLabel-root, & .MuiStepContent-root': {
-											cursor: 'pointer!important'
-										},
-										'& .MuiStepContent-root': {
-											color: 'text.secondary',
-											fontSize: 13
-										}
-									}}
-									onClick={() => handleStepChange(step.order)}
-									expanded
-								>
-									<StepLabel
-										className="font-medium"
-										sx={{
-											'& .MuiSvgIcon-root': {
-												color: 'background.default',
-												'& .MuiStepIcon-text': {
-													fill: (_theme) => _theme.palette.text.secondary
-												},
-												'&.Mui-completed': {
-													color: 'secondary.main',
-													'& .MuiStepIcon-text ': {
-														fill: (_theme) => _theme.palette.secondary.contrastText
-													}
-												},
-												'&.Mui-active': {
-													color: 'secondary.main',
-													'& .MuiStepIcon-text ': {
-														fill: (_theme) => _theme.palette.secondary.contrastText
-													}
-												}
-											}
-										}}
-									>
-										{step.title}
-									</StepLabel>
-									<StepContent>{step.subtitle}</StepContent>
-								</Step>
-							);
-						})}
-					</Stepper>
+					{/*<Stepper*/}
+					{/*	classes={{ root: 'p-32' }}*/}
+					{/*	// activeStep={activeStep - 1}*/}
+					{/*	orientation="vertical"*/}
+					{/*>*/}
+					{/*	{course.steps.map((step, index) => {*/}
+					{/*		return (*/}
+					{/*			<Step*/}
+					{/*				key={index}*/}
+					{/*				sx={{*/}
+					{/*					'& .MuiStepLabel-root, & .MuiStepContent-root': {*/}
+					{/*						cursor: 'pointer!important'*/}
+					{/*					},*/}
+					{/*					'& .MuiStepContent-root': {*/}
+					{/*						color: 'text.secondary',*/}
+					{/*						fontSize: 13*/}
+					{/*					}*/}
+					{/*				}}*/}
+					{/*				// onClick={() => handleStepChange(step.order)}*/}
+					{/*				expanded*/}
+					{/*			>*/}
+					{/*				<StepLabel*/}
+					{/*					className="font-medium"*/}
+					{/*					sx={{*/}
+					{/*						'& .MuiSvgIcon-root': {*/}
+					{/*							color: 'background.default',*/}
+					{/*							'& .MuiStepIcon-text': {*/}
+					{/*								fill: (_theme) => _theme.palette.text.secondary*/}
+					{/*							},*/}
+					{/*							'&.Mui-completed': {*/}
+					{/*								color: 'secondary.main',*/}
+					{/*								'& .MuiStepIcon-text ': {*/}
+					{/*									fill: (_theme) => _theme.palette.secondary.contrastText*/}
+					{/*								}*/}
+					{/*							},*/}
+					{/*							'&.Mui-active': {*/}
+					{/*								color: 'secondary.main',*/}
+					{/*								'& .MuiStepIcon-text ': {*/}
+					{/*									fill: (_theme) => _theme.palette.secondary.contrastText*/}
+					{/*								}*/}
+					{/*							}*/}
+					{/*						}*/}
+					{/*					}}*/}
+					{/*				>*/}
+					{/*					{step.title}*/}
+					{/*				</StepLabel>*/}
+					{/*				<StepContent>{step.subtitle}</StepContent>*/}
+					{/*			</Step>*/}
+					{/*		);*/}
+					{/*	})}*/}
+					{/*</Stepper>*/}
 				</>
 			}
 			scroll="content"

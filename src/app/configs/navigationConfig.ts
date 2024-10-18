@@ -123,7 +123,7 @@ const navigationConfig: FuseNavItemType[] = [
 				type: 'item',
 				icon: 'heroicons-outline:academic-cap',
 				url: '/apps/academy',
-				translate: 'ACADEMY'
+				translate: 'Programmes'
 			},
 			{
 				id: 'apps.calendar',
