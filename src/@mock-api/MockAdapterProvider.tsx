@@ -26,6 +26,8 @@ import { profileApiMocks } from './api/profile-api';
 import { calendarApiMocks } from './api/calendar-api';
 import { settingsApiMocks } from './api/settings-api';
 import { facilitiesApiMocks } from './Facilities-api';
+import { studentApiMocks } from './api/students-api';
+import { institutionApiMocks } from './api/institutions-api';
 import { staffApiMocks } from './Staff-api';
 import { researchApiMocks } from './research-api';
 
@@ -71,9 +73,7 @@ function MockAdapterProvider(props: MockAdapterProviderProps) {
 				scrumboardApiMocks,
 				tasksApiMocks,
 				settingsApiMocks,
-				facilitiesApiMocks,
-				staffApiMocks,
-				researchApiMocks
+				facilitiesApiMocks
 			].forEach((mockSetup) => {
 				mockSetup(mock);
 			});

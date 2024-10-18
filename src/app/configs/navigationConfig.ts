@@ -6,7 +6,7 @@ import tr from './navigation-i18n/tr';
 import { authRoles } from '../auth';
 import DocumentationNavigation from '../main/documentation/DocumentationNavigation';
 import SettingsAppNavigation from '../main/apps/settings/SettingsAppNavigation';
- 
+
 i18next.addResourceBundle('en', 'navigation', en);
 i18next.addResourceBundle('tr', 'navigation', tr);
 i18next.addResourceBundle('ar', 'navigation', ar);
@@ -45,119 +45,65 @@ const navigationConfig: FuseNavItemType[] = [
 				url: '/dashboards/finance'
 			},
 			{
+				id: 'dashboards.institutions',
+				title: 'Institutions',
+				type: 'item',
+				icon: 'heroicons-outline:academic-cap',
+				url: '/dashboards/institutions'
+			},
+			{
+				id: 'dashboards.students',
+				title: 'Students Management',
+				type: 'collapse',
+				icon: 'heroicons-outline:users',
+				children: [
+					{
+						id: 'students',
+						title: 'Students',
+						type: 'item',
+						url: '/dashboards/students',
+						end: true
+					},
+					{
+						id: 'students-detail',
+						title: 'Student Detail',
+						type: 'item',
+						url: '/dashboards/students/1/hamisa-mobeto'
+					},
+					{
+						id: 'new-student',
+						title: 'New Student',
+						type: 'item',
+						url: '/dashboards/students/students/new'
+					}
+				]
+			},
+			{
 				id: 'dashboards.facilities',
 				title: 'Facilities Management',
 				type: 'collapse',
 				icon: 'heroicons-outline:academic-cap',
 				children: [
-				  {
-					id: 'facilities',
-					title: 'Facilities',
-					type: 'item',
-					url: '/dashboards/facilities',  
-				  },
-				  {
-					id: 'facilities-products',
-					title: 'Facilities Products',
-					type: 'item',
-					url: '/dashboards/facilities/products',  
-					end: true,
-				  },
-				  {
-					id: 'facilities-detail',
-					title: 'Facilities Detail',
-					type: 'item',
-					url: '/dashboards/facilities/product/:id',  
-					end: true
-				  }
-				]
-			  },
-			  {
-				id: 'dashboards.research',
-				title: 'Research Output',
-				type: 'collapse',
-				icon: 'heroicons-outline:academic-cap',
-				children: [
-				  {
-					id: 'research',
-					title: 'Research',
-					type: 'item',
-					url: '/dashboards/research',  
-				  },
-				  {
-					id: 'research-products',
-					title: 'Research Products',
-					type: 'item',
-					url: '/dashboards/research/products',  
-					end: true,
-				  },
-				  {
-					id: 'research-detail',
-					title: 'Research Detail',
-					type: 'item',
-					url: '/dashboards/research/product/:id',  
-					end: true
-				  }
-				]
-			  },
-
-
-
-
-			  {
-				id: 'dashboards.staff',
-				title: 'Staff Management',
-				type: 'collapse',
-				icon: 'heroicons-outline:academic-cap',
-				children: [
-				  {
-					id: 'staff',
-					title: 'Staff',
-					type: 'item',
-					url: '/dashboards/staff',  
-				  },
-				  {
-					id: 'staff-products',
-					title: 'Staff Products',
-					type: 'item',
-					url: '/dashboards/staff/products',  
-					end: true,
-				  },
-				  {
-					id: 'staf-detail',
-					title: 'Staff Detail',
-					type: 'item',
-					url: '/dashboards/staff/product/:id',  
-					end: true
-				  }
-				]
-			  },
-			  {
-				id: 'dashboards.staff',
-				title: 'Staff Management',
-				type: 'collapse',
-				icon: 'heroicons-outline:academic-cap',
-				children: [
-				  {
-					id: 'staff',
-					title: 'Staff',
-					type: 'item',
-					url: '/dashboards/staff',  
-				  },
-				  {
-					id: 'staff-products',
-					title: 'Staff Products',
-					type: 'item',
-					url: '/dashboards/staff/products',  
-					end: true,
-				  },
-				  {
-					id: 'staf-detail',
-					title: 'Staff Detail',
-					type: 'item',
-					url: '/dashboards/staff/product/:id',  
-					end: true
-				  }
+					{
+						id: 'facilities',
+						title: 'Facilities',
+						type: 'item',
+						url: '/dashboards/facilities'
+					},
+					{
+						id: 'facilities-products',
+						title: 'Facilities Products',
+						type: 'item',
+						url: '/dashboards/facilities/products',
+						end: true
+					},
+					{
+						id: 'facilities-detail',
+						title: 'Facilities Detail',
+						type: 'item',
+						url: '/dashboards/facilities/product/:id',
+						end: true
+					}
 				]
 			  }
 
@@ -1286,7 +1232,7 @@ const navigationConfig: FuseNavItemType[] = [
 				children: [
 					{
 						id: 'navigation-features.disabled-collapse.child',
-						title: "You shouldn't be able to see this child",
+						title: 'You shouldn\'t be able to see this child',
 						type: 'item'
 					}
 				]
