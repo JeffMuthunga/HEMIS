@@ -37,15 +37,15 @@ export const themesConfig: FuseThemesType = {
 				white: '#FFFFFF'
 			},
 			primary: {
-				light: '#DBA92D', // Light brown (Hex value)
-            main: '#DBA92D',  // Main brown (Hex value)
-            dark: '#DBA92D',  // Dark brown (Hex value)
+				light: '#DBA92D',
+				main: '#DBA92D',
+				dark: '#DBA92D',
 				contrastText: '#FFFFFF'
 			},
 			secondary: {
-				light: '#FFCCBC',//changed to brown as well
-				main: '#FF5722',//changed to brown as well
-				dark: '#E64A19',//changed to brown as well
+				light: '#FFCCBC',
+				main: '#FF5722',
+				dark: '#E64A19',
 				contrastText: '#FFFFFF'
 			},
 			background: {
@@ -111,8 +111,8 @@ export const themesConfig: FuseThemesType = {
 				contrastText: lightPaletteText.primary
 			},
 			background: {
-				paper: '#FFFFFF',
-				default: '#f1f5f9'
+				paper: '#dba92d',
+				default: '#7393B3'
 			},
 			text: lightPaletteText,
 			divider: '#d8d9da'
