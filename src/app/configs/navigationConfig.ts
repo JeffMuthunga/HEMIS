@@ -105,35 +105,93 @@ const navigationConfig: FuseNavItemType[] = [
 						end: true
 					}
 				]
-			},
-			{
-				id: 'dashboards.indicators',
-				title: 'Performance Management',
+			  },
+			  {
+				id: 'dashboards.staff',
+				title: 'Staff Management',
 				type: 'collapse',
 				icon: 'heroicons-outline:academic-cap',
 				children: [
 					{
-						id: 'indicators',
-						title: 'Indicators',
+						id: 'staff',
+						title: 'Staff',
 						type: 'item',
-						url: '/dashboards/indicators'
+						url: '/dashboards/staff'
 					},
 					{
-						id: 'indicators-products',
-						title: 'Indicators',
+						id: 'staff-products',
+						title: 'Staff Products',
 						type: 'item',
-						url: '/dashboards/indicators/products',
+						url: '/dashboards/staff/products',
 						end: true
 					},
 					{
-						id: 'indicators-detail',
-						title: 'Indicators Detail',
+						id: 'staff-detail',
+						title: 'Staff Detail',
 						type: 'item',
-						url: '/dashboards/indicators/product/:id',
+						url: '/dashboards/staff/product/:id',
 						end: true
 					}
 				]
-			}
+			  },
+			  {
+				id: 'dashboards.facilities',
+				title: 'Facilities Management',
+				type: 'collapse',
+				icon: 'heroicons-outline:academic-cap',
+				children: [
+					{
+						id: 'facilities',
+						title: 'Facilities',
+						type: 'item',
+						url: '/dashboards/facilities'
+					},
+					{
+						id: 'facilities-products',
+						title: 'Facilities Products',
+						type: 'item',
+						url: '/dashboards/facilities/products',
+						end: true
+					},
+					{
+						id: 'facilities-detail',
+						title: 'Facilities Detail',
+						type: 'item',
+						url: '/dashboards/facilities/product/:id',
+						end: true
+					}
+				]
+			  },
+			  {
+				id: 'dashboards.research',
+				title: 'Research Management',
+				type: 'collapse',
+				icon: 'heroicons-outline:academic-cap',
+				children: [
+					{
+						id: 'research',
+						title: 'Research',
+						type: 'item',
+						url: '/dashboards/research'
+					},
+					{
+						id: 'research-products',
+						title: 'Research Products',
+						type: 'item',
+						url: '/dashboards/research/products',
+						end: true
+					},
+					{
+						id: 'research-detail',
+						title: 'Research Detail',
+						type: 'item',
+						url: '/dashboards/research/product/:id',
+						end: true
+					}
+				]
+			  }
+			  
+
 		]
 	},
 	{
