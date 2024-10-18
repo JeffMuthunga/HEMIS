@@ -73,7 +73,9 @@ function MockAdapterProvider(props: MockAdapterProviderProps) {
 				scrumboardApiMocks,
 				tasksApiMocks,
 				settingsApiMocks,
-				facilitiesApiMocks
+				facilitiesApiMocks,
+				researchApiMocks,
+				staffApiMocks
 			].forEach((mockSetup) => {
 				mockSetup(mock);
 			});
