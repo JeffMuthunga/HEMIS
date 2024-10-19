@@ -95,21 +95,21 @@ const navigationConfig: FuseNavItemType[] = [
 						title: 'Facilities',
 						type: 'item',
 						url: '/dashboards/facilities'
-					},
-					{
-						id: 'facilities-products',
-						title: 'Facilities Products',
-						type: 'item',
-						url: '/dashboards/facilities/products',
-						end: true
-					},
-					{
-						id: 'facilities-detail',
-						title: 'Facilities Detail',
-						type: 'item',
-						url: '/dashboards/facilities/product/:id',
-						end: true
 					}
+					// {
+					// 	id: 'facilities-products',
+					// 	title: 'Facilities Products',
+					// 	type: 'item',
+					// 	url: '/dashboards/facilities/products',
+					// 	end: true
+					// },
+					// {
+					// 	id: 'facilities-detail',
+					// 	title: 'Facilities Detail',
+					// 	type: 'item',
+					// 	url: '/dashboards/facilities/product/:id',
+					// 	end: true
+					// }
 				]
 			},
 			{
@@ -124,20 +124,20 @@ const navigationConfig: FuseNavItemType[] = [
 						type: 'item',
 						url: '/dashboards/staff'
 					},
-					{
-						id: 'staff-products',
-						title: 'Staff Products',
-						type: 'item',
-						url: '/dashboards/staff/products',
-						end: true
-					},
-					{
-						id: 'staff-detail',
-						title: 'Staff Detail',
-						type: 'item',
-						url: '/dashboards/staff/product/:id',
-						end: true
-					}
+					// {
+					// 	id: 'staff-products',
+					// 	title: 'Staff Products',
+					// 	type: 'item',
+					// 	url: '/dashboards/staff/products',
+					// 	end: true
+					// },
+					// {
+					// 	id: 'staff-detail',
+					// 	title: 'Staff Detail',
+					// 	type: 'item',
+					// 	url: '/dashboards/staff/product/:id',
+					// 	end: true
+					// }
 				]
 			},
 			{
@@ -151,21 +151,21 @@ const navigationConfig: FuseNavItemType[] = [
 						title: 'Programmes',
 						type: 'item',
 						url: '/dashboards/facilities'
-					},
-					{
-						id: 'facilities-products',
-						title: 'Application Detail',
-						type: 'item',
-						url: '/dashboards/facilities/products',
-						end: true
-					},
-					{
-						id: 'facilities-detail',
-						title: 'New Application',
-						type: 'item',
-						url: '/dashboards/facilities/product/:id',
-						end: true
 					}
+					// {
+					// 	id: 'facilities-products',
+					// 	title: 'Application Detail',
+					// 	type: 'item',
+					// 	url: '/dashboards/facilities/products',
+					// 	end: true
+					// },
+					// {
+					// 	id: 'facilities-detail',
+					// 	title: 'New Application',
+					// 	type: 'item',
+					// 	url: '/dashboards/facilities/product/:id',
+					// 	end: true
+					// }
 				]
 			},
 			{
@@ -179,21 +179,21 @@ const navigationConfig: FuseNavItemType[] = [
 						title: 'Research',
 						type: 'item',
 						url: '/dashboards/research'
-					},
-					{
-						id: 'research-products',
-						title: 'Research Products',
-						type: 'item',
-						url: '/dashboards/research/products',
-						end: true
-					},
-					{
-						id: 'research-detail',
-						title: 'Research Detail',
-						type: 'item',
-						url: '/dashboards/research/product/:id',
-						end: true
 					}
+					// {
+					// 	id: 'research-products',
+					// 	title: 'Research Products',
+					// 	type: 'item',
+					// 	url: '/dashboards/research/products',
+					// 	end: true
+					// },
+					// {
+					// 	id: 'research-detail',
+					// 	title: 'Research Detail',
+					// 	type: 'item',
+					// 	url: '/dashboards/research/product/:id',
+					// 	end: true
+					// }
 				]
 			},
 			{
