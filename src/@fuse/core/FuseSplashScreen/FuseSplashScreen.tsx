@@ -12,15 +12,15 @@ function FuseSplashScreen() {
 			<div className="logo">
 				<img
 					width="128"
-					src="assets/images/logo/logo.svg"
-					alt="logo"
+					src="assets/images/logo/hemis1.png"
+					alt="Hemis"
 				/>
 			</div>
 			<Box
 				id="spinner"
 				sx={{
 					'& > div': {
-						backgroundColor: 'palette.secondary.main'
+						backgroundColor: 'palette.primary.light'
 					}
 				}}
 			>
