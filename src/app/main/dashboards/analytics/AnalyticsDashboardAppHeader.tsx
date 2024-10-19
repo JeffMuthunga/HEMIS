@@ -25,6 +25,14 @@ function AnalyticsDashboardAppHeader() {
 				<div className="flex items-center mt-24 sm:mt-0 sm:mx-8 space-x-8">
 					<Button
 						className="whitespace-nowrap"
+						startIcon={<FuseSvgIcon size={20}>heroicons-solid:document-chart-bar</FuseSvgIcon>}
+						variant="contained"
+						color="primary"
+					>
+						Reports
+					</Button>
+					<Button
+						className="whitespace-nowrap"
 						startIcon={<FuseSvgIcon size={20}>heroicons-solid:cog-6-tooth</FuseSvgIcon>}
 						variant="contained"
 						color="primary"

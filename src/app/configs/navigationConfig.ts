@@ -74,7 +74,7 @@ const navigationConfig: FuseNavItemType[] = [
 						title: 'New Student',
 						type: 'item',
 						url: '/dashboards/students/students/new'
-					},
+					}
 				]
 			},
 			{
@@ -195,6 +195,13 @@ const navigationConfig: FuseNavItemType[] = [
 						end: true
 					}
 				]
+			},
+			{
+				id: 'dashboards.workflows',
+				title: 'Workflow Management',
+				type: 'item',
+				icon: 'heroicons-outline:square-3-stack-3d',
+				url: '/dashboards/workflow-mgt'
 			}
 		]
 	},
