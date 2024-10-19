@@ -10,8 +10,7 @@ import { useState } from 'react';
 import * as React from 'react';
 import _ from '../../../@lodash/@lodash';
 import JwtSignUpTab from './tabs/JwSignUpTab';
-import FirebaseSignUpTab from './tabs/FirebaseSignUpTab';
-import AwsSignUpTab from './tabs/AwsSignUpTab';
+
 
 const tabs = [
 	{
@@ -19,18 +18,6 @@ const tabs = [
 		title: 'JWT',
 		logo: 'assets/images/logo/jwt.svg',
 		logoClass: 'h-36 p-4 bg-black rounded-lg'
-	},
-	{
-		id: 'firebase',
-		title: 'Firebase',
-		logo: 'assets/images/logo/firebase.svg',
-		logoClass: 'h-36'
-	},
-	{
-		id: 'aws',
-		title: 'AWS',
-		logo: 'assets/images/logo/aws-amplify.svg',
-		logoClass: 'h-36'
 	}
 ];
 
@@ -58,7 +45,7 @@ function SignUpPage() {
 						Sign up
 					</Typography>
 					<div className="mt-2 flex items-baseline font-medium">
-						<Typography>Already have an account?</Typography>
+						<Typography>Already have an account with us?</Typography>
 						<Link
 							className="ml-4"
 							to="/sign-in"
@@ -67,43 +54,8 @@ function SignUpPage() {
 						</Link>
 					</div>
 
-					<Tabs
-						value={_.findIndex(tabs, { id: selectedTabId })}
-						variant="fullWidth"
-						className="w-full mt-24 mb-32"
-						classes={{
-							indicator: 'flex justify-center bg-transparent w-full h-full'
-						}}
-						TabIndicatorProps={{
-							children: (
-								<Box
-									sx={{ borderColor: (theme) => theme.palette.secondary.main }}
-									className="border-1 border-solid w-full h-full rounded-lg"
-								/>
-							)
-						}}
-					>
-						{tabs.map((item) => (
-							<Tab
-								disableRipple
-								onClick={() => handleSelectTab(item.id)}
-								key={item.id}
-								icon={
-									<img
-										className={item.logoClass}
-										src={item.logo}
-										alt={item.title}
-									/>
-								}
-								className="min-w-0"
-								label={item.title}
-							/>
-						))}
-					</Tabs>
-
 					{selectedTabId === 'jwt' && <JwtSignUpTab />}
-					{selectedTabId === 'firebase' && <FirebaseSignUpTab />}
-					{selectedTabId === 'aws' && <AwsSignUpTab />}
+					
 				</div>
 			</Paper>
 
@@ -175,29 +127,9 @@ function SignUpPage() {
 				<div className="relative z-10 w-full max-w-2xl">
 					<div className="text-7xl font-bold leading-none text-gray-100">
 						<div>Welcome to</div>
-						<div>our community</div>
-					</div>
-					<div className="mt-24 text-lg leading-6 tracking-tight text-gray-400">
-						Fuse helps developers to build organized and well coded dashboards full of beautiful and rich
-						modules. Join us and start building your application today.
+						<div>The HEMIS portal</div>
 					</div>
 					<div className="mt-32 flex items-center">
-						<AvatarGroup
-							sx={{
-								'& .MuiAvatar-root': {
-									borderColor: 'primary.main'
-								}
-							}}
-						>
-							<Avatar src="assets/images/avatars/female-18.jpg" />
-							<Avatar src="assets/images/avatars/female-11.jpg" />
-							<Avatar src="assets/images/avatars/male-09.jpg" />
-							<Avatar src="assets/images/avatars/male-16.jpg" />
-						</AvatarGroup>
-
-						<div className="ml-16 font-medium tracking-tight text-gray-400">
-							More than 17k people joined us, it's your turn
-						</div>
 					</div>
 				</div>
 			</Box>

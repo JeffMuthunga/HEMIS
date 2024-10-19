@@ -210,7 +210,7 @@ function FirebaseSignUpForm() {
 				type="submit"
 				size="large"
 			>
-				Create your free account
+				Create your free account for the HEMIS portal
 			</Button>
 		</form>
 	);

@@ -151,7 +151,7 @@ function JwtSignInForm() {
 
 			<Button
 				variant="contained"
-				color="secondary"
+				color="primary"
 				className=" mt-16 w-full"
 				aria-label="Sign in"
 				disabled={_.isEmpty(dirtyFields) || !isValid}

@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import { FuseRouteItemType } from "@fuse/utils/FuseUtils";
 
 const VisualizationApp = lazy(() => import("./VisualisationApp"));
-// const Course = lazy(() => import('./course/Course'));
+const Course = lazy(() => import("./statistics/page"));
 // const Courses = lazy(() => import('./courses/Courses'));
 
 /**
@@ -17,10 +17,10 @@ const StatisticsAppConfig: FuseRouteItemType = {
       path: "",
       element: <Navigate to="/apps/visualization/statistics" />,
     },
-    // {
-    // 	path: 'courses/:courseId/*',
-    // 	element: <Course />
-    // },
+    {
+      path: "statistics",
+      element: <Course />,
+    },
     // {
     // 	path: 'courses',
     // 	element: <Courses />

@@ -1,16 +1,17 @@
 import { apiService as api } from 'app/store/apiService';
+import { Integer } from 'type-fest';
 
 export const addTagTypes = ['profile_photos_videos', 'profile_timeline', 'profile_about'] as const;
 
-const ProfileApi = api
-	.enhanceEndpoints({
+const ProfileApi = api 
+	.enhanceEndpoints({//this adds additional functionality to the endoints api 
 		addTagTypes
 	})
-	.injectEndpoints({
-		endpoints: (build) => ({
+	.injectEndpoints({//allows the addition of new api endpoints
+		endpoints: (build) => ({//where these apis are defined
 			getProfilePhotosVideos: build.query<GetProfilePhotosVideosApiResponse, GetProfilePhotosVideosApiArg>({
 				query: () => ({ url: `/mock-api/profile/photos-videos` }),
-				providesTags: ['profile_photos_videos']
+				providesTags: ['profile_photos_videos']//caches data fetched from the datbase, ie helps redux remember the info associated with the query
 			}),
 			getProfileTimeline: build.query<GetProfileTimelineApiResponse, GetProfileTimelineApiArg>({
 				query: () => ({ url: `/mock-api/profile/timeline` }),
@@ -35,7 +36,7 @@ export type GetProfileTimelineApiArg = void;
 export type GetProfileAboutApiResponse = /** status 200 OK */ ProfileAbout;
 export type GetProfileAboutApiArg = void;
 
-export type ProfilePhotosVideos = {
+export type ProfilePhotosVideos = {//structure of the profile photos
 	id?: string;
 	name?: string;
 	info?: string;
@@ -97,37 +98,19 @@ export type ProfileTimeline = {
 };
 
 export type ProfileAbout = {
-	general?: {
-		gender?: string;
-		birthday?: string;
-		locations?: string[];
+	studentinfo?: {
+		sex?: string;
+		dateofbirth?: string;
+		address?: string[];
 		about?: string;
-	};
-	work?: {
-		occupation?: string;
-		skills?: string;
-		jobs?: {
-			company?: string;
-			date?: string;
-		}[];
-	};
-	contact?: {
-		address?: string;
-		tel?: string[];
-		websites?: string[];
-		emails?: string[];
-	};
-	groups?: {
-		id?: string;
-		name?: string;
-		category?: string;
-		members?: string;
-	}[];
-	friends?: {
-		id?: string;
-		name?: string;
-		avatar?: string;
-	}[];
+		academicYear?: string;
+		studentId?: string;
+		emailAddress?: string;
+		contactNumber?: Integer<number>;
+		qualificationCode?: Integer<number>;
+		faculty?: string;
+
+	}
 };
 
 export const { useGetProfilePhotosVideosQuery, useGetProfileTimelineQuery, useGetProfileAboutQuery } = ProfileApi;

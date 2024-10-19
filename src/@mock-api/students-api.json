@@ -1,0 +1,133 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "handle": "shikungu-doe",
+      "academicYear": "2021",
+      "studentIdentifier": "NDA-LS-FR5670",
+      "name": "Shikungu",
+      "surname": "Doe",
+      "dateOfBirth": "2000-01-01",
+      "sex": "Male",
+      "email": "jomwa@gmail.com",
+      "mobileNo": "0746260004",
+      "qualificationCode": "BSC01",
+      "faculty": "Science",
+      "department": "Physics",
+      "marginalized": "Yes",
+      "disability": "None",
+      "sourceOfFunding": "Scholarship",
+      "examinationGrade": "A",
+      "active": true,
+      "featuredImageId": "1",
+      "images": [
+        {
+          "id": "0",
+          "url": "assets/images/apps/ecommerce/a-walk-amongst-friends.jpg",
+          "type": "image"
+        },
+        {
+          "id": "1",
+          "url": "assets/images/apps/ecommerce/braies-lake.jpg",
+          "type": "image"
+        },
+        {
+          "id": "2",
+          "url": "assets/images/apps/ecommerce/fall-glow.jpg",
+          "type": "image"
+        },
+        {
+          "id": "3",
+          "url": "assets/images/apps/ecommerce/first-snow.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "handle": "miriam-smith",
+      "academicYear": "2021",
+      "studentIdentifier": "NDA-LS-FR5671",
+      "name": "Miriam",
+      "surname": "Smith",
+      "dateOfBirth": "1999-05-15",
+      "sex": "Female",
+      "email": "miriam.smith@gmail.com",
+      "mobileNo": "0746260005",
+      "qualificationCode": "BSC02",
+      "faculty": "Engineering",
+      "department": "Mechanical",
+      "marginalized": "No",
+      "disability": "None",
+      "sourceOfFunding": "Self-funded",
+      "examinationGrade": "B",
+      "active": true,
+      "featuredImageId": "1",
+      "images": [
+        {
+          "id": "0",
+          "url": "assets/images/apps/ecommerce/a-walk-amongst-friends.jpg",
+          "type": "image"
+        },
+        {
+          "id": "1",
+          "url": "assets/images/apps/ecommerce/braies-lake.jpg",
+          "type": "image"
+        },
+        {
+          "id": "2",
+          "url": "assets/images/apps/ecommerce/fall-glow.jpg",
+          "type": "image"
+        },
+        {
+          "id": "3",
+          "url": "assets/images/apps/ecommerce/first-snow.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "handle": "john-matthews",
+      "academicYear": "2021",
+      "studentIdentifier": "NDA-LS-FR5672",
+      "name": "John",
+      "surname": "Matthews",
+      "dateOfBirth": "1998-10-10",
+      "sex": "Male",
+      "email": "john.matthews@gmail.com",
+      "mobileNo": "0746260006",
+      "qualificationCode": "BSC03",
+      "faculty": "Business",
+      "department": "Economics",
+      "marginalized": "No",
+      "disability": "Visual Impairment",
+      "sourceOfFunding": "Loan",
+      "examinationGrade": "C",
+      "active": true,
+      "featuredImageId": "1",
+      "images": [
+        {
+          "id": "0",
+          "url": "assets/images/apps/ecommerce/a-walk-amongst-friends.jpg",
+          "type": "image"
+        },
+        {
+          "id": "1",
+          "url": "assets/images/apps/ecommerce/braies-lake.jpg",
+          "type": "image"
+        },
+        {
+          "id": "2",
+          "url": "assets/images/apps/ecommerce/fall-glow.jpg",
+          "type": "image"
+        },
+        {
+          "id": "3",
+          "url": "assets/images/apps/ecommerce/first-snow.jpg",
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}

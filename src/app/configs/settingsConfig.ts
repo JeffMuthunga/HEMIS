@@ -40,7 +40,7 @@ const settingsConfig: FuseSettingsConfigType = {
 	 */
 	theme: {
 		main: themesConfig.default,
-		navbar: themesConfig.defaultDark,
+		navbar: themesConfig.darkBlueSilverDark,
 		toolbar: themesConfig.default,
 		footer: themesConfig.defaultDark
 	},
