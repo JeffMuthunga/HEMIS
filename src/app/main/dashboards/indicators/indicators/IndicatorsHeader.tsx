@@ -9,7 +9,7 @@ import PageBreadcrumb from 'app/shared-components/PageBreadcrumb';
 /**
  * The products header.
  */
-function ProductsHeader() {
+function IndicatorsHeader() {
 	const isMobile = useThemeMediaQuery((theme) => theme.breakpoints.down('lg'));
 
 	return (
@@ -20,7 +20,7 @@ function ProductsHeader() {
 			>
 				<div>
 					<PageBreadcrumb className="mb-8" />
-					<Typography className="text-4xl font-extrabold leading-none tracking-tight">Staff</Typography>
+					<Typography className="text-4xl font-extrabold leading-none tracking-tight">Indicators</Typography>
 				</div>
 			</motion.span>
 
@@ -35,7 +35,7 @@ function ProductsHeader() {
 						variant="contained"
 						color="secondary"
 						component={NavLinkAdapter}
-						to="/apps/e-commerce/products/new"
+						to="/dashboards/students/students/new"
 						size={isMobile ? 'small' : 'medium'}
 					>
 						<FuseSvgIcon size={20}>heroicons-outline:plus</FuseSvgIcon>
@@ -47,4 +47,4 @@ function ProductsHeader() {
 	);
 }
 
-export default ProductsHeader;
+export default IndicatorsHeader;

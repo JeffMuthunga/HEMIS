@@ -7930,9 +7930,9 @@
             "password": "admin",
             "role": "admin",
             "data": {
-              "displayName": "Abbott Keitch",
+              "displayName": "HEMIS Admin",
               "photoURL": "assets/images/avatars/brian-hughes.jpg",
-              "email": "admin@fusetheme.com",
+              "email": "joseph.mwita@softclans.co.ke",
               "settings": {
                 "layout": {},
                 "theme": {}
@@ -26136,19 +26136,11 @@
       "project_dashboard_widgets": {
         "value": {
           "summary": {
-            "ranges": {
-              "DY": "Yesterday",
-              "DT": "Today",
-              "DTM": "Tomorrow"
-            },
+            "title": "Staff",
             "currentRange": "DT",
             "data": {
-              "name": "Due Tasks",
-              "count": {
-                "DY": 21,
-                "DT": 25,
-                "DTM": 19
-              },
+              "name": "Total",
+              "count": 5,
               "extra": {
                 "name": "Completed",
                 "count": {
@@ -26161,9 +26153,9 @@
             "detail": "You can show some detailed information about this widget in here."
           },
           "overdue": {
-            "title": "Overdue",
+            "title": "Institutions",
             "data": {
-              "name": "Tasks",
+              "name": "Total",
               "count": 4,
               "extra": {
                 "name": "Yesterday's overdue",
@@ -26173,10 +26165,10 @@
             "detail": "You can show some detailed information about this widget in here."
           },
           "issues": {
-            "title": "Issues",
+            "title": "Subjects",
             "data": {
-              "name": "Open",
-              "count": 32,
+              "name": "Total",
+              "count": 5,
               "extra": {
                 "name": "Closed today",
                 "count": 0
@@ -26185,10 +26177,10 @@
             "detail": "You can show some detailed information about this widget in here."
           },
           "features": {
-            "title": "Features",
+            "title": "Students",
             "data": {
-              "name": "Proposals",
-              "count": 42,
+              "name": "Total",
+              "count": 5,
               "extra": {
                 "name": "Implemented",
                 "count": 8
@@ -26199,12 +26191,12 @@
           "githubIssues": {
             "overview": {
               "this-week": {
-                "new-issues": 214,
-                "closed-issues": 75,
-                "fixed": 3,
-                "wont-fix": 4,
-                "re-opened": 8,
-                "needs-triage": 6
+                "new-issues": 3900,
+                "closed-issues": 535,
+                "fixed": 5,
+                "wont-fix": 2,
+                "re-opened": 1,
+                "needs-triage": 5
               },
               "last-week": {
                 "new-issues": 197,
@@ -26216,44 +26208,38 @@
               }
             },
             "ranges": {
-              "this-week": "This Week",
-              "last-week": "Last Week"
+              "this-week": "",
+              "last-week": ""
             },
             "labels": [
-              "Mon",
-              "Tue",
-              "Wed",
-              "Thu",
-              "Fri",
-              "Sat",
-              "Sun"
+              "University of Namibia",
+              "Namibia University of Science and Technology",
+              "International University of Management",
+              "Business School of Excellence",
+              "Medical Research Institute"
             ],
             "series": {
               "this-week": [
                 {
-                  "name": "New issues",
+                  "name": "Enrolment Rate (%)",
                   "type": "line",
                   "data": [
-                    42,
-                    28,
-                    43,
-                    34,
-                    20,
-                    25,
-                    22
+                    85,
+                    80,
+                    88,
+                    82,
+                    75
                   ]
                 },
                 {
-                  "name": "Closed issues",
+                  "name": "Graduation Rate (%)",
                   "type": "column",
                   "data": [
-                    11,
-                    10,
-                    8,
-                    11,
-                    8,
-                    10,
-                    17
+                    70,
+                    75,
+                    78,
+                    72,
+                    65
                   ]
                 }
               ],
@@ -26303,10 +26289,10 @@
               }
             },
             "labels": [
-              "API",
-              "Backend",
-              "Frontend",
-              "Issues"
+              "Accredation",
+              "Institutional Audits",
+              "Registration",
+              "Placements"
             ],
             "series": {
               "this-week": [
@@ -26331,8 +26317,8 @@
             "series": {
               "today": [
                 {
-                  "title": "Group Meeting",
-                  "time": "in 32 minutes",
+                  "title": "Meeting with Programs' Review Panel ",
+                  "time": "in 2 hours",
                   "location": "Conference room 1B"
                 },
                 {
@@ -26340,7 +26326,7 @@
                   "time": "10:30 AM"
                 },
                 {
-                  "title": "Public Beta Release",
+                  "title": "Registration of New Private HEI's",
                   "time": "11:00 AM"
                 },
                 {
@@ -26348,29 +26334,23 @@
                   "time": "12:10 PM"
                 },
                 {
-                  "title": "Dinner with David",
-                  "time": "05:30 PM",
-                  "location": "Magnolia"
+                  "title": "Ushering New Eyployees",
+                  "time": "02:30 PM"
                 },
+
                 {
-                  "title": "Jane's Birthday Party",
-                  "time": "07:30 PM",
-                  "location": "Home"
-                },
-                {
-                  "title": "Overseer's Retirement Party",
-                  "time": "09:30 PM",
-                  "location": "Overseer's room"
+                  "title": "Approving Pending Student Registration",
+                  "time": "03:30 PM"
                 }
               ],
               "tomorrow": [
                 {
-                  "title": "Marketing Meeting",
+                  "title": "General Company Meeting",
                   "time": "09:00 AM",
                   "location": "Conference room 1A"
                 },
                 {
-                  "title": "Public Announcement",
+                  "title": "Analysis of NCHE's Newly Collected Data",
                   "time": "11:00 AM"
                 },
                 {
@@ -26378,24 +26358,14 @@
                   "time": "12:10 PM"
                 },
                 {
-                  "title": "Meeting with Beta Testers",
-                  "time": "03:00 PM",
-                  "location": "Conference room 2C"
+                  "title": "Traning of Public and Private Institutions",
+                  "time": "03:30 PM"
                 },
                 {
-                  "title": "Live Stream",
+                  "title": "End Day's work",
                   "time": "05:30 PM"
-                },
-                {
-                  "title": "Release Party",
-                  "time": "07:30 PM",
-                  "location": "CEO's house"
-                },
-                {
-                  "title": "CEO's Private Party",
-                  "time": "09:30 PM",
-                  "location": "CEO's Penthouse"
                 }
+
               ]
             }
           },
@@ -33239,9 +33209,9 @@
             "password": "5;4+0IOx:\\Dy",
             "role": "admin",
             "data": {
-              "displayName": "Abbott Keitch",
+              "displayName": "HEMIS Admin",
               "photoURL": "assets/images/avatars/brian-hughes.jpg",
-              "email": "admin@fusetheme.com",
+              "email": "joseph.mwita@softclans.co.ke",
               "settings": {
                 "layout": {},
                 "theme": {}

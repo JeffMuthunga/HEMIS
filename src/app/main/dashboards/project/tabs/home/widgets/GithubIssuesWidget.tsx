@@ -122,7 +122,7 @@ function GithubIssuesWidget() {
 		<Paper className="flex flex-col flex-auto p-24 shadow rounded-xl overflow-hidden">
 			<div className="flex flex-col sm:flex-row items-start justify-between">
 				<Typography className="text-xl font-medium tracking-tight leading-6 truncate">
-					Github Issues Summary
+					Indicators Summary
 				</Typography>
 				<div className="mt-12 sm:mt-0">
 					<FuseTabs
@@ -145,7 +145,7 @@ function GithubIssuesWidget() {
 						className="font-medium"
 						color="text.secondary"
 					>
-						New vs. Closed
+						Enrolment vs. Graduation Rates
 					</Typography>
 					<div className="flex flex-col flex-auto">
 						<ReactApexChart
@@ -168,13 +168,13 @@ function GithubIssuesWidget() {
 							<Typography className="text-5xl sm:text-7xl font-semibold leading-none tracking-tight">
 								{overview[currentRange]['new-issues']}
 							</Typography>
-							<Typography className="mt-4 text-sm sm:text-lg font-medium">New Issues</Typography>
+							<Typography className="mt-4 text-sm sm:text-lg font-medium">Total Staffs</Typography>
 						</div>
 						<div className="col-span-2 flex flex-col items-center justify-center py-32 px-4 rounded-xl bg-green-50 text-green-800">
 							<Typography className="text-5xl sm:text-7xl font-semibold leading-none tracking-tight">
 								{overview[currentRange]['closed-issues']}
 							</Typography>
-							<Typography className="mt-4 text-sm sm:text-lg font-medium">Closed</Typography>
+							<Typography className="mt-4 text-sm sm:text-lg font-medium">Research Ouput</Typography>
 						</div>
 						<Box
 							sx={{
@@ -188,7 +188,7 @@ function GithubIssuesWidget() {
 							<Typography className="text-5xl font-semibold leading-none tracking-tight">
 								{overview[currentRange].fixed}
 							</Typography>
-							<Typography className="mt-4 text-sm font-medium text-center">Fixed</Typography>
+							<Typography className="mt-4 text-sm font-medium text-center">Accredited Programmes</Typography>
 						</Box>
 						<Box
 							sx={{
@@ -202,7 +202,7 @@ function GithubIssuesWidget() {
 							<Typography className="text-5xl font-semibold leading-none tracking-tight">
 								{overview[currentRange]['wont-fix']}
 							</Typography>
-							<Typography className="mt-4 text-sm font-medium text-center">Won't Fix</Typography>
+							<Typography className="mt-4 text-sm font-medium text-center">Approved Registrations</Typography>
 						</Box>
 						<Box
 							sx={{
@@ -216,7 +216,7 @@ function GithubIssuesWidget() {
 							<Typography className="text-5xl font-semibold leading-none tracking-tight">
 								{overview[currentRange]['re-opened']}
 							</Typography>
-							<Typography className="mt-4 text-sm font-medium text-center">Re-opened</Typography>
+							<Typography className="mt-4 text-sm font-medium text-center">Registrations Under Review</Typography>
 						</Box>
 						<Box
 							sx={{
@@ -230,7 +230,7 @@ function GithubIssuesWidget() {
 							<Typography className="text-5xl font-semibold leading-none tracking-tight">
 								{overview[currentRange]['needs-triage']}
 							</Typography>
-							<Typography className="mt-4 text-sm font-medium text-center">Needs Triage</Typography>
+							<Typography className="mt-4 text-sm font-medium text-center">Quality Audit</Typography>
 						</Box>
 					</div>
 				</div>

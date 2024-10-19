@@ -34,35 +34,36 @@ function ScheduleWidget() {
 	const currentRange = Object.keys(ranges)[tabValue];
 
 	return (
-		<Paper className="flex flex-col flex-auto p-24 shadow rounded-xl overflow-hidden h-full">
-			<div className="flex flex-col sm:flex-row items-start justify-between">
-				<Typography className="text-lg font-medium tracking-tight leading-6 truncate">Schedule</Typography>
-				<div className="mt-12 sm:mt-0">
-					<FuseTabs
-						value={tabValue}
-						onChange={(ev, value: number) => setTabValue(value)}
-					>
-						{Object.entries(ranges).map(([key, label], index) => (
-							<FuseTab
-								key={key}
-								value={index}
-								label={label}
-							/>
-						))}
-					</FuseTabs>
+		<>
+			<Paper className="flex flex-col flex-auto p-24 shadow rounded-xl overflow-hidden h-full">
+				<div className="flex flex-col sm:flex-row items-start justify-between">
+					<Typography className="text-lg font-medium tracking-tight leading-6 truncate">Schedule</Typography>
+					<div className="mt-12 sm:mt-0">
+						<FuseTabs
+							value={tabValue}
+							onChange={(ev, value: number) => setTabValue(value)}
+						>
+							{Object.entries(ranges).map(([key, label], index) => (
+								<FuseTab
+									key={key}
+									value={index}
+									label={label}
+								/>
+							))}
+						</FuseTabs>
+					</div>
 				</div>
-			</div>
-			<List className="py-0 mt-8 divide-y">
-				{series[currentRange].map((item, index) => (
-					<ListItem
-						key={index}
-						className="px-0"
-					>
-						<ListItemText
-							classes={{ root: 'px-8', primary: 'font-medium' }}
-							primary={item.title}
-							secondary={
-								<span className="flex flex-col sm:flex-row sm:items-center -ml-2 mt-8 sm:mt-4 space-y-4 sm:space-y-0 sm:space-x-12">
+				<List className="py-0 mt-8 divide-y">
+					{series[currentRange].map((item, index) => (
+						<ListItem
+							key={index}
+							className="px-0"
+						>
+							<ListItemText
+								classes={{ root: 'px-8', primary: 'font-medium' }}
+								primary={item.title}
+								secondary={
+									<span className="flex flex-col sm:flex-row sm:items-center -ml-2 mt-8 sm:mt-4 space-y-4 sm:space-y-0 sm:space-x-12">
 									{item.time && (
 										<span className="flex items-center">
 											<FuseSvgIcon
@@ -81,8 +82,8 @@ function ScheduleWidget() {
 										</span>
 									)}
 
-									{item.location && (
-										<span className="flex items-center">
+										{item.location && (
+											<span className="flex items-center">
 											<FuseSvgIcon
 												size={20}
 												color="disabled"
@@ -97,19 +98,20 @@ function ScheduleWidget() {
 												{item.location}
 											</Typography>
 										</span>
-									)}
+										)}
 								</span>
-							}
-						/>
-						<ListItemSecondaryAction>
-							<IconButton aria-label="more">
-								<FuseSvgIcon>heroicons-solid:chevron-right</FuseSvgIcon>
-							</IconButton>
-						</ListItemSecondaryAction>
-					</ListItem>
-				))}
-			</List>
-		</Paper>
+								}
+							/>
+							<ListItemSecondaryAction>
+								<IconButton aria-label="more">
+									<FuseSvgIcon>heroicons-solid:chevron-right</FuseSvgIcon>
+								</IconButton>
+							</ListItemSecondaryAction>
+						</ListItem>
+					))}
+				</List>
+			</Paper>
+		</>
 	);
 }
 

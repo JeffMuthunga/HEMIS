@@ -44,15 +44,15 @@ const Transition = forwardRef((props: TransitionProps, ref) => {
 		return null;
 	}
 
-	return (
-		<Slide
-			direction={theme.direction === 'ltr' ? 'left' : 'right'}
-			ref={ref}
-			{...other}
-		>
-			{children}
-		</Slide>
-	);
+	// return (
+	// 	<Slide
+	// 		direction={theme.direction === 'ltr' ? 'left' : 'right'}
+	// 		ref={ref}
+	// 		{...other}
+	// 	>
+	// 		{children}
+	// 	</Slide>
+	// );
 });
 
 type ThemesPanelProps = {
@@ -67,55 +67,55 @@ function ThemesPanel(props: ThemesPanelProps) {
 	const dispatch = useAppDispatch();
 
 	function handleThemeSelect(_theme: FuseThemeOption) {
-		dispatch(changeFuseTheme(_theme?.section)).then(() => {
-			dispatch(showMessage({ message: 'User theme selection saved with the api' }));
-		});
+		// dispatch(changeFuseTheme(_theme?.section)).then(() => {
+		// 	dispatch(showMessage({ message: 'User theme selection saved with the api' }));
+		// });
 	}
 
-	return (
-		<StyledDialog
-			TransitionComponent={Transition}
-			aria-labelledby="schemes-panel"
-			aria-describedby="schemes"
-			open={open}
-			onClose={onClose}
-			BackdropProps={{ invisible: true }}
-			classes={{
-				paper: 'shadow-lg'
-			}}
-			{...schemesHandlers}
-		>
-			<FuseScrollbars className="p-16 sm:p-32">
-				<IconButton
-					className="fixed top-0 z-10 ltr:right-0 rtl:left-0"
-					onClick={onClose}
-					size="large"
-				>
-					<FuseSvgIcon>heroicons-outline:x-mark</FuseSvgIcon>
-				</IconButton>
-
-				<Typography
-					className="mb-32"
-					variant="h6"
-				>
-					Theme Color Options
-				</Typography>
-
-				<Typography
-					className="mb-24 text-justify text-md italic"
-					color="text.secondary"
-				>
-					* Selected option will be applied to all layout elements (navbar, toolbar, etc.). You can also
-					create your own theme options and color schemes.
-				</Typography>
-
-				<FuseThemeSelector
-					options={themeOptions}
-					onSelect={handleThemeSelect}
-				/>
-			</FuseScrollbars>
-		</StyledDialog>
-	);
+	// return (
+	// 	<StyledDialog
+	// 		TransitionComponent={Transition}
+	// 		aria-labelledby="schemes-panel"
+	// 		aria-describedby="schemes"
+	// 		open={open}
+	// 		onClose={onClose}
+	// 		BackdropProps={{ invisible: true }}
+	// 		classes={{
+	// 			paper: 'shadow-lg'
+	// 		}}
+	// 		{...schemesHandlers}
+	// 	>
+	// 		<FuseScrollbars className="p-16 sm:p-32">
+	// 			<IconButton
+	// 				className="fixed top-0 z-10 ltr:right-0 rtl:left-0"
+	// 				onClick={onClose}
+	// 				size="large"
+	// 			>
+	// 				<FuseSvgIcon>heroicons-outline:x-mark</FuseSvgIcon>
+	// 			</IconButton>
+	//
+	// 			<Typography
+	// 				className="mb-32"
+	// 				variant="h6"
+	// 			>
+	// 				Theme Color Options
+	// 			</Typography>
+	//
+	// 			<Typography
+	// 				className="mb-24 text-justify text-md italic"
+	// 				color="text.secondary"
+	// 			>
+	// 				* Selected option will be applied to all layout elements (navbar, toolbar, etc.). You can also
+	// 				create your own theme options and color schemes.
+	// 			</Typography>
+	//
+	// 			<FuseThemeSelector
+	// 				options={themeOptions}
+	// 				onSelect={handleThemeSelect}
+	// 			/>
+	// 		</FuseScrollbars>
+	// 	</StyledDialog>
+	// );
 }
 
 export default ThemesPanel;
