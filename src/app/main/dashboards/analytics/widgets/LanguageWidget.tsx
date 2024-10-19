@@ -97,7 +97,7 @@ function LanguageWidget() {
 	return (
 		<Paper className="flex flex-col flex-auto shadow rounded-xl overflow-hidden p-16">
 			<div className="flex flex-col sm:flex-row items-start justify-between">
-				<Typography className="text-lg font-medium tracking-tight leading-6 truncate">Language</Typography>
+				<Typography className="text-lg font-medium tracking-tight leading-6 truncate">Region Distribution</Typography>
 				<div className="ml-8">
 					<Chip
 						size="small"
