@@ -1,0 +1,71 @@
+{
+  "programmes": {
+  "value": [
+    {
+      "hei_name": "University of Namibia",
+      "campus_name": "Main Campus",
+      "faculty_and_department": "Faculty of Science, Department of Physics",
+      "qualification_name": "Bachelor of Science in Physics",
+      "qualification_type": "Bachelor's Degree",
+      "nqf_level": "7",
+      "number_of_credits": "360",
+      "accreditation_status": "Accredited",
+      "program_duration": "4 years",
+      "mode_of_study": "Full-time",
+      "handle": "University of Namibia"
+    },
+    {
+      "hei_name": "Namibia University of Science and Technology",
+      "campus_name": "North Campus",
+      "faculty_and_department": "Faculty of Humanities, Department of History",
+      "qualification_name": "Master of Arts in History",
+      "qualification_type": "Master's Degree",
+      "nqf_level": "9",
+      "number_of_credits": "180",
+      "accreditation_status": "Accredited",
+      "program_duration": "2 years",
+      "mode_of_study": "Full-time/Part-time",
+      "handle": "University of Namibia"
+    },
+    {
+      "hei_name": "International University of Management",
+      "campus_name": "City Campus",
+      "faculty_and_department": "Faculty of Business, Department of Management",
+      "qualification_name": "Bachelor of Business Administration",
+      "qualification_type": "Bachelor's Degree",
+      "nqf_level": "7",
+      "number_of_credits": "360",
+      "accreditation_status": "Accredited",
+      "program_duration": "3 years",
+      "mode_of_study": "Full-time",
+      "handle": "University of Namibia"
+    },
+    {
+      "hei_name": "Business School of Excellence",
+      "campus_name": "Tech Campus",
+      "faculty_and_department": "Faculty of Engineering, Department of Electrical Engineering",
+      "qualification_name": "Diploma in Electrical Engineering",
+      "qualification_type": "Diploma",
+      "nqf_level": "6",
+      "number_of_credits": "240",
+      "accreditation_status": "Accredited",
+      "program_duration": "2 years",
+      "mode_of_study": "Full-time",
+      "handle": "University of Namibia"
+    },
+    {
+      "hei_name": "Medical Research Institute",
+      "campus_name": "Health Campus",
+      "faculty_and_department": "Faculty of Health Sciences, Department of Medicine",
+      "qualification_name": "Doctor of Medicine",
+      "qualification_type": "Doctoral Degree",
+      "nqf_level": "10",
+      "number_of_credits": "480",
+      "accreditation_status": "Accredited",
+      "program_duration": "5 years",
+      "mode_of_study": "Full-time",
+      "handle": "University of Namibia"
+    }
+  ]
+}
+}

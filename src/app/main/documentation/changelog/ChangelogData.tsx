@@ -618,7 +618,7 @@ const changelogData: ChangelogItemType[] = [
 		date: '2020-11-17',
 		newChanges: [
 			'react updated to v17.0.1,',
-			'E-commerce App: showing loading indicator while fetching products/orders table data.',
+			'E-commerce App: showing loading programme while fetching products/orders table data.',
 			'NavbarFoldedToggleButton icon changed with push_pin',
 			'FuseSearch: placeholder and noResults props added for localization.',
 			'material ui icons updated and all variations added for to choose from.',

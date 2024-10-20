@@ -31,6 +31,7 @@ import { institutionApiMocks } from './api/institutions-api';
 import { staffApiMocks } from './Staff-api';
 import { researchApiMocks } from './research-api';
 import {indicatorApiMocks} from "@mock-api/api/indicators-api";
+import {programmeApiMocks} from "@mock-api/api/programmes-api";
 
 const mockAdapterOptions = {
 	delayResponse: 0
@@ -79,6 +80,7 @@ function MockAdapterProvider(props: MockAdapterProviderProps) {
 				studentApiMocks,
 				institutionApiMocks,
 				indicatorApiMocks,
+				programmeApiMocks,
 				staffApiMocks,
 				facilitiesApiMocks,
 				researchApiMocks
