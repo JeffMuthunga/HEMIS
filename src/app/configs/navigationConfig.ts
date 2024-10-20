@@ -38,11 +38,45 @@ const navigationConfig: FuseNavItemType[] = [
 			},
 			{
 				id: 'dashboards.institutions',
-				title: 'Institutions',
-				type: 'item',
+				title: 'Institutions Management',
+				type: 'collapse',
 				icon: 'heroicons-outline:building-library',
-				url: '/dashboards/institutions'
+				// url: '/dashboards/institutions',
+				children: [
+					{
+						id: 'institutions',
+						title: 'Institutions',
+						type: 'item',
+						// icon: 'heroicons-outline:building-library',
+						url: '/dashboards/institutions',
+
+					},
+					{
+						id: 'indicators',
+						title: 'Indicators',
+						type: 'item',
+						// icon: 'heroicons-outline:building-library',
+						url: '/dashboards/indicators',
+					},
+				]
 			},
+			{
+				id: 'dashboards.programmes',
+				title: 'Programmes Management',
+				type: 'collapse',
+				icon: 'heroicons-outline:chart-pie',
+				// url: '/dashboards/program'
+				children: [
+					{
+						id: 'programmes',
+						title: 'Programmes',
+						type: 'item',
+						url: '/dashboards/programmes',
+						end: true
+					},
+				]
+			},
+
 			{
 				id: 'dashboards.students',
 				title: 'Students Management',
@@ -79,7 +113,7 @@ const navigationConfig: FuseNavItemType[] = [
 			},
 			{
 				id: 'apps.academy',
-				title: 'Accredited Programmes',
+				title: 'Subjects',
 				type: 'item',
 				icon: 'heroicons-outline:light-bulb',
 				url: '/apps/academy'

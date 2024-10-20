@@ -267,16 +267,31 @@ function InstitutionsTable() {
 					<MenuItem
 						key={0}
 						onClick={() => {
+							// // Define your view action here, e.g., navigate to detail view
+							// viewProduct(row.original.id);
+							closeMenu();
+						}}
+					>
+						<ListItemIcon>
+							<FuseSvgIcon>heroicons-outline:eye</FuseSvgIcon>
+						</ListItemIcon>
+						View
+					</MenuItem>,
+					<MenuItem
+						key={0}
+						onClick={() => {
 							removeProducts([row.original.id]);
 							closeMenu();
 							table.resetRowSelection();
 						}}
 					>
+
 						<ListItemIcon>
 							<FuseSvgIcon>heroicons-outline:trash</FuseSvgIcon>
 						</ListItemIcon>
 						Delete
 					</MenuItem>
+
 				]}
 				renderTopToolbarCustomActions={({ table }) => {
 					const { rowSelection } = table.getState();
