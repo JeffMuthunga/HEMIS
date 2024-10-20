@@ -30,7 +30,7 @@ function BasicInfoTab() {
 						helperText={errors?.name?.message as string}
 					/>
 				)}
-			/>
+			/>ss
 
 			<Controller
 				name="description"

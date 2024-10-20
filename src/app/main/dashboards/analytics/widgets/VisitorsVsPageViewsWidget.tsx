@@ -105,7 +105,7 @@ function VisitorsVsPageViewsWidget() {
 		<Paper className="flex flex-col flex-auto shadow rounded-xl overflow-hidden">
 			<div className="flex items-start justify-between m-24 mb-0">
 				<Typography className="text-xl font-medium tracking-tight leading-6 truncate">
-					Visitors vs. Page Views
+					Enrollment vs Graduation Rates
 				</Typography>
 				<div className="ml-8">
 					<Chip
@@ -119,7 +119,7 @@ function VisitorsVsPageViewsWidget() {
 				<div className="grid grid-cols-1 sm:grid-cols-3 gap-42 sm:gap-48">
 					<div className="flex flex-col">
 						<div className="flex items-center">
-							<div className="font-medium text-secondary leading-5">Overall Score</div>
+							<div className="font-medium text-secondary leading-5">Median Score</div>
 							<Tooltip title="Score is calculated by using the historical ratio between Page Views and Visitors. Best score is 1000, worst score is 0.">
 								<FuseSvgIcon
 									className="ml-6"

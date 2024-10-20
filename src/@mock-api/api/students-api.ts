@@ -1,6 +1,5 @@
 import _ from '@lodash';
 import FuseUtils from '@fuse/utils';
-// import mockApi from '../mock-api.json';
 import studentsMockApi from '../students-api.json'
 import ExtendedMockAdapter, { Params } from '../ExtendedMockAdapter';
 import { Student } from '../../app/main/dashboards/students/StudentsApi';

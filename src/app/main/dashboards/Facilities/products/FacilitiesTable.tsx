@@ -50,7 +50,7 @@ function FacilitiesTable() {
 			Cell: ({ row }) => (
 				<Typography
 					component={Link}
-					to={`/apps/e-commerce/products/${row.original.id}/${row.original.handle}`}
+					to={`/apps/facilities/products/${row.original.id}/${row.original.handle}`}
 					className="underline"
 					color="secondary"
 					role="button"

@@ -1,190 +1,137 @@
-import { alpha, ThemeProvider, useTheme } from "@mui/material/styles";
-import ReactApexChart from "react-apexcharts";
-import { useState } from "react";
-import Box from "@mui/material/Box";
-import { selectContrastMainTheme } from "@fuse/core/FuseSettings/fuseSettingsSlice";
+import { useTheme } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
-// eslint-disable-next-line camelcase
-import { private_safeDarken } from "@mui/system/colorManipulator";
-import { useAppSelector } from "app/store/hooks";
-import _ from "@lodash";
-import FuseTabs from "app/shared-components/tabs/FuseTabs";
-import FuseTab from "app/shared-components/tabs/FuseTab";
-import VisitorsOverviewWidgetType from "./types/VisitorsOverviewWidgetType";
-import { selectWidget } from "../AnalyticsDashboardApi";
+import _ from "lodash";
 
-function VisitorsOverviewWidget() {
+function EnrollmentGenderComparisonWidget() {
   const theme = useTheme();
-  const contrastTheme = useAppSelector(
-    selectContrastMainTheme(theme.palette.primary.dark)
-  );
-  const widget = useAppSelector(
-    selectWidget<VisitorsOverviewWidgetType>("courses")
-  );
 
-  if (!widget) {
-    return null;
-  }
+  // Data for male and female enrollment in each course
+  const series = [
+    {
+      name: "Males",
+      data: [60, 80, 150, 90, 120, 110, 65], // Male students in each course
+    },
+    {
+      name: "Females",
+      data: [60, 70, 150, 110, 60, 110, 65], // Female students in each course
+    },
+  ];
 
-  const { series } = widget;
+  // Courses
+  const categories = [
+    "Math",
+    "Science",
+    "History",
+    "Art",
+    "Engineering",
+    "Business",
+    "Literature",
+  ];
 
-  const [tabValue, setTabValue] = useState(0);
-  //   const currentRange = Object.keys(ranges)[tabValue];
-
+  // Chart options
   const chartOptions: ApexOptions = {
     chart: {
-      animations: {
-        speed: 400,
-        animateGradually: {
-          enabled: false,
-        },
-      },
-      fontFamily: "inherit",
-      foreColor: "inherit",
-      width: "100%",
+      type: "bar",
       height: "100%",
-      type: "area",
       toolbar: {
         show: false,
       },
-      zoom: {
-        enabled: false,
-      },
+      stacked: false, // Keep bars grouped, not stacked
     },
-    colors: [contrastTheme.palette.secondary.light],
-    dataLabels: {
-      enabled: false,
-    },
-    fill: {
-      colors: [contrastTheme.palette.secondary.dark],
-    },
-    grid: {
-      show: true,
-      borderColor: alpha(contrastTheme.palette.primary.contrastText, 0.1),
-      padding: {
-        top: 10,
-        bottom: -40,
-        left: 0,
-        right: 0,
-      },
-      position: "back",
-      xaxis: {
-        lines: {
-          show: true,
-        },
-      },
-    },
-    stroke: {
-      width: 2,
-    },
-    tooltip: {
-      followCursor: true,
-      theme: "dark",
-      x: {
-        format: "MMM dd, yyyy",
-      },
-      y: {
-        formatter: (value) => `${value}`,
+    colors: [theme.palette.primary.main, theme.palette.secondary.main],
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "50%",
+        // endingShape: "rounded",
       },
     },
     xaxis: {
+      categories, // Courses on the x-axis
       axisBorder: {
-        show: false,
+        show: true,
+        color: theme.palette.divider,
       },
       axisTicks: {
-        show: false,
-      },
-      crosshairs: {
-        stroke: {
-          color: contrastTheme.palette.secondary.main,
-          dashArray: 0,
-          width: 2,
-        },
+        show: true,
+        color: theme.palette.divider,
       },
       labels: {
-        offsetY: -20,
         style: {
-          colors: contrastTheme.palette.primary.contrastText,
+          colors: theme.palette.text.primary,
         },
       },
-      tickAmount: 20,
-      tooltip: {
-        enabled: false,
-      },
-      type: "datetime",
     },
     yaxis: {
-      axisTicks: {
-        show: false,
+      labels: {
+        style: {
+          colors: theme.palette.text.primary,
+        },
+        formatter: function (value) {
+          return value.toFixed(0); // Display whole numbers for student counts
+        },
       },
       axisBorder: {
-        show: false,
+        show: true,
+        color: theme.palette.divider,
       },
-      min: (min) => min - 750,
-      max: (max) => max + 250,
-      tickAmount: 5,
-      show: false,
+      axisTicks: {
+        show: true,
+        color: theme.palette.divider,
+      },
+    },
+    grid: {
+      show: true,
+      borderColor: theme.palette.divider,
+      strokeDashArray: 4,
+    },
+    tooltip: {
+      y: {
+        formatter: function (value, { seriesIndex, dataPointIndex, w }) {
+          const totalStudents =
+            series[0].data[dataPointIndex] + series[1].data[dataPointIndex];
+          const percentage = ((value / totalStudents) * 100).toFixed(2);
+          return `${value} students (${percentage}%)`;
+        },
+      },
+    },
+    legend: {
+      position: "top",
+      horizontalAlign: "center",
+    },
+    dataLabels: {
+      enabled: true,
+      formatter: function (val, opts) {
+        const total =
+          series[0].data[opts.dataPointIndex] +
+          series[1].data[opts.dataPointIndex];
+        const percentage = ((val / total) * 100).toFixed(2);
+        return `${percentage}%`;
+      },
     },
   };
 
   return (
-    <ThemeProvider theme={contrastTheme}>
-      <Box
-        className="sm:col-span-2 lg:col-span-3 dark flex flex-col flex-auto shadow rounded-xl overflow-hidden"
-        sx={{
-          background: private_safeDarken(
-            contrastTheme.palette.primary.main,
-            0.1
-          ),
-          color: contrastTheme.palette.primary.contrastText,
-        }}
-      >
-        <div className="flex justify-between mt-12 mx-12 md:mt-24 md:mx-24">
-          <div className="flex flex-col">
-            <Typography
-              sx={{
-                color: contrastTheme.palette.primary.contrastText,
-              }}
-              className="mr-16 text-2xl md:text-3xl font-semibold tracking-tight leading-7"
-            >
-              Student's Enrollment Overview
-            </Typography>
-            <Typography
-              className="font-medium"
-              sx={{
-                color: alpha(contrastTheme.palette.primary.contrastText, 0.7),
-              }}
-            >
-              Number of students
-            </Typography>
-          </div>
-          <div className="">
-            <FuseTabs
-              value={tabValue}
-              onChange={(_ev, value: number) => setTabValue(value)}
-            >
-              {/* {Object.entries(ranges).map(([key, label]) => (
-                <FuseTab
-                  key={key}
-                  // label={label}
-                />
-              ))} */}
-            </FuseTabs>
-          </div>
-        </div>
-
-        <div className="flex flex-col flex-auto h-320">
-          <ReactApexChart
-            options={chartOptions}
-            series={_.cloneDeep(series)}
-            type={chartOptions?.chart?.type}
-            height={chartOptions?.chart?.height}
-          />
-        </div>
-      </Box>
-    </ThemeProvider>
+    <Paper className="flex flex-col flex-auto shadow rounded-xl overflow-hidden">
+      <div className="flex items-start justify-between m-24 mb-0">
+        <Typography className="text-xl font-medium tracking-tight leading-6 truncate">
+          Male and Female Enrollment per Course
+        </Typography>
+      </div>
+      <div className="flex flex-col flex-auto h-320 mt-12">
+        <ReactApexChart
+          className="flex-auto w-full h-full"
+          options={chartOptions}
+          series={_.cloneDeep(series)}
+          type={chartOptions?.chart?.type}
+          height={chartOptions?.chart?.height}
+        />
+      </div>
+    </Paper>
   );
 }
 
-export default VisitorsOverviewWidget;
+export default EnrollmentGenderComparisonWidget;

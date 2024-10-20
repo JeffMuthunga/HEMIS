@@ -84,6 +84,15 @@ export type Course = {
 		currentStep: number;
 		completed: number;
 	};
+	subjectCode: string;
+	subjectFees: string;
+	academicYear: number;
+	HEIDetails: string;
+	credits: number;
+	department: string;
+	faculty: string;
+	prerequisites: string;
+	"corequisites": string;
 	activeStep?: number;
 	steps?: {
 		content?: string;

@@ -1,75 +1,145 @@
 {
-    "facilities": {
-      "value": [
-        {
-          "id": "1",
-          "academicYear": "2024",
-          "HEIName": "University of Example",
-          "HEICode": "UE123",
-          "campusName": "Main Campus",
-          "buildingName": "Art Building",
-          "roomNumber": "101",
-          "spaceIdentifier": "A-101",
-          "condition": "Good",
-          "assignableArea": 50,
-          "usageType": "Classroom",
-          "occupancyCapacity": 30,
-          "featuredImageId": "1",
-          "images": [
-            {
-              "id": "0",
-              "url": "assets/images/apps/ecommerce/a-walk-amongst-friends.jpg",
-              "type": "image"
-            },
-            {
-              "id": "1",
-              "url": "assets/images/apps/ecommerce/braies-lake.jpg",
-              "type": "image"
-            },
-            {
-              "id": "2",
-              "url": "assets/images/apps/ecommerce/fall-glow.jpg",
-              "type": "image"
-            },
-            {
-              "id": "3",
-              "url": "assets/images/apps/ecommerce/first-snow.jpg",
-              "type": "image"
-            },
-            {
-              "id": "4",
-              "url": "assets/images/apps/ecommerce/lago-di-braies.jpg",
-              "type": "image"
-            },
-            {
-              "id": "5",
-              "url": "assets/images/apps/ecommerce/lago-di-sorapis.jpg",
-              "type": "image"
-            },
-            {
-              "id": "6",
-              "url": "assets/images/apps/ecommerce/never-stop-changing.jpg",
-              "type": "image"
-            },
-            {
-              "id": "7",
-              "url": "assets/images/apps/ecommerce/reaching.jpg",
-              "type": "image"
-            },
-            {
-              "id": "8",
-              "url": "assets/images/apps/ecommerce/morain-lake.jpg",
-              "type": "image"
-            },
-            {
-              "id": "9",
-              "url": "assets/images/apps/ecommerce/yosemite.jpg",
-              "type": "image"
-            }
-          ],
-          "active": true
-        }
-      ]
-    }
+  "facilities": {
+    "value": [
+      {
+        "id": "1",
+        "academicYear": "2024",
+        "HEIName": "University of Example",
+        "HEICode": "UE123",
+        "campusName": "Main Campus",
+        "buildingName": "Art Building",
+        "roomNumber": "101",
+        "spaceIdentifier": "A-101",
+        "condition": "Good",
+        "assignableArea": 50,
+        "usageType": "Classroom",
+        "occupancyCapacity": 30,
+        "featuredImageId": "1",
+        "images": [
+          {
+            "id": "0",
+            "url": "assets/images/apps/ecommerce/a-walk-amongst-friends.jpg",
+            "type": "image"
+          }
+          
+        ],
+        "active": true
+      },
+      {
+        "id": "2",
+        "academicYear": "2024",
+        "HEIName": "University of Example",
+        "HEICode": "UE123",
+        "campusName": "Main Campus",
+        "buildingName": "Science Building",
+        "roomNumber": "202",
+        "spaceIdentifier": "B-202",
+        "condition": "Excellent",
+        "assignableArea": 70,
+        "usageType": "Laboratory",
+        "occupancyCapacity": 40,
+        "featuredImageId": "2",
+        "images": [
+          {
+            "id": "0",
+            "url": "assets/images/apps/ecommerce/science-lab.jpg",
+            "type": "image"
+          }
+        ],
+        "active": true
+      },
+      {
+        "id": "3",
+        "academicYear": "2024",
+        "HEIName": "University of Example",
+        "HEICode": "UE123",
+        "campusName": "Main Campus",
+        "buildingName": "Library",
+        "roomNumber": "301",
+        "spaceIdentifier": "C-301",
+        "condition": "Good",
+        "assignableArea": 100,
+        "usageType": "Study Room",
+        "occupancyCapacity": 50,
+        "featuredImageId": "3",
+        "images": [
+          {
+            "id": "0",
+            "url": "assets/images/apps/ecommerce/library.jpg",
+            "type": "image"
+          }
+        ],
+        "active": true
+      },
+      {
+        "id": "4",
+        "academicYear": "2024",
+        "HEIName": "University of Example",
+        "HEICode": "UE123",
+        "campusName": "Main Campus",
+        "buildingName": "Sports Complex",
+        "roomNumber": "G01",
+        "spaceIdentifier": "D-G01",
+        "condition": "Fair",
+        "assignableArea": 150,
+        "usageType": "Gymnasium",
+        "occupancyCapacity": 200,
+        "featuredImageId": "4",
+        "images": [
+          {
+            "id": "0",
+            "url": "assets/images/apps/ecommerce/sports-complex.jpg",
+            "type": "image"
+          }
+        ],
+        "active": true
+      },
+      {
+        "id": "5",
+        "academicYear": "2024",
+        "HEIName": "University of Example",
+        "HEICode": "UE123",
+        "campusName": "Main Campus",
+        "buildingName": "Cafeteria",
+        "roomNumber": "C01",
+        "spaceIdentifier": "E-C01",
+        "condition": "Good",
+        "assignableArea": 120,
+        "usageType": "Dining Area",
+        "occupancyCapacity": 80,
+        "featuredImageId": "5",
+        "images": [
+          {
+            "id": "0",
+            "url": "assets/images/apps/ecommerce/cafeteria.jpg",
+            "type": "image"
+          }
+        ],
+        "active": true
+      },
+      {
+        "id": "6",
+        "academicYear": "2024",
+        "HEIName": "University of Example",
+        "HEICode": "UE123",
+        "campusName": "Main Campus",
+        "buildingName": "Engineering Building",
+        "roomNumber": "404",
+        "spaceIdentifier": "F-404",
+        "condition": "Excellent",
+        "assignableArea": 60,
+        "usageType": "Lecture Hall",
+        "occupancyCapacity": 100,
+        "featuredImageId": "6",
+        "images": [
+          {
+            "id": "0",
+            "url": "assets/images/apps/ecommerce/engineering-building.jpg",
+            "type": "image"
+          }
+        ],
+        "active": true
+      }
+    ]
   }
-  
+}

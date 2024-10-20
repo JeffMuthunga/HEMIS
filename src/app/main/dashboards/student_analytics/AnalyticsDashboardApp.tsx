@@ -13,6 +13,7 @@ import AgeWidget from "./widgets/AgeWidget";
 import LanguageWidget from "./widgets/LanguageWidget";
 import GenderWidget from "./widgets/GenderWidget";
 import { useGetAnalyticsDashboardWidgetsQuery } from "./AnalyticsDashboardApi";
+import StudentCourseEnrollment from "./widgets/courseEnrollment";
 
 const container = {
   show: {
@@ -47,15 +48,23 @@ function AnalyticsDashboardApp() {
           initial="hidden"
           animate="show"
         >
-          {/* <motion.div variants={item} className="sm:col-span-2 lg:col-span-3">
-            <VisitorsOverviewWidget />
-          </motion.div> */}
+          <motion.div variants={item} className="sm:col-span-2 lg:col-span-3">
+            <EnrollmentGrowth />
+          </motion.div>
+
+          <motion.div variants={item} className="sm:col-span-2 lg:col-span-3">
+            <StudentCourseEnrollment />
+          </motion.div>
 
           {/* <motion.div variants={item} className="sm:col-span-2 lg:col-span-1 ">
             <ConversionsWidget />
+          </motion.div> */}
+
+          <motion.div variants={item} className="sm:col-span-2 lg:col-span-3">
+            <VisitorsOverviewWidget />
           </motion.div>
 
-          <motion.div variants={item} className="sm:col-span-2 lg:col-span-1 ">
+          {/* <motion.div variants={item} className="sm:col-span-2 lg:col-span-1 ">
             <ImpressionsWidget />
           </motion.div>
 
@@ -63,23 +72,20 @@ function AnalyticsDashboardApp() {
             <VisitsWidget />
           </motion.div> */}
 
-          <motion.div variants={item} className="sm:col-span-2 lg:col-span-3">
-            <EnrollmentGrowth />
-          </motion.div>
-
-          {/* <div className="w-full mt-16 sm:col-span-3">
+          <div className="w-full mt-16 sm:col-span-3">
             <Typography className="text-2xl font-semibold tracking-tight leading-6">
-              Your Audience
+              Enrollment Statistics
             </Typography>
             <Typography
               className="font-medium tracking-tight"
               color="text.secondary"
             >
-              Demographic properties of your users
+              Student enrollment to the higher education system according to
+              age, region of origin and gender.
             </Typography>
-          </div> */}
+          </div>
 
-          <div className="sm:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-32 w-full">
+          <div className="sm:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-32 w-full">
             <motion.div variants={item}>
               <NewVsReturningWidget />
             </motion.div>
@@ -89,9 +95,9 @@ function AnalyticsDashboardApp() {
             <motion.div variants={item}>
               <AgeWidget />
             </motion.div>
-            <motion.div variants={item}>
+            {/* <motion.div variants={item}>
               <LanguageWidget />
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       }

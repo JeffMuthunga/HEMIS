@@ -57,7 +57,7 @@ function Impressions() {
 	return (
 		<Paper className="flex flex-col flex-auto shadow rounded-xl overflow-hidden">
 			<div className="flex items-start justify-between m-16 mb-0">
-				<Typography className="text-lg font-medium tracking-tight leading-6 truncate">Impressions</Typography>
+				<Typography className="text-lg font-medium tracking-tight leading-6 truncate">Staffing Patterns</Typography>
 				<div className="ml-8">
 					<Chip
 						size="small"

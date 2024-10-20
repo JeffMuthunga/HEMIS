@@ -65,13 +65,17 @@ function EnrollmentGenderComparisonWidget() {
     },
     xaxis: {
       axisBorder: {
-        show: false,
+        show: true, // Show x-axis line
+        color: theme.palette.divider,
+      },
+      axisTicks: {
+        show: true, // Show ticks on the x-axis
+        color: theme.palette.divider,
       },
       labels: {
-        offsetY: -20,
-        rotate: 0,
+        offsetY: 5, // Adjust this to align labels better
         style: {
-          colors: theme.palette.text.secondary,
+          colors: theme.palette.text.primary, // Use primary color for better contrast
         },
       },
       tickAmount: 3,
@@ -83,13 +87,27 @@ function EnrollmentGenderComparisonWidget() {
     yaxis: {
       labels: {
         style: {
-          colors: theme.palette.divider,
+          colors: theme.palette.text.primary, // Set the label color to the primary text color
         },
+        offsetX: -10, // Move labels outside the chart
       },
       max: (max) => max + 250,
       min: (min) => min - 250,
-      show: false,
+      show: true, // Show y-axis
       tickAmount: 5,
+      axisBorder: {
+        show: true, // Show y-axis line
+        color: theme.palette.divider,
+      },
+      axisTicks: {
+        show: true, // Show ticks on the y-axis
+        color: theme.palette.divider,
+      },
+    },
+    grid: {
+      show: true, // Show grid lines
+      borderColor: theme.palette.divider,
+      strokeDashArray: 4,
     },
   };
 

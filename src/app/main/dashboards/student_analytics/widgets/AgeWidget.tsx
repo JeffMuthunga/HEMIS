@@ -1,150 +1,90 @@
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import { memo, useEffect, useState } from 'react';
-import Chip from '@mui/material/Chip';
-import Box from '@mui/material/Box';
-import { useTheme } from '@mui/material/styles';
-import { ApexOptions } from 'apexcharts';
-import ReactApexChart from 'react-apexcharts';
-import { useAppSelector } from 'app/store/hooks';
-import AgeWidgetModelType from './types/AgeWidgetType';
-import { selectWidget } from '../AnalyticsDashboardApi';
+import { useTheme } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import ReactApexChart from "react-apexcharts";
+import { ApexOptions } from "apexcharts";
 
-/**
- * The age widget.
- */
-function AgeWidget() {
-	const widget = useAppSelector(selectWidget<AgeWidgetModelType>('age'));
+function RegionOfOriginPieChart() {
+  const theme = useTheme();
 
-	if (!widget) {
-		return null;
-	}
+  // Data for the number of people per region
+  const series = [500, 400, 300, 250, 200, 150, 100]; // Example data for the regions
 
-	const { series, labels, uniqueVisitors } = widget;
-	const [awaitRender, setAwaitRender] = useState(true);
-	const theme = useTheme();
+  // Region names
+  const labels = [
+    "Khomas",
+    "Oshana",
+    "Ohangwena",
+    "Omusati",
+    "Erongo",
+    "Kavango East",
+    "Others",
+  ];
 
-	const chartOptions: ApexOptions = {
-		chart: {
-			animations: {
-				speed: 400,
-				animateGradually: {
-					enabled: false
-				}
-			},
-			fontFamily: 'inherit',
-			foreColor: 'inherit',
-			height: '100%',
-			type: 'donut',
-			sparkline: {
-				enabled: true
-			}
-		},
-		colors: ['#DD6B20', '#F6AD55'],
-		labels,
-		plotOptions: {
-			pie: {
-				customScale: 0.9,
-				expandOnClick: false,
-				donut: {
-					size: '70%'
-				}
-			}
-		},
-		stroke: {
-			colors: [theme.palette.background.paper]
-		},
-		series,
-		states: {
-			hover: {
-				filter: {
-					type: 'none'
-				}
-			},
-			active: {
-				filter: {
-					type: 'none'
-				}
-			}
-		},
-		tooltip: {
-			enabled: true,
-			fillSeriesColor: false,
-			theme: 'dark',
-			custom: ({
-				seriesIndex,
-				w
-			}: {
-				seriesIndex: number;
-				w: { config: { colors: string[]; labels: string[]; series: string[] } };
-			}) =>
-				`<div class="flex items-center h-32 min-h-32 max-h-23 px-12">
-            <div class="w-12 h-12 rounded-full" style="background-color: ${w.config.colors[seriesIndex]};"></div>
-            <div class="ml-8 text-md leading-none">${w?.config?.labels[seriesIndex]}:</div>
-            <div class="ml-8 text-md font-bold leading-none">${w.config.series[seriesIndex]}%</div>
-        </div>`
-		}
-	};
+  // Chart options
+  const chartOptions: ApexOptions = {
+    chart: {
+      type: "donut",
+      height: "100%",
+    },
+    labels, // Region names for the chart
+    colors: [
+      theme.palette.primary.main,
+      theme.palette.secondary.main,
+      theme.palette.error.main,
+      theme.palette.warning.main,
+      theme.palette.success.main,
+      theme.palette.info.main,
+      theme.palette.grey[500],
+    ],
+    legend: {
+      position: "bottom",
+      horizontalAlign: "center",
+    },
+    dataLabels: {
+      enabled: true,
+      formatter: (val) => `${val.toFixed(2)}%`, // Format the percentages to 2 decimal places
+    },
+    tooltip: {
+      y: {
+        formatter: (value) => `${value} people`, // Show the number of people in the tooltip
+      },
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: "70%", // Defines the size of the inner circle
+          labels: {
+            show: true,
+            total: {
+              show: false,
+              label: "Total",
+              formatter: () => "1900", // Total number of people
+            },
+          },
+        },
+      },
+    },
+  };
 
-	useEffect(() => {
-		setAwaitRender(false);
-	}, []);
-
-	if (awaitRender) {
-		return null;
-	}
-
-	return (
-		<Paper className="flex flex-col flex-auto shadow rounded-xl overflow-hidden p-16">
-			<div className="flex flex-col sm:flex-row items-start justify-between">
-				<Typography className="text-lg font-medium tracking-tight leading-6 truncate">Age</Typography>
-				<div className="ml-8">
-					<Chip
-						size="small"
-						className="font-medium text-sm"
-						label=" 30 days"
-					/>
-				</div>
-			</div>
-
-			<div className="flex flex-col flex-auto mt-24 h-192">
-				<ReactApexChart
-					className="flex flex-auto items-center justify-center w-full h-full"
-					options={chartOptions}
-					series={series}
-					type={chartOptions.chart?.type}
-					height={chartOptions.chart?.height}
-				/>
-			</div>
-			<div className="mt-32">
-				<div className="-my-12 divide-y">
-					{series?.map((dataset, i) => (
-						<div
-							className="grid grid-cols-3 py-12"
-							key={i}
-						>
-							<div className="flex items-center">
-								<Box
-									className="flex-0 w-8 h-8 rounded-full"
-									sx={{ backgroundColor: chartOptions?.colors?.[i] as string }}
-								/>
-								<Typography className="ml-12 truncate">{labels?.[i]}</Typography>
-							</div>
-							<Typography className="font-medium text-right">
-								{((uniqueVisitors * dataset) / 100).toLocaleString('en-US')}
-							</Typography>
-							<Typography
-								className="text-right"
-								color="text.secondary"
-							>
-								{dataset}%
-							</Typography>
-						</div>
-					))}
-				</div>
-			</div>
-		</Paper>
-	);
+  return (
+    <Paper className="flex flex-col flex-auto shadow rounded-xl overflow-hidden">
+      <div className="flex items-start justify-between m-24 mb-0">
+        <Typography className="text-xl font-medium tracking-tight leading-6 truncate">
+          People by Region of Origin
+        </Typography>
+      </div>
+      <div className="flex flex-col flex-auto h-320 mt-12">
+        <ReactApexChart
+          className="flex-auto w-full h-full"
+          options={chartOptions}
+          series={series}
+          type="donut"
+          height="100%"
+        />
+      </div>
+    </Paper>
+  );
 }
 
-export default memo(AgeWidget);
+export default RegionOfOriginPieChart;

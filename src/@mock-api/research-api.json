@@ -1,0 +1,82 @@
+{
+    "research": {
+      "value": [
+        {
+          "id": "research-1",
+          "researchTitle": "AI and Machine Learning",
+          "typeOfResearchOutcome": "Journal Article",
+          "namesOfResearchers": "Dr. John Doe, Dr. Jane Smith",
+          "areasfResearch": "Artificial Intelligence, Data Science",
+          "academicYear": "2024",
+          "heiDetails": "University of Example",
+          "publicationDate": "2024-05-12",
+          "journalConferenceDate": "2024-06-15",
+          "volumeIssue": 12,
+          "pages": "101-120",
+          "DOI": "10.1234/exampledoi.123456",
+          "featuredImageId": "1",
+          "fundingScore": "5/5",
+          "images": [
+            {
+              "id": "0",
+              "url": "assets/images/research/ai-machine-learning.jpg",
+              "type": "image"
+            }
+          ],
+          "abstract": "This research explores the advancements in AI and machine learning and their impact on various industries.",
+          "active": true
+        },
+        {
+          "id": "research-2",
+          "researchTitle": "Climate Change and Environmental Policy",
+          "typeOfResearchOutcome": "Conference Paper",
+          "namesOfResearchers": "Dr. Emily Davis, Dr. Michael Lee",
+          "areasfResearch": "Environmental Science, Policy Studies",
+          "academicYear": "2024",
+          "heiDetails": "University of Example",
+          "publicationDate": "2024-03-18",
+          "journalConferenceDate": "2024-04-22",
+          "volumeIssue": 0,
+          "pages": "55-80",
+          "DOI": "10.1234/exampledoi.789012",
+          "featuredImageId": "2",
+          "fundingScore": "4/5",
+          "images": [
+            {
+              "id": "0",
+              "url": "assets/images/research/climate-change.jpg",
+              "type": "image"
+            }
+          ],
+          "abstract": "This paper discusses the global climate crisis and the role of policy interventions in mitigating its effects.",
+          "active": true
+        },
+        {
+          "id": "research-3",
+          "researchTitle": "Quantum Computing: A New Frontier",
+          "typeOfResearchOutcome": "Book Chapter",
+          "namesOfResearchers": "Dr. Sarah Green, Dr. Robert White",
+          "areasfResearch": "Quantum Physics, Computer Science",
+          "academicYear": "2024",
+          "heiDetails": "University of Example",
+          "publicationDate": "2024-08-10",
+          "journalConferenceDate": "2024-09-01",
+          "volumeIssue": 1,
+          "pages": "220-250",
+          "DOI": "10.5678/be2024",
+          "featuredImageId": "3",
+          "fundingScore": "4.5/5",
+          "images": [
+            {
+              "id": "0",
+              "url": "assets/images/research/quantum-computing.jpg",
+              "type": "image"
+            }
+          ],
+          "abstract": "This chapter delves into the potential of quantum computing and its future implications for technology.",
+          "active": true
+        }
+      ]
+    }
+  }
+  

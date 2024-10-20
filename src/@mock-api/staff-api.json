@@ -1,0 +1,156 @@
+{
+    "staff": {
+      "value": [
+        {
+          "id": "1",
+          "academicYear": "2024",
+          "PersonelId": "PS001",
+          "StaffName": "John",
+          "Surname": "Smith",
+          "Sex": "Male",
+          "DateOfBirth": "1980-05-15",
+          "ContactInformation": "john.smith@example.edu",
+          "TermsOfEmployment": "Full-Time",
+          "ModeOfEmployment": 1,
+          "DateOfEmployment": "2020-01-15",
+          "Department": 1,
+          "featuredImageId": "1",
+          "Qualification": "Ph.D. in Computer Science",
+          "images": [
+            {
+              "id": "0",
+              "url": "assets/images/staff/john-smith.jpg",
+              "type": "image"
+            }
+          ],
+          "AcademicEmploymentFunction": "Professor",
+          "active": true
+        },
+        {
+          "id": "2",
+          "academicYear": "2024",
+          "PersonelId": "PS002",
+          "StaffName": "Sarah",
+          "Surname": "Johnson",
+          "Sex": "Female",
+          "DateOfBirth": "1985-08-22",
+          "ContactInformation": "sarah.johnson@example.edu",
+          "TermsOfEmployment": "Full-Time",
+          "ModeOfEmployment": 1,
+          "DateOfEmployment": "2019-03-10",
+          "Department": 2,
+          "featuredImageId": "2",
+          "Qualification": "Ph.D. in Physics",
+          "images": [
+            {
+              "id": "0",
+              "url": "assets/images/staff/sarah-johnson.jpg",
+              "type": "image"
+            }
+          ],
+          "AcademicEmploymentFunction": "Associate Professor",
+          "active": true
+        },
+        {
+          "id": "3",
+          "academicYear": "2024",
+          "PersonelId": "PS003",
+          "StaffName": "Michael",
+          "Surname": "Brown",
+          "Sex": "Male",
+          "DateOfBirth": "1975-11-30",
+          "ContactInformation": "michael.brown@example.edu",
+          "TermsOfEmployment": "Part-Time",
+          "ModeOfEmployment": 2,
+          "DateOfEmployment": "2021-09-01",
+          "Department": 3,
+          "featuredImageId": "3",
+          "Qualification": "Master's in Literature",
+          "images": [
+            {
+              "id": "0",
+              "url": "assets/images/staff/michael-brown.jpg",
+              "type": "image"
+            }
+          ],
+          "AcademicEmploymentFunction": "Lecturer",
+          "active": true
+        },
+        {
+          "id": "4",
+          "academicYear": "2024",
+          "PersonelId": "PS004",
+          "StaffName": "Emily",
+          "Surname": "Davis",
+          "Sex": "Female",
+          "DateOfBirth": "1988-04-17",
+          "ContactInformation": "emily.davis@example.edu",
+          "TermsOfEmployment": "Full-Time",
+          "ModeOfEmployment": 1,
+          "DateOfEmployment": "2018-08-15",
+          "Department": 4,
+          "featuredImageId": "4",
+          "Qualification": "Ph.D. in Chemistry",
+          "images": [
+            {
+              "id": "0",
+              "url": "assets/images/staff/emily-davis.jpg",
+              "type": "image"
+            }
+          ],
+          "AcademicEmploymentFunction": "Research Professor",
+          "active": true
+        },
+        {
+          "id": "5",
+          "academicYear": "2024",
+          "PersonelId": "PS005",
+          "StaffName": "Robert",
+          "Surname": "Wilson",
+          "Sex": "Male",
+          "DateOfBirth": "1982-12-05",
+          "ContactInformation": "robert.wilson@example.edu",
+          "TermsOfEmployment": "Contract",
+          "ModeOfEmployment": 3,
+          "DateOfEmployment": "2022-01-20",
+          "Department": 5,
+          "featuredImageId": "5",
+          "Qualification": "Master's in Mathematics",
+          "images": [
+            {
+              "id": "0",
+              "url": "assets/images/staff/robert-wilson.jpg",
+              "type": "image"
+            }
+          ],
+          "AcademicEmploymentFunction": "Assistant Professor",
+          "active": true
+        },
+        {
+          "id": "6",
+          "academicYear": "2024",
+          "PersonelId": "PS006",
+          "StaffName": "Lisa",
+          "Surname": "Anderson",
+          "Sex": "Female",
+          "DateOfBirth": "1979-07-25",
+          "ContactInformation": "lisa.anderson@example.edu",
+          "TermsOfEmployment": "Full-Time",
+          "ModeOfEmployment": 1,
+          "DateOfEmployment": "2017-06-30",
+          "Department": 6,
+          "featuredImageId": "6",
+          "Qualification": "Ph.D. in Engineering",
+          "images": [
+            {
+              "id": "0",
+              "url": "assets/images/staff/lisa-anderson.jpg",
+              "type": "image"
+            }
+          ],
+          "AcademicEmploymentFunction": "Professor",
+          "active": true
+        }
+      ]
+    }
+  }

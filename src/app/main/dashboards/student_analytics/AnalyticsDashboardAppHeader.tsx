@@ -13,7 +13,7 @@ function AnalyticsDashboardAppHeader() {
         <div className="flex flex-col flex-auto">
           <PageBreadcrumb className="mb-8" />
           <Typography className="text-3xl font-semibold tracking-tight leading-8">
-            NCHE Enrollment Analytics dashboard
+            NCHE Student Enrollment Analytics Dashboard
           </Typography>
           {/* <Typography
             className="font-medium tracking-tight"
@@ -23,7 +23,7 @@ function AnalyticsDashboardAppHeader() {
           </Typography> */}
         </div>
         <div className="flex items-center mt-24 sm:mt-0 sm:mx-8 space-x-8">
-          <Button
+          {/* <Button
             className="whitespace-nowrap"
             startIcon={
               <FuseSvgIcon size={20}>heroicons-solid:cog-6-tooth</FuseSvgIcon>
@@ -32,7 +32,7 @@ function AnalyticsDashboardAppHeader() {
             color="primary"
           >
             Settings
-          </Button>
+          </Button> */}
           <Button
             className="whitespace-nowrap"
             variant="contained"
