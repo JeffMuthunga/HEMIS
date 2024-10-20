@@ -45,7 +45,7 @@ const navigationConfig: FuseNavItemType[] = [
 				children: [
 					{
 						id: 'institutions',
-						title: 'Institutions',
+						title: 'institutions',
 						type: 'item',
 						// icon: 'heroicons-outline:building-library',
 						url: '/dashboards/institutions',
@@ -53,10 +53,16 @@ const navigationConfig: FuseNavItemType[] = [
 					},
 					{
 						id: 'indicators',
-						title: 'Indicators',
+						title: 'indicators',
 						type: 'item',
 						// icon: 'heroicons-outline:building-library',
 						url: '/dashboards/indicators',
+					},
+					{
+						id: 'institution-programmes',
+						title: 'programmes',
+						type: 'item',
+						url: '/dashboards/institution-programmes',
 					},
 				]
 			},
@@ -64,18 +70,18 @@ const navigationConfig: FuseNavItemType[] = [
 				id: 'dashboards.programmes',
 				title: 'Programmes Management',
 				type: 'collapse',
-				icon: 'heroicons-outline:chart-pie',
-				// url: '/dashboards/program'
+				icon: 'heroicons-outline:building-library',
+				// url: '/dashboards/institutions',
 				children: [
 					{
-						id: 'programmes',
-						title: 'Programmes',
+						id: 'hei-programmes',
+						title: 'programme accreditation',
 						type: 'item',
-						url: '/dashboards/programmes',
-						end: true
+						url: '/dashboards/programmes-accreditations',
 					},
 				]
 			},
+
 
 			{
 				id: 'dashboards.students',

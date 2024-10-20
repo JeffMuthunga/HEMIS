@@ -1,0 +1,71 @@
+{
+  "accreditations": {
+    "value": [
+      {
+        "hei_name": "BSE",
+        "site_and_contract_information": "Main Campus, contact@usc.edu, 123-456-7890",
+        "programme_name": "Bachelor of Science in Physics",
+        "nqf_level": "7",
+        "credits": "360",
+        "stakeholder_involvement": "Industry partners, Professional bodies",
+        "accreditation_status": "Accredited",
+        "year_of_accreditation": "2024",
+        "department": "Department of Physics",
+        "faculty": "Faculty of Science",
+        "handle": "BSE"
+      },
+      {
+        "hei_name": "IUM",
+        "site_and_contract_information": "North Campus, contact@ai.edu, 234-567-8901",
+        "programme_name": "Master of Arts in History",
+        "nqf_level": "9",
+        "credits": "180",
+        "stakeholder_involvement": "Historical societies, Alumni",
+        "accreditation_status": "Accredited",
+        "year_of_accreditation": "2024",
+        "department": "Department of History",
+        "faculty": "Faculty of Humanities",
+        "handle": "BSE"
+      },
+      {
+        "hei_name": "NUST",
+        "site_and_contract_information": "Tech Campus, support@tu.edu, 345-678-9012",
+        "programme_name": "Diploma in Electrical Engineering",
+        "nqf_level": "6",
+        "credits": "240",
+        "stakeholder_involvement": "Engineering firms, Accreditation agencies",
+        "accreditation_status": "Accredited",
+        "year_of_accreditation": "2024",
+        "department": "Department of Electrical Engineering",
+        "faculty": "Faculty of Engineering",
+        "handle": "BSE"
+      },
+      {
+        "hei_name": "UNAM",
+        "site_and_contract_information": "Health Campus, admissions@hsc.edu, 456-789-0123",
+        "programme_name": "Doctor of Medicine",
+        "nqf_level": "10",
+        "credits": "480",
+        "stakeholder_involvement": "Medical associations, Hospitals",
+        "accreditation_status": "Accredited",
+        "year_of_accreditation": "2024",
+        "department": "Department of Medicine",
+        "faculty": "Faculty of Health Sciences",
+        "handle": "BSE"
+      },
+      {
+        "hei_name": "NUST",
+        "site_and_contract_information": "Main Campus, admin@hu.edu, 567-890-1234",
+        "programme_name": "Bachelor of Arts in Literature",
+        "nqf_level": "7",
+        "credits": "360",
+        "stakeholder_involvement": "Literary clubs, Academic councils",
+        "accreditation_status": "Accredited",
+        "year_of_accreditation": "2024",
+        "department": "Department of Literature",
+        "faculty": "Faculty of Humanities",
+        "handle": "BSE"
+      }
+    ]
+  }
+}

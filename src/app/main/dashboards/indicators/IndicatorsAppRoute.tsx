@@ -11,7 +11,7 @@ const Indicators = lazy(() => import('./indicators/Indicators'));
  * The E-Commerce app Routes.
  */
 const IndicatorsAppRoute: FuseRouteItemType = {
-	path: 'dashboards/programmes',
+	path: 'dashboards/indicators',
 	element: <IndicatorsApp />,
 	children: [
 		{
