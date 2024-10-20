@@ -79,7 +79,7 @@ const navigationConfig: FuseNavItemType[] = [
 			},
 			{
 				id: 'apps.academy',
-				title: 'Accredited Programmes',
+				title: 'Subjects',
 				type: 'item',
 				icon: 'heroicons-outline:light-bulb',
 				url: '/apps/academy'
