@@ -11,7 +11,7 @@ const Programmes = lazy(() => import('./programmes/Programmes'));
  * The E-Commerce app Routes.
  */
 const ProgrammesAppRoute: FuseRouteItemType = {
-	path: 'dashboards/programmes',
+	path: 'dashboards/accreditation-programmes',
 	element: <ProgrammesApp />,
 	children: [
 		{
