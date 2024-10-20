@@ -39,7 +39,7 @@ export const indicatorApiMocks = (mock: ExtendedMockAdapter) => {
 			return [200, indicator];
 		}
 
-		return [404, 'Requested indicator does not exist.'];
+		return [404, 'Requested programme does not exist.'];
 	});
 
 	mock.onPut('/indicators/all/:id').reply((config) => {

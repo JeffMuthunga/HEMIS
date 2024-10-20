@@ -37,19 +37,50 @@ const navigationConfig: FuseNavItemType[] = [
         url: "/dashboards/analytics",
       },
       {
-        id: "dashboards.studentAnalytics",
-        title: "Student Enrollment Analytics",
-        type: "item",
-        icon: "heroicons-outline:presentation-chart-bar",
-        url: "/dashboards/student_analytics",
+        id: "dashboards.institutions",
+        title: "Institutions Management",
+        type: "collapse",
+        icon: "heroicons-outline:building-library",
+        // url: '/dashboards/institutions',
+        children: [
+          {
+            id: "institutions",
+            title: "institutions",
+            type: "item",
+            // icon: 'heroicons-outline:building-library',
+            url: "/dashboards/institutions",
+          },
+          {
+            id: "indicators",
+            title: "indicators",
+            type: "item",
+            // icon: 'heroicons-outline:building-library',
+            url: "/dashboards/indicators",
+          },
+          {
+            id: "institution-programmes",
+            title: "programmes",
+            type: "item",
+            url: "/dashboards/institution-programmes",
+          },
+        ],
       },
       {
-        id: "dashboards.institutions",
-        title: "Institutions",
-        type: "item",
+        id: "dashboards.programmes",
+        title: "Programmes Management",
+        type: "collapse",
         icon: "heroicons-outline:building-library",
-        url: "/dashboards/institutions",
+        // url: '/dashboards/institutions',
+        children: [
+          {
+            id: "hei-programmes",
+            title: "programme accreditation",
+            type: "item",
+            url: "/dashboards/programmes-accreditations",
+          },
+        ],
       },
+
       {
         id: "dashboards.students",
         title: "Students Management",
@@ -86,7 +117,7 @@ const navigationConfig: FuseNavItemType[] = [
       },
       {
         id: "apps.academy",
-        title: "Accredited Programmes",
+        title: "Subjects",
         type: "item",
         icon: "heroicons-outline:light-bulb",
         url: "/apps/academy",
@@ -202,6 +233,13 @@ const navigationConfig: FuseNavItemType[] = [
           // 	end: true
           // }
         ],
+      },
+      {
+        id: "dashboards.studentAnalytics",
+        title: "Student Enrollment Analytics",
+        type: "item",
+        icon: "heroicons-outline:presentation-chart-bar",
+        url: "/dashboards/student_analytics",
       },
       {
         id: "dashboards.workflows",

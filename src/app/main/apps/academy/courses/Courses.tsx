@@ -113,7 +113,7 @@ function Courses() {
 								color="white"
 								className="text-center text-5xl sm:text-48 font-extrabold tracking-tight mt-4"
 							>
-								HEMIS Available Accredited Programmes.
+								HEMIS Available Subjects.
 							</Typography>
 						</motion.div>
 						<motion.div
@@ -124,7 +124,7 @@ function Courses() {
 								color="white"
 								className="text-15 sm:text-2xl mt-16 sm:mt-24 opacity-75 tracking-tight max-w-md text-center"
 							>
-								The programmes meet standards against NCHE's criteria.
+								Subjects meet standards against NCHE's criteria.
 							</Typography>
 						</motion.div>
 					</div>
