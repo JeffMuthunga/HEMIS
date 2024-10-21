@@ -19,7 +19,6 @@ import ContactInfoTab from './tabs/ContactInfoTab';
 import PricingTab from './tabs/PricingTab';
 import ProductImagesTab from './tabs/ProductImagesTab';
 import ShippingTab from './tabs/ShippingTab';
-import { useGetIndicatorQuery } from '../AccreditationsApi';
 import AccreditationModel from './models/AccreditationModel';
 
 /**
