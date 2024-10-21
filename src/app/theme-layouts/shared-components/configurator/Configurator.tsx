@@ -116,17 +116,17 @@ function Configurator() {
 				</Button>
 			</Root>
 
-			<SettingsPanel
-				open={Boolean(open === 'settings')}
-				onClose={handleClose}
-				settingsHandlers={settingsHandlers}
-			/>
+			{/*<SettingsPanel*/}
+			{/*	open={Boolean(open === 'settings')}*/}
+			{/*	onClose={handleClose}*/}
+			{/*	settingsHandlers={settingsHandlers}*/}
+			{/*/>*/}
 
-			<ThemesPanel
-				schemesHandlers={schemesHandlers}
-				onClose={handleClose}
-				open={Boolean(open === 'schemes')}
-			/>
+			{/*<ThemesPanel*/}
+			{/*	schemesHandlers={schemesHandlers}*/}
+			{/*	onClose={handleClose}*/}
+			{/*	open={Boolean(open === 'schemes')}*/}
+			{/*/>*/}
 		</>
 	);
 }

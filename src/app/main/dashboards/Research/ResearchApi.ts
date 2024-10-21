@@ -154,9 +154,9 @@ const researchApi = api
 
       updateResearchProduct: build.mutation<UpdateResearchProductApiResponse, UpdateResearchProductApiArg>({
         query: (product) => ({
-          url: `/mock-api/research/products/${product.id}`,
-          method: 'PUT',
-          body: product,
+          // url: `/mock-api/research/products/${product.id}`,
+          // method: 'PUT',
+          // body: product,
         }),
         invalidatesTags: ['research_product', 'research_products'],
       }),
@@ -185,9 +185,9 @@ const researchApi = api
 
       updateResearchOrder: build.mutation<UpdateResearchOrderApiResponse, UpdateResearchOrderApiArg>({
         query: (order) => ({
-          url: `/mock-api/research/orders/${order.id}`,
-          method: 'PUT',
-          body: order,
+          // url: `/mock-api/research/orders/${order.id}`,
+          // method: 'PUT',
+          // body: order,
         }),
         invalidatesTags: ['research_order', 'research_orders'],
       }),
@@ -227,8 +227,8 @@ export const {
   useDeleteResearchOrdersMutation,
 } = researchApi;
 
-export type ResearchApiType = {
-  [researchApi.reducerPath]: ReturnType<typeof researchApi.reducer>;
-};
+// export type ResearchApiType = {
+//   [researchApi.reducerPath]: ReturnType<typeof researchApi.reducer>;
+// };
 
 export default researchApi;

@@ -1,11 +1,11 @@
 import _ from '@lodash';
 import { PartialDeep } from 'type-fest';
-import { Student } from '../../IndicatorsApi';
+import { Indicator } from '../../IndicatorsApi';
 
 /**
  * The product model.
  */
-const IndicatorModel = (data: PartialDeep<Student>) =>
+const IndicatorModel = (data: PartialDeep<Indicator>) =>
 	_.defaults(data || {}, {
 		id: _.uniqueId('student-'),
 		handle: '',

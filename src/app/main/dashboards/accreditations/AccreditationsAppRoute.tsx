@@ -25,14 +25,14 @@ const AccreditationsAppRoute: FuseRouteItemType = {
 					path: '',
 					element: <Accreditations />
 				},
-				{
-					path: ':accreditationId/:handle?',
-					element: <Accreditation />
-				},
-				{
-					path: 'new',
-					element: <Accreditation/>
-				}
+				// {
+				// 	path: ':accreditationId/:handle?',
+				// 	element: <Accreditation />
+				// },
+				// {
+				// 	path: 'new',
+				// 	element: <Accreditation/>
+				// }
 			]
 		},
 	]

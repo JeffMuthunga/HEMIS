@@ -43,7 +43,7 @@ function RegionOfOriginPieChart() {
     },
     dataLabels: {
       enabled: true,
-      formatter: (val) => `${val.toFixed(2)}%`, // Format the percentages to 2 decimal places
+      // formatter: (val) => `${val.toFixed(2)}%`, // Format the percentages to 2 decimal places
     },
     tooltip: {
       y: {

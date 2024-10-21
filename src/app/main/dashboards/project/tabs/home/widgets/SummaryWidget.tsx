@@ -7,7 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
 import FuseLoading from '@fuse/core/FuseLoading';
 import { useGetProjectDashboardWidgetsQuery } from '../../../ProjectDashboardApi';
-import WidgetDataType, { RangeType } from './types/WidgetDataType';
+import WidgetDataType from './types/WidgetDataType';
 
 /**
  * The SummaryWidget widget.
@@ -27,10 +27,10 @@ function SummaryWidget() {
 
 	const { data, title,currentRange: currentRangeDefault } = widget;
 
-	const [currentRange, setCurrentRange] = useState<RangeType>(currentRangeDefault as RangeType);
+	// const [currentRange, setCurrentRange] = useState<RangeType>(currentRangeDefault as RangeType);
 
 	function handleChangeRange(event: SelectChangeEvent<string>) {
-		setCurrentRange(event.target.value as RangeType);
+		// setCurrentRange(event.target.value as RangeType);
 	}
 
 

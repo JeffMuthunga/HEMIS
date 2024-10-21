@@ -26,7 +26,7 @@ function AccreditationsTable() {
 				Cell: ({ row }) => (
 					<Typography
 						component={Link}
-						to={`/apps/e-commerce/products/${row.original.id}/${row.original.handle}`}
+						to={`/apps/e-commerce/products/${row.original.handle}`}
 						className="underline"
 						color="secondary"
 						role="button"
@@ -101,12 +101,12 @@ function AccreditationsTable() {
 				columns={columns}
 				renderRowActionMenuItems={({ closeMenu, row, table }) => [
 					<MenuItem
-						key={0}
-						onClick={() => {
-							removeProducts([row.original.id]);
-							closeMenu();
-							table.resetRowSelection();
-						}}
+						// key={0}
+						// onClick={() => {
+						// 	removeProducts([row.original.id]);
+						// 	closeMenu();
+						// 	table.resetRowSelection();
+						// }}
 					>
 						<ListItemIcon>
 							<FuseSvgIcon>heroicons-outline:eye</FuseSvgIcon>
@@ -114,12 +114,12 @@ function AccreditationsTable() {
 						View
 					</MenuItem>,
 					<MenuItem
-						key={0}
-						onClick={() => {
-							removeProducts([row.original.id]);
-							closeMenu();
-							table.resetRowSelection();
-						}}
+						// key={0}
+						// onClick={() => {
+						// 	removeProducts([row.original.id]);
+						// 	closeMenu();
+						// 	table.resetRowSelection();
+						// }}
 					>
 						<ListItemIcon>
 							<FuseSvgIcon>heroicons-outline:trash</FuseSvgIcon>
@@ -127,12 +127,12 @@ function AccreditationsTable() {
 						Discredit
 					</MenuItem>,
 					<MenuItem
-						key={0}
-						onClick={() => {
-							removeProducts([row.original.id]);
-							closeMenu();
-							table.resetRowSelection();
-						}}
+						// key={0}
+						// onClick={() => {
+						// 	removeProducts([row.original.id]);
+						// 	closeMenu();
+						// 	table.resetRowSelection();
+						// }}
 					>
 						<ListItemIcon>
 							<FuseSvgIcon>heroicons-outline:trash</FuseSvgIcon>
@@ -153,7 +153,7 @@ function AccreditationsTable() {
 							size="small"
 							onClick={() => {
 								const selectedRows = table.getSelectedRowModel().rows;
-								removeProducts(selectedRows.map((row) => row.original.id));
+								// removeProducts(selectedRows.map((row) => row.original.id));
 								table.resetRowSelection();
 							}}
 							className="flex shrink min-w-36 ltr:mr-8 rtl:ml-8"

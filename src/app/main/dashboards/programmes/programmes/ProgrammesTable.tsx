@@ -5,11 +5,9 @@ import DataTable from 'app/shared-components/data-table/DataTable';
 import FuseLoading from '@fuse/core/FuseLoading';
 import { ListItemIcon, MenuItem, Paper } from '@mui/material';
 import * as React from 'react';
-import _ from '@lodash';
 import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
-import clsx from 'clsx';
 import Button from '@mui/material/Button';
 import { Programme, useDeleteProgrammesMutation, useGetProgrammesQuery } from '../ProgrammesApi';
 
@@ -26,7 +24,7 @@ function ProgrammesTable() {
 				Cell: ({ row }) => (
 					<Typography
 						component={Link}
-						to={`/apps/e-commerce/products/${row.original.id}/${row.original.handle}`}
+						to={`/apps/e-commerce/products/${row.original.handle}`}
 						className="underline"
 						color="secondary"
 						role="button"
@@ -100,14 +98,7 @@ function ProgrammesTable() {
 				data={programmes}
 				columns={columns}
 				renderRowActionMenuItems={({ closeMenu, row, table }) => [
-					<MenuItem
-						key={0}
-						onClick={() => {
-							removeProducts([row.original.id]);
-							closeMenu();
-							table.resetRowSelection();
-						}}
-					>
+					<MenuItem>
 						<ListItemIcon>
 							<FuseSvgIcon>heroicons-outline:trash</FuseSvgIcon>
 						</ListItemIcon>
@@ -127,7 +118,7 @@ function ProgrammesTable() {
 							size="small"
 							onClick={() => {
 								const selectedRows = table.getSelectedRowModel().rows;
-								removeProducts(selectedRows.map((row) => row.original.id));
+								// removeProducts(selectedRows.map((row) => row.original.id));
 								table.resetRowSelection();
 							}}
 							className="flex shrink min-w-36 ltr:mr-8 rtl:ml-8"

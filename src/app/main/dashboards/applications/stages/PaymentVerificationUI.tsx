@@ -52,14 +52,16 @@ function PaymentVerificationUI() {
 
 	const action = (
 		<React.Fragment>
-			<Button color="secondary" size="large" onClick={handleClose}>
+			<Button color="secondary" size="large"
+					// onClick={handleClose}
+			>
 				UNDO
 			</Button>
 			<IconButton
 				size="small"
 				aria-label="close"
 				color="inherit"
-				onClick={handleClose}
+				// onClick={handleClose}
 			>
 				<CloseIcon fontSize="small" />
 			</IconButton>
@@ -147,9 +149,9 @@ function PaymentVerificationUI() {
 								className="w-full"
 								onClick={() => {
 									setOpen(true);
-									setTimeout(() => {
-										navigate('/dashboards/institutions');
-									}, [6000]);
+									// setTimeout(() => {
+									// 	navigate('/dashboards/institutions');
+									// }, [6000]);
 								}}
 							>
 								{isSubmitting ? (
@@ -171,7 +173,7 @@ function PaymentVerificationUI() {
 								sx={{ zIndex: 50 }}
 							>
 								<Alert
-									onClose={handleClose}
+									// onClose={handleClose}
 									severity="success"
 									variant="filled"
 									sx={{ width: '100%' }}

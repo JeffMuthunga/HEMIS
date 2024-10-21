@@ -32,6 +32,7 @@ function StaffAnalyticsWidget() {
   };
 
   // Data for different charts
+
   const staffByDepartment = {
     series: [30, 25, 15, 10, 20, 14], // Example data for departments
     options: {

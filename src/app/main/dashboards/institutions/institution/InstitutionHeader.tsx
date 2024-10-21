@@ -36,11 +36,11 @@ function InstitutionHeader() {
 
 	const navigate = useNavigate();
 
-	const { name, images, featuredImageId } = watch() as Institution;
+	// const { name, images, featuredImageId } = watch() as Institution;
 	const [open, setOpen] = useState(false);
 
 	function handleSaveProduct() {
-		saveProduct(getValues() as Institution);
+		// saveProduct(getValues() as Institution);
 	}
 
 	// Function to close the snackbar
@@ -60,21 +60,23 @@ function InstitutionHeader() {
 	}
 
 	function handleRemoveProduct() {
-		removeProduct(productId);
+		// removeProduct(productId);
 		navigate('/dashboards/institutions/institutions');
 	}
 
 	// eslint-disable-next-line react/no-unstable-nested-components
 	const action = (
 		<React.Fragment>
-			<Button color="secondary" size="large" onClick={handleClose}>
+			<Button color="secondary" size="large"
+					// onClick={handleClose}
+			>
 				UNDO
 			</Button>
 			<IconButton
 				size="small"
 				aria-label="close"
 				color="inherit"
-				onClick={handleClose}
+				// onClick={handleClose}
 			>
 				<CloseIcon fontSize="small" />
 			</IconButton>
@@ -99,42 +101,42 @@ function InstitutionHeader() {
 					<PageBreadcrumb className="mb-8" />
 				</motion.div>
 
-				<div className="flex items-center max-w-full space-x-12">
-					<motion.div
-						className="hidden sm:flex"
-						initial={{ scale: 0 }}
-						animate={{ scale: 1, transition: { delay: 0.3 } }}
-					>
-						{images && images.length > 0 && featuredImageId ? (
-							<img
-								className="w-32 sm:w-48 rounded"
-								src={_.find(images, { id: featuredImageId })?.url}
-								alt={name}
-							/>
-						) : (
-							<img
-								className="w-32 sm:w-48 rounded"
-								src="assets/images/apps/ecommerce/product-image-placeholder.png"
-								alt={name}
-							/>
-						)}
-					</motion.div>
-					<motion.div
-						className="flex flex-col min-w-0"
-						initial={{ x: -20 }}
-						animate={{ x: 0, transition: { delay: 0.3 } }}
-					>
-						<Typography className="text-15 sm:text-2xl truncate font-semibold">
-							{name || 'New Institution'}
-						</Typography>
-						<Typography
-							variant="caption"
-							className="font-medium"
-						>
-							Institution's Detail
-						</Typography>
-					</motion.div>
-				</div>
+				{/*<div className="flex items-center max-w-full space-x-12">*/}
+				{/*	<motion.div*/}
+				{/*		className="hidden sm:flex"*/}
+				{/*		initial={{ scale: 0 }}*/}
+				{/*		animate={{ scale: 1, transition: { delay: 0.3 } }}*/}
+				{/*	>*/}
+				{/*		{images && images.length > 0 && featuredImageId ? (*/}
+				{/*			<img*/}
+				{/*				className="w-32 sm:w-48 rounded"*/}
+				{/*				src={_.find(images, { id: featuredImageId })?.url}*/}
+				{/*				alt={name}*/}
+				{/*			/>*/}
+				{/*		) : (*/}
+				{/*			<img*/}
+				{/*				className="w-32 sm:w-48 rounded"*/}
+				{/*				src="assets/images/apps/ecommerce/product-image-placeholder.png"*/}
+				{/*				alt={name}*/}
+				{/*			/>*/}
+				{/*		)}*/}
+				{/*	</motion.div>*/}
+				{/*	<motion.div*/}
+				{/*		className="flex flex-col min-w-0"*/}
+				{/*		initial={{ x: -20 }}*/}
+				{/*		animate={{ x: 0, transition: { delay: 0.3 } }}*/}
+				{/*	>*/}
+				{/*		<Typography className="text-15 sm:text-2xl truncate font-semibold">*/}
+				{/*			{name || 'New Institution'}*/}
+				{/*		</Typography>*/}
+				{/*		<Typography*/}
+				{/*			variant="caption"*/}
+				{/*			className="font-medium"*/}
+				{/*		>*/}
+				{/*			Institution's Detail*/}
+				{/*		</Typography>*/}
+				{/*	</motion.div>*/}
+				{/*</div>*/}
 			</div>
 			<motion.div
 				className="flex flex-1 w-full"
@@ -158,9 +160,9 @@ function InstitutionHeader() {
 							color="secondary"
 							onClick={() => {
 								setOpen(true);
-								setTimeout(() => {
-									navigate('/dashboards/institutions');
-								}, [6000]);
+								// setTimeout(() => {
+								// 	navigate('/dashboards/institutions');
+								// }, [6000]);
 							}}
 						>
 							Save
@@ -175,7 +177,7 @@ function InstitutionHeader() {
 							sx={{ zIndex: 50 }}
 						>
 							<Alert
-								onClose={handleClose}
+								// onClose={handleClose}
 								severity="success"
 								variant="filled"
 								sx={{ width: '100%' }}
