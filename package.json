@@ -82,6 +82,7 @@
         "react-virtualized": "9.22.5",
         "react-virtuoso": "4.7.11",
         "react-window": "1.8.10",
+        "recharts": "^2.13.0",
         "redoc": "2.1.4",
         "redux-logger": "4.0.0",
         "reselect": "5.1.1",

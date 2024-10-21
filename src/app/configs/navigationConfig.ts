@@ -1,15 +1,15 @@
-import i18next from 'i18next';
-import { FuseNavItemType } from '@fuse/core/FuseNavigation/types/FuseNavItemType';
-import ar from './navigation-i18n/ar';
-import en from './navigation-i18n/en';
-import tr from './navigation-i18n/tr';
-import { authRoles } from '../auth';
-import DocumentationNavigation from '../main/documentation/DocumentationNavigation';
-import SettingsAppNavigation from '../main/apps/settings/SettingsAppNavigation';
+import i18next from "i18next";
+import { FuseNavItemType } from "@fuse/core/FuseNavigation/types/FuseNavItemType";
+import ar from "./navigation-i18n/ar";
+import en from "./navigation-i18n/en";
+import tr from "./navigation-i18n/tr";
+import { authRoles } from "../auth";
+import DocumentationNavigation from "../main/documentation/DocumentationNavigation";
+import SettingsAppNavigation from "../main/apps/settings/SettingsAppNavigation";
 
-i18next.addResourceBundle('en', 'navigation', en);
-i18next.addResourceBundle('tr', 'navigation', tr);
-i18next.addResourceBundle('ar', 'navigation', ar);
+i18next.addResourceBundle("en", "navigation", en);
+i18next.addResourceBundle("tr", "navigation", tr);
+i18next.addResourceBundle("ar", "navigation", ar);
 
 /**
  * The navigationConfig object is an array of navigation items for the Fuse application.
@@ -36,6 +36,38 @@ const navigationConfig: FuseNavItemType[] = [
 				icon: 'heroicons-outline:chart-pie',
 				url: '/dashboards/analytics'
 			},
+      {
+        id: "dashboards.studentAnalytics",
+        title: "Analytics Management",
+        type: "collapse",
+        icon: "heroicons-outline:chart-bar",
+        children: [
+          {
+            id: "studentAnalytics",
+            title: "Student Analytics",
+            type: "item",
+            url: "/dashboards/student_analytics",
+          },
+          {
+            id: "staffAnalytics",
+            title: "Staff Analytics",
+            type: "item",
+            url: "/dashboards/staff_analytics",
+          },
+          {
+            id: "institutionAnalytics",
+            title: "Institutions Analytics",
+            type: "item",
+            url: "/dashboards/institution_analytics",
+          },
+          {
+            id: "programmesAnalytics",
+            title: "Programmes Analytics",
+            type: "item",
+            url: "/dashboards/programmes_analytics",
+          },
+        ],
+      },
 			{
 				id: 'dashboards.applications',
 				title: 'Applications Dashboards',
