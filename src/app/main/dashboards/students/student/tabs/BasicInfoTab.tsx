@@ -26,7 +26,6 @@ function BasicInfoTab() {
 						fullWidth
 						error={!!errors.name}
 						helperText={errors?.name?.message as string}
-						style={{ width: '50%' }}
 					/>
 				)}
 			/>
@@ -46,7 +45,6 @@ function BasicInfoTab() {
 						fullWidth
 						error={!!errors.surname}
 						helperText={errors?.surname?.message as string}
-						style={{ width: '50%' }}
 					/>
 				)}
 			/>
@@ -66,7 +64,6 @@ function BasicInfoTab() {
 						fullWidth
 						error={!!errors.dateOfBirth}
 						helperText={errors?.dateOfBirth?.message as string}
-						style={{ width: '50%' }}
 					/>
 				)}
 			/>
@@ -86,7 +83,6 @@ function BasicInfoTab() {
 						fullWidth
 						error={!!errors.sex}
 						helperText={errors?.sex?.message as string}
-						style={{ width: '50%' }}
 					/>
 				)}
 			/>

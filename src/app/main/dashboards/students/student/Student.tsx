@@ -5,10 +5,8 @@ import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
 import { SyntheticEvent, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import _ from '@lodash';
 import { FormProvider, useForm } from 'react-hook-form';
 import useThemeMediaQuery from '@fuse/hooks/useThemeMediaQuery';
-import * as React from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import FuseTabs from 'app/shared-components/tabs/FuseTabs';
@@ -16,9 +14,9 @@ import FuseTab from 'app/shared-components/tabs/FuseTab';
 import StudentHeader from './StudentHeader';
 import BasicInfoTab from './tabs/BasicInfoTab';
 import ContactInfoTab from './tabs/ContactInfoTab';
-import PricingTab from './tabs/PricingTab';
+import AcademicSpecifications from './tabs/AcademicSpecifications';
 import ProductImagesTab from './tabs/ProductImagesTab';
-import ShippingTab from './tabs/ShippingTab';
+import DemographicsTab from './tabs/DemographicsTab';
 import { useGetStudentQuery } from '../StudentsApi';
 import StudentModel from './models/StudentModel';
 
@@ -30,21 +28,16 @@ const schema = z.object({
 });
 
 /**
- * The product page.
+ * The student page component.
  */
 function Student() {
 	const isMobile = useThemeMediaQuery((theme) => theme.breakpoints.down('lg'));
-
 	const routeParams = useParams();
+	const { studentId } = routeParams;
 
-	const { productId } = routeParams;
-
-	const {
-		data: product,
-		isLoading,
-		isError
-	} = useGetStudentQuery(productId, {
-		skip: !productId || productId === 'new'
+	// Fetching student data
+	const { data: student, isLoading, isError } = useGetStudentQuery(studentId, {
+		skip: !studentId || studentId === 'new'
 	});
 
 	const [tabValue, setTabValue] = useState('basic-info');
@@ -55,21 +48,20 @@ function Student() {
 		resolver: zodResolver(schema)
 	});
 
-	const { reset, watch } = methods;
+	const { reset } = methods;
 
-	const form = watch();
-
+	// Initializing form data for a new or existing student
 	useEffect(() => {
-		if (productId === 'new') {
+		if (studentId === 'new') {
 			reset(StudentModel({}));
 		}
-	}, [productId, reset]);
+	}, [studentId, reset]);
 
 	useEffect(() => {
-		if (product) {
-			reset({ ...product });
+		if (student) {
+			reset({ ...student });
 		}
-	}, [product, reset]);
+	}, [student, reset]);
 
 	/**
 	 * Tab Change
@@ -78,31 +70,24 @@ function Student() {
 		setTabValue(value);
 	}
 
-	if (isLoading) {
-		return <FuseLoading />;
-	}
-
 	/**
-	 * Show Message if the requested products is not exists
+	 * Show message if the requested student doesn't exist
 	 */
-	if (isError && productId !== 'new') {
+	if (isError && studentId !== 'new') {
 		return (
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1, transition: { delay: 0.1 } }}
 				className="flex flex-col flex-1 items-center justify-center h-full"
 			>
-				<Typography
-					color="text.secondary"
-					variant="h5"
-				>
-					There is no such product!
+				<Typography color="text.secondary" variant="h5">
+					There is no such student!
 				</Typography>
 				<Button
 					className="mt-24"
 					component={Link}
 					variant="outlined"
-					to="/apps/e-commerce/products"
+					to="/apps/e-commerce/students"
 					color="inherit"
 				>
 					Go to Students Page
@@ -111,10 +96,8 @@ function Student() {
 		);
 	}
 
-	/**
-	 * Wait while product data is loading and form is setted
-	 */
-	if (_.isEmpty(form) || (product && routeParams.productId !== product.id && routeParams.productId !== 'new')) {
+	// Loading spinner while data is being fetched
+	if (isLoading) {
 		return <FuseLoading />;
 	}
 
@@ -124,51 +107,19 @@ function Student() {
 				header={<StudentHeader />}
 				content={
 					<div className="p-16 sm:p-24 max-w-3xl space-y-24">
-						<FuseTabs
-							value={tabValue}
-							onChange={handleTabChange}
-						>
-							<FuseTab
-								value="basic-info"
-								label="Basic Info"
-							/>
-							<FuseTab
-								value="product-images"
-								label="Student Image and Docs"
-							/>
-							<FuseTab
-								value="pricing"
-								label="Pricing"
-							/>
-							<FuseTab
-								value="contact-info"
-								label="Contact Info"
-							/>
-							<FuseTab
-								value="shipping"
-								label="Shipping"
-							/>
+						<FuseTabs value={tabValue} onChange={handleTabChange}>
+							<FuseTab value="basic-info" label="Basic Info" />
+							<FuseTab value="contact-info" label="Contact Info" />
+							<FuseTab value="academic" label="Academic Specifications" />
+							<FuseTab value="product-images" label="Student Image and Docs" />
+							<FuseTab value="demographics" label="Demographics" />
 						</FuseTabs>
 						<div className="">
-							<div className={tabValue !== 'basic-info' ? 'hidden' : ''}>
-								<BasicInfoTab />
-							</div>
-
-							<div className={tabValue !== 'product-images' ? 'hidden' : ''}>
-								<ProductImagesTab />
-							</div>
-
-							<div className={tabValue !== 'pricing' ? 'hidden' : ''}>
-								<PricingTab />
-							</div>
-
-							<div className={tabValue !== 'contact-info' ? 'hidden' : ''}>
-								<ContactInfoTab />
-							</div>
-
-							<div className={tabValue !== 'shipping' ? 'hidden' : ''}>
-								<ShippingTab />
-							</div>
+							{tabValue === 'basic-info' && <BasicInfoTab />}
+							{tabValue === 'product-images' && <ProductImagesTab />}
+							{tabValue === 'academic' && <AcademicSpecifications />}
+							{tabValue === 'contact-info' && <ContactInfoTab />}
+							{tabValue === 'demographics' && <DemographicsTab />}
 						</div>
 					</div>
 				}

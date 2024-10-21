@@ -12,14 +12,10 @@ const Students = lazy(() => import('./students/Students'));
  */
 const StudentsAppRoute: FuseRouteItemType = {
 	path: 'dashboards/students',
-	element: <StudentsApp />,
 	children: [
 		{
 			path: '',
-			element: <Navigate to="students" />
-		},
-		{
-			path: 'students',
+			element: <StudentsApp />,
 			children: [
 				{
 					path: '',
@@ -35,6 +31,27 @@ const StudentsAppRoute: FuseRouteItemType = {
 				}
 			]
 		},
+		// {
+		// 	path: 'new',
+		// 	element: <Student />
+		// },
+		// {
+		// 	path: 'students',
+		// 	children: [
+		// 		{
+		// 			path: '',
+		// 			element: <Students />
+		// 		},
+		// 		{
+		// 			path: ':studentId/:handle?',
+		// 			element: <Student />
+		// 		},
+		// 		{
+		// 			path: 'new',
+		// 			element: <Student/>
+		// 		}
+		// 	]
+		// }
 	]
 };
 

@@ -245,7 +245,9 @@ export type EcommerceOrder = {
 export const {
 	useGetInstitutionsQuery,
 	useGetInstitutionQuery,
-	useGetECommerceProductsQuery,
+	useDeleteInstitutionMutation,
+	useUpdateInstitutionMutation,
+	useCreateInstitutionMutation,
 	useDeleteECommerceProductsMutation,
 	useGetECommerceProductQuery,
 	useUpdateECommerceProductMutation,

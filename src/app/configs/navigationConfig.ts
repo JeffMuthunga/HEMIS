@@ -41,15 +41,19 @@ const navigationConfig: FuseNavItemType[] = [
 				title: 'Institutions Management',
 				type: 'collapse',
 				icon: 'heroicons-outline:building-library',
-				// url: '/dashboards/institutions',
 				children: [
 					{
 						id: 'institutions',
-						title: 'institutions',
+						title: 'Institutions',
 						type: 'item',
-						// icon: 'heroicons-outline:building-library',
 						url: '/dashboards/institutions',
-
+						end: true
+					},
+					{
+						id: 'new-institutions',
+						title: 'New Institution',
+						type: 'item',
+						url: '/dashboards/institutions/new'
 					},
 					{
 						id: 'indicators',
@@ -63,7 +67,7 @@ const navigationConfig: FuseNavItemType[] = [
 						title: 'programmes',
 						type: 'item',
 						url: '/dashboards/institution-programmes',
-					},
+					}
 				]
 			},
 			{
@@ -81,8 +85,6 @@ const navigationConfig: FuseNavItemType[] = [
 					},
 				]
 			},
-
-
 			{
 				id: 'dashboards.students',
 				title: 'Students Management',
@@ -113,7 +115,7 @@ const navigationConfig: FuseNavItemType[] = [
 						id: 'new-student',
 						title: 'New Student',
 						type: 'item',
-						url: '/dashboards/students/students/new'
+						url: '/dashboards/students/new'
 					}
 				]
 			},

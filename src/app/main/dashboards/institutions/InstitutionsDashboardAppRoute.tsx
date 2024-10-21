@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 import { Navigate } from 'react-router-dom';
 import { FuseRouteItemType } from '@fuse/utils/FuseUtils';
+import Institution from './institution/Institution';
 
 const InstitutionsDashboardApp = lazy(() => import('./InstitutionsDashboardApp'));
 // const Product = lazy(() => import('./product/Product'));
@@ -13,7 +14,16 @@ const InstitutionsDashboardApp = lazy(() => import('./InstitutionsDashboardApp')
  */
 const InstitutionsDashboardAppRoute: FuseRouteItemType = {
 	path: 'dashboards/institutions',
-	element: <InstitutionsDashboardApp />,
+	children: [
+		{
+			path: '',
+			element: <InstitutionsDashboardApp />
+		},
+		{
+			path: 'new',
+			element: <Institution />
+		}
+	]
 };
 
 export default InstitutionsDashboardAppRoute;

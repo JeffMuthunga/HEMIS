@@ -6,10 +6,16 @@ import { useNavigate, useParams } from 'react-router-dom';
 import _ from '@lodash';
 import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
 import PageBreadcrumb from 'app/shared-components/PageBreadcrumb';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import * as React from 'react';
+import { useState } from 'react';
+import Alert from '@mui/material/Alert';
 import {
-	EcommerceProduct,
+	Institution,
 	useCreateECommerceProductMutation,
-	useDeleteECommerceProductMutation,
+	useDeleteECommerceProductsMutation,
 	useUpdateECommerceProductMutation
 } from '../InstitutionsApi';
 
@@ -22,7 +28,7 @@ function InstitutionHeader() {
 
 	const [createProduct] = useCreateECommerceProductMutation();
 	const [saveProduct] = useUpdateECommerceProductMutation();
-	const [removeProduct] = useDeleteECommerceProductMutation();
+	const [removeProduct] = useDeleteECommerceProductsMutation();
 
 	const methods = useFormContext();
 	const { formState, watch, getValues } = methods;
@@ -30,27 +36,54 @@ function InstitutionHeader() {
 
 	const navigate = useNavigate();
 
-	const { name, images, featuredImageId } = watch() as EcommerceProduct;
+	const { name, images, featuredImageId } = watch() as Institution;
+	const [open, setOpen] = useState(false);
 
 	function handleSaveProduct() {
-		saveProduct(getValues() as EcommerceProduct);
+		saveProduct(getValues() as Institution);
 	}
 
+	// Function to close the snackbar
+	const handleClose = (event, reason) => {
+		if (reason === 'clickaway') {
+			return;
+		}
+		setOpen(false);
+	};
+
 	function handleCreateProduct() {
-		createProduct(getValues() as EcommerceProduct)
+		createProduct(getValues() as Institution)
 			.unwrap()
 			.then((data) => {
-				navigate(`/apps/e-commerce/products/${data.id}`);
+				navigate(`/dashboards/institutions/institutions/${data.id}`);
 			});
 	}
 
 	function handleRemoveProduct() {
 		removeProduct(productId);
-		navigate('/apps/e-commerce/products');
+		navigate('/dashboards/institutions/institutions');
 	}
 
+	// eslint-disable-next-line react/no-unstable-nested-components
+	const action = (
+		<React.Fragment>
+			<Button color="secondary" size="large" onClick={handleClose}>
+				UNDO
+			</Button>
+			<IconButton
+				size="small"
+				aria-label="close"
+				color="inherit"
+				onClick={handleClose}
+			>
+				<CloseIcon fontSize="small" />
+			</IconButton>
+		</React.Fragment>
+	);
+
 	return (
-		<div className="flex flex-col sm:flex-row flex-1 w-full items-center justify-between space-y-8 sm:space-y-0 py-24 sm:py-32">
+		<div
+			className="flex flex-col sm:flex-row flex-1 w-full items-center justify-between space-y-8 sm:space-y-0 py-24 sm:py-32">
 			<div className="flex flex-col items-start space-y-8 sm:space-y-0 w-full sm:max-w-full min-w-0">
 				<motion.div
 					initial={{
@@ -92,13 +125,13 @@ function InstitutionHeader() {
 						animate={{ x: 0, transition: { delay: 0.3 } }}
 					>
 						<Typography className="text-15 sm:text-2xl truncate font-semibold">
-							{name || 'New Product'}
+							{name || 'New Institution'}
 						</Typography>
 						<Typography
 							variant="caption"
 							className="font-medium"
 						>
-							Institution Detail
+							Institution's Detail
 						</Typography>
 					</motion.div>
 				</div>
@@ -123,11 +156,33 @@ function InstitutionHeader() {
 							className="whitespace-nowrap mx-4"
 							variant="contained"
 							color="secondary"
-							disabled={_.isEmpty(dirtyFields) || !isValid}
-							onClick={handleSaveProduct}
+							onClick={() => {
+								setOpen(true);
+								setTimeout(() => {
+									navigate('/dashboards/institutions');
+								}, [6000]);
+							}}
 						>
 							Save
 						</Button>
+						<Snackbar
+							open={open}
+							autoHideDuration={6000}
+							onClose={handleClose}
+							message="Note archived"
+							action={action}
+							anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
+							sx={{ zIndex: 50 }}
+						>
+							<Alert
+								onClose={handleClose}
+								severity="success"
+								variant="filled"
+								sx={{ width: '100%' }}
+							>
+								Institution Saved Successfully
+							</Alert>
+						</Snackbar>
 					</>
 				) : (
 					<Button

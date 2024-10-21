@@ -6,12 +6,18 @@ import { useNavigate, useParams } from 'react-router-dom';
 import _ from '@lodash';
 import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
 import PageBreadcrumb from 'app/shared-components/PageBreadcrumb';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import * as React from 'react';
+import { useState } from 'react';
 import {
 	Student,
 	useCreateStudentMutation,
 	useDeleteStudentMutation,
 	useUpdateStudentMutation
 } from '../StudentsApi';
+import Alert from '@mui/material/Alert';
 
 /**
  * The product header.
@@ -31,10 +37,19 @@ function StudentHeader() {
 	const navigate = useNavigate();
 
 	const { name, images, featuredImageId } = watch() as Student;
+	const [open, setOpen] = useState(false);
 
 	function handleSaveProduct() {
 		saveProduct(getValues() as Student);
 	}
+
+	// Function to close the snackbar
+	const handleClose = (event, reason) => {
+		if (reason === 'clickaway') {
+			return;
+		}
+		setOpen(false);
+	};
 
 	function handleCreateProduct() {
 		createProduct(getValues() as Student)
@@ -49,8 +64,26 @@ function StudentHeader() {
 		navigate('/dashboards/students/students');
 	}
 
+	// eslint-disable-next-line react/no-unstable-nested-components
+	const action = (
+		<React.Fragment>
+			<Button color="secondary" size="large" onClick={handleClose}>
+				UNDO
+			</Button>
+			<IconButton
+				size="small"
+				aria-label="close"
+				color="inherit"
+				onClick={handleClose}
+			>
+				<CloseIcon fontSize="small" />
+			</IconButton>
+		</React.Fragment>
+	);
+
 	return (
-		<div className="flex flex-col sm:flex-row flex-1 w-full items-center justify-between space-y-8 sm:space-y-0 py-24 sm:py-32">
+		<div
+			className="flex flex-col sm:flex-row flex-1 w-full items-center justify-between space-y-8 sm:space-y-0 py-24 sm:py-32">
 			<div className="flex flex-col items-start space-y-8 sm:space-y-0 w-full sm:max-w-full min-w-0">
 				<motion.div
 					initial={{
@@ -123,11 +156,33 @@ function StudentHeader() {
 							className="whitespace-nowrap mx-4"
 							variant="contained"
 							color="secondary"
-							disabled={_.isEmpty(dirtyFields) || !isValid}
-							onClick={handleSaveProduct}
+							onClick={() => {
+								setOpen(true);
+								setTimeout(() => {
+									navigate('/dashboards/students');
+								}, [6000]);
+							}}
 						>
 							Save
 						</Button>
+						<Snackbar
+							open={open}
+							autoHideDuration={6000}
+							onClose={handleClose}
+							message="Note archived"
+							action={action}
+							anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
+							sx={{ zIndex: 50 }}
+						>
+							<Alert
+								onClose={handleClose}
+								severity="success"
+								variant="filled"
+								sx={{ width: '100%' }}
+							>
+								Student Saved Successfully
+							</Alert>
+						</Snackbar>
 					</>
 				) : (
 					<Button

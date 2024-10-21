@@ -35,7 +35,7 @@ function IndicatorsHeader() {
 						variant="contained"
 						color="secondary"
 						component={NavLinkAdapter}
-						to="/dashboards/students/students/new"
+						to="/dashboards/students/new"
 						size={isMobile ? 'small' : 'medium'}
 					>
 						<FuseSvgIcon size={20}>heroicons-outline:plus</FuseSvgIcon>
