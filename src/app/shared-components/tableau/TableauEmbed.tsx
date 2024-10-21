@@ -64,7 +64,7 @@ const CustomDashboard = () => {
     }
 
     if (studentsError) {
-        return <div>Error: {studentsError}</div>;
+        // return <div>Error: {studentsError}</div>;
     }
 
     const renderPieChart = (data, title) => (
