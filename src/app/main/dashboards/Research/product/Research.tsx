@@ -16,7 +16,7 @@ import FuseTab from 'app/shared-components/tabs/FuseTab';
 import ProductHeader from './ResearchHeader';
 import BasicInfoTab from './tabs/BasicInfoTab';
 import ProductModel from './models/ResearchModel';
-import {useGetResarchProductQuery} from '../ResearchApi';
+import { useGetResearchProductQuery } from '../ResearchApi';
 
 /**
  * Form Validation Schema
@@ -39,7 +39,7 @@ function Product() {
 		data: product,
 		isLoading,
 		isError
-	} = useGetResarchProductQuery(productId, {
+	} = useGetResearchProductQuery(productId, {
 		skip: !productId || productId === 'new'
 	});
 

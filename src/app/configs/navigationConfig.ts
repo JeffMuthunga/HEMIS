@@ -37,6 +37,27 @@ const navigationConfig: FuseNavItemType[] = [
 				url: '/dashboards/analytics'
 			},
 			{
+				id: 'dashboards.applications',
+				title: 'Applications Dashboards',
+				type: 'collapse',
+				icon: 'heroicons-outline:clipboard-document-list',
+				children: [
+					{
+						id: 'applications',
+						title: 'HEI Applications',
+						type: 'item',
+						url: '/dashboards/applications',
+						end: true
+					},
+					{
+						id: 'batch_mgmt',
+						title: 'Batch Management',
+						type: 'item',
+						url: 'dashboards/applications/batch_mgt'
+					}
+				]
+			},
+			{
 				id: 'dashboards.institutions',
 				title: 'Institutions Management',
 				type: 'collapse',
@@ -60,7 +81,7 @@ const navigationConfig: FuseNavItemType[] = [
 						title: 'indicators',
 						type: 'item',
 						// icon: 'heroicons-outline:building-library',
-						url: '/dashboards/indicators',
+						url: '/dashboards/indicators'
 					},
 					{
 						id: 'institution-programmes',
@@ -74,7 +95,7 @@ const navigationConfig: FuseNavItemType[] = [
 				id: 'dashboards.programmes',
 				title: 'Programmes Management',
 				type: 'collapse',
-				icon: 'heroicons-outline:building-library',
+				icon: 'heroicons-outline:circle-stack',
 				// url: '/dashboards/institutions',
 				children: [
 					{
@@ -82,7 +103,7 @@ const navigationConfig: FuseNavItemType[] = [
 						title: 'programme accreditation',
 						type: 'item',
 						url: '/dashboards/programmes-accreditations',
-					},
+					}
 				]
 			},
 			{
