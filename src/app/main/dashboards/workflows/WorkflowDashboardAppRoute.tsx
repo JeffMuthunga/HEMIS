@@ -11,14 +11,21 @@ const WorkflowDashboardApp = lazy(() => import('./WorkflowDashboardApp'));
  */
 const WorkflowDashboardAppRoute: FuseRouteItemType = {
 	path: 'dashboards/workflow-mgt',
-	element: <WorkflowDashboardApp />,
 	children: [
 		{
 			path: '',
-			element: <Navigate to="new" />
+			element: <WorkflowDashboardApp />
 		},
 		{
 			path: 'new',
+			element: <WorkflowForm initialValues={{ name: 'Example Workflow', description: 'This is a test description.', status: 'active' }} />
+		},
+		{
+			path: ':wid/edit',
+			element: <WorkflowForm initialValues={{ name: 'Example Workflow', description: 'This is a test description.', status: 'active' }} />
+		},
+		{
+			path: ':wid/view',
 			element: <WorkflowForm initialValues={{ name: 'Example Workflow', description: 'This is a test description.', status: 'active' }} />
 		}
 	]

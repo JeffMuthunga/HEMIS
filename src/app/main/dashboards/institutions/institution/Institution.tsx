@@ -5,22 +5,22 @@ import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
 import { SyntheticEvent, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import _ from '@lodash';
 import { FormProvider, useForm } from 'react-hook-form';
 import useThemeMediaQuery from '@fuse/hooks/useThemeMediaQuery';
-import * as React from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import FuseTabs from 'app/shared-components/tabs/FuseTabs';
 import FuseTab from 'app/shared-components/tabs/FuseTab';
 import InstitutionHeader from './InstitutionHeader';
 import BasicInfoTab from './tabs/BasicInfoTab';
-import InventoryTab from './tabs/InventoryTab';
-import PricingTab from './tabs/PricingTab';
+import ContactInfoTab from './tabs/ContactInfoTab';
+import AcademicSpecifications from './tabs/AcademicSpecifications';
 import ProductImagesTab from './tabs/ProductImagesTab';
-import ShippingTab from './tabs/ShippingTab';
-import { useGetECommerceProductQuery } from '../InstitutionsApi';
+import DemographicsTab from './tabs/DemographicsTab';
+import { useGetInstitutionQuery } from '../InstitutionsApi';
 import InstitutionModel from './models/InstitutionModel';
+import AcademicInfoTab from './tabs/AcademicInfoTab';
+import AdmissionsFeesTab from './tabs/AdmissionFeesTab';
 
 /**
  * Form Validation Schema
@@ -30,21 +30,16 @@ const schema = z.object({
 });
 
 /**
- * The product page.
+ * The institution page component.
  */
 function Institution() {
 	const isMobile = useThemeMediaQuery((theme) => theme.breakpoints.down('lg'));
-
 	const routeParams = useParams();
+	const { institutionId } = routeParams;
 
-	const { productId } = routeParams;
-
-	const {
-		data: product,
-		isLoading,
-		isError
-	} = useGetECommerceProductQuery(productId, {
-		skip: !productId || productId === 'new'
+	// Fetching institution data
+	const { data: institution, isLoading, isError } = useGetInstitutionQuery(institutionId, {
+		skip: !institutionId || institutionId === 'new'
 	});
 
 	const [tabValue, setTabValue] = useState('basic-info');
@@ -55,21 +50,20 @@ function Institution() {
 		resolver: zodResolver(schema)
 	});
 
-	const { reset, watch } = methods;
+	const { reset } = methods;
 
-	const form = watch();
-
+	// Initializing form data for a new or existing institution
 	useEffect(() => {
-		if (productId === 'new') {
+		if (institutionId === 'new') {
 			reset(InstitutionModel({}));
 		}
-	}, [productId, reset]);
+	}, [institutionId, reset]);
 
 	useEffect(() => {
-		if (product) {
-			reset({ ...product });
+		if (institution) {
+			reset({ ...institution });
 		}
-	}, [product, reset]);
+	}, [institution, reset]);
 
 	/**
 	 * Tab Change
@@ -78,43 +72,34 @@ function Institution() {
 		setTabValue(value);
 	}
 
-	if (isLoading) {
-		return <FuseLoading />;
-	}
-
 	/**
-	 * Show Message if the requested products is not exists
+	 * Show message if the requested institution doesn't exist
 	 */
-	if (isError && productId !== 'new') {
+	if (isError && institutionId !== 'new') {
 		return (
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1, transition: { delay: 0.1 } }}
 				className="flex flex-col flex-1 items-center justify-center h-full"
 			>
-				<Typography
-					color="text.secondary"
-					variant="h5"
-				>
-					There is no such product!
+				<Typography color="text.secondary" variant="h5">
+					There is no such institution!
 				</Typography>
 				<Button
 					className="mt-24"
 					component={Link}
 					variant="outlined"
-					to="/apps/e-commerce/products"
+					to="/apps/e-commerce/institutions"
 					color="inherit"
 				>
-					Go to Products Page
+					Go to Institutions Page
 				</Button>
 			</motion.div>
 		);
 	}
 
-	/**
-	 * Wait while product data is loading and form is setted
-	 */
-	if (_.isEmpty(form) || (product && routeParams.productId !== product.id && routeParams.productId !== 'new')) {
+	// Loading spinner while data is being fetched
+	if (isLoading) {
 		return <FuseLoading />;
 	}
 
@@ -124,51 +109,21 @@ function Institution() {
 				header={<InstitutionHeader />}
 				content={
 					<div className="p-16 sm:p-24 max-w-3xl space-y-24">
-						<FuseTabs
-							value={tabValue}
-							onChange={handleTabChange}
-						>
-							<FuseTab
-								value="basic-info"
-								label="Basic Info"
-							/>
-							<FuseTab
-								value="product-images"
-								label="Product Images"
-							/>
-							<FuseTab
-								value="pricing"
-								label="Pricing"
-							/>
-							<FuseTab
-								value="inventory"
-								label="Inventory"
-							/>
-							<FuseTab
-								value="shipping"
-								label="Shipping"
-							/>
+						<FuseTabs value={tabValue} onChange={handleTabChange}>
+							<FuseTab value="basic-info" label="Basic Info" />
+							<FuseTab value="contact-info" label="Contact Info" />
+							<FuseTab value="academic-info" label="Academic Info"/>
+							<FuseTab value='admissions-info' label="Admissions Info" />
+							<FuseTab value="product-images" label="Institution Image and Docs" />
 						</FuseTabs>
 						<div className="">
-							<div className={tabValue !== 'basic-info' ? 'hidden' : ''}>
-								<BasicInfoTab />
-							</div>
+							{tabValue === 'basic-info' && <BasicInfoTab />}
+							{tabValue === 'product-images' && <ProductImagesTab />}
+							{tabValue === 'academic' && <AcademicSpecifications />}
+							{tabValue === 'contact-info' && <ContactInfoTab />}
+							{tabValue === 'academic-info' && <AcademicInfoTab />}
+							{tabValue === 'admissions-info' && <AdmissionsFeesTab />}
 
-							<div className={tabValue !== 'product-images' ? 'hidden' : ''}>
-								<ProductImagesTab />
-							</div>
-
-							<div className={tabValue !== 'pricing' ? 'hidden' : ''}>
-								<PricingTab />
-							</div>
-
-							<div className={tabValue !== 'inventory' ? 'hidden' : ''}>
-								<InventoryTab />
-							</div>
-
-							<div className={tabValue !== 'shipping' ? 'hidden' : ''}>
-								<ShippingTab />
-							</div>
 						</div>
 					</div>
 				}

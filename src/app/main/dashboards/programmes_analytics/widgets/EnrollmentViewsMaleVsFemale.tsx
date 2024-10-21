@@ -42,7 +42,7 @@ function ProgramsChart() {
   const programsByDuration = {
     series: [
       {
-        name: "Program Count",
+        name: "Number of Programs",
         data: [15, 25, 30, 20], // Example durations
       },
     ],
@@ -58,7 +58,7 @@ function ProgramsChart() {
   const popularProgramsByEnrollment = {
     series: [
       {
-        name: "Number of students Enrollment",
+        name: "Number of students enrolled",
         data: [120, 80, 100, 50, 120], // Enrollment data for each program
       },
     ],

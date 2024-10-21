@@ -7,7 +7,6 @@ import { Controller, useFormContext } from 'react-hook-form';
 function ContactInfoTab() {
 	const methods = useFormContext();
 	const { control } = methods;
-	const { errors } = formState;
 
 	return (
 		<div>
@@ -25,9 +24,7 @@ function ContactInfoTab() {
 						type="email"
 						variant="outlined"
 						fullWidth
-						error={!!errors.email}
-						helperText={errors?.email?.message as string}
-						style={{ width: '50%' }}
+						value='joseph.mwita@softclans.co.ke'
 					/>
 				)}
 			/>
@@ -43,12 +40,10 @@ function ContactInfoTab() {
 						label="mobileNo"
 						autoFocus
 						id="mobileNo"
+						value="0746260004"
 						type="number"
 						variant="outlined"
 						fullWidth
-						error={!!errors.mobileNo}
-						helperText={errors?.mobileNo?.message as string}
-						style={{ width: '50%' }}
 					/>
 				)}
 			/>
