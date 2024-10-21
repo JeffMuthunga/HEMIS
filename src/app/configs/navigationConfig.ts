@@ -236,10 +236,35 @@ const navigationConfig: FuseNavItemType[] = [
       },
       {
         id: "dashboards.studentAnalytics",
-        title: "Student Enrollment Analytics",
-        type: "item",
-        icon: "heroicons-outline:presentation-chart-bar",
-        url: "/dashboards/student_analytics",
+        title: "Analytics Management",
+        type: "collapse",
+        icon: "heroicons-outline:chart-bar",
+        children: [
+          {
+            id: "studentAnalytics",
+            title: "Student Analytics",
+            type: "item",
+            url: "/dashboards/student_analytics",
+          },
+          {
+            id: "staffAnalytics",
+            title: "Staff Analytics",
+            type: "item",
+            url: "/dashboards/staff_analytics",
+          },
+          {
+            id: "institutionAnalytics",
+            title: "Institutions Analytics",
+            type: "item",
+            url: "/dashboards/institution_analytics",
+          },
+          {
+            id: "programmesAnalytics",
+            title: "Programmes Analytics",
+            type: "item",
+            url: "/dashboards/programmes_analytics",
+          },
+        ],
       },
       {
         id: "dashboards.workflows",
