@@ -36,7 +36,7 @@ function ProgramsChart() {
       ...chartOptions,
       labels: ["Undergraduate", "Postgraduate", "Diploma"],
       chart: { type: "donut" },
-    },
+    } as ApexOptions,
   };
 
   const programsByDuration = {
@@ -51,7 +51,7 @@ function ProgramsChart() {
       xaxis: { categories: ["1 Year", "2 Years", "3 Years", "4 Years"] },
       chart: { type: "bar" },
       // title: { text: "Programs by Duration" },
-    },
+    } as ApexOptions,
   };
 
   // Popular Programs by Student Enrollment (Bubble Chart)
@@ -94,7 +94,7 @@ function ProgramsChart() {
           text: "Enrollment",
         },
       },
-    },
+    } as ApexOptions,
   };
 
   const programsByStemType = {
@@ -103,7 +103,7 @@ function ProgramsChart() {
       chart: { type: "pie" },
       labels: ["STEM Type", "Non-STEM type"],
       // title: { text: "Programs by STEM Type" },
-    },
+    } as ApexOptions,
   };
 
   return (
