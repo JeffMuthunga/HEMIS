@@ -11,15 +11,8 @@ import useThemeMediaQuery from '@fuse/hooks/useThemeMediaQuery';
 import * as React from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import FuseTabs from 'app/shared-components/tabs/FuseTabs';
-import FuseTab from 'app/shared-components/tabs/FuseTab';
-import AccreditationHeader from './AccreditationHeader';
-import BasicInfoTab from './tabs/BasicInfoTab';
-import ContactInfoTab from './tabs/ContactInfoTab';
-import PricingTab from './tabs/PricingTab';
-import ProductImagesTab from './tabs/ProductImagesTab';
-import ShippingTab from './tabs/ShippingTab';
 import AccreditationModel from './models/AccreditationModel';
+import {isError} from "lodash";
 
 /**
  * Form Validation Schema
@@ -38,13 +31,13 @@ function Accreditation() {
 
 	const { productId } = routeParams;
 
-	const {
-		data: product,
-		isLoading,
-		isError
-	} = useGetIndicatorQuery(productId, {
-		skip: !productId || productId === 'new'
-	});
+	// const {
+	// 	data: product,
+	// 	isLoading,
+	// 	isError
+	// } = useGetIndicatorQuery(productId, {
+	// 	skip: !productId || productId === 'new'
+	// });
 
 	const [tabValue, setTabValue] = useState('basic-info');
 
@@ -64,11 +57,11 @@ function Accreditation() {
 		}
 	}, [productId, reset]);
 
-	useEffect(() => {
-		if (product) {
-			reset({ ...product });
-		}
-	}, [product, reset]);
+	// useEffect(() => {
+	// 	if (product) {
+	// 		reset({ ...product });
+	// 	}
+	// }, [product, reset]);
 
 	/**
 	 * Tab Change
@@ -77,9 +70,9 @@ function Accreditation() {
 		setTabValue(value);
 	}
 
-	if (isLoading) {
-		return <FuseLoading />;
-	}
+	// if (isLoading) {
+	// 	return <FuseLoading />;
+	// }
 
 	/**
 	 * Show Message if the requested products is not exists
@@ -113,68 +106,68 @@ function Accreditation() {
 	/**
 	 * Wait while product data is loading and form is setted
 	 */
-	if (_.isEmpty(form) || (product && routeParams.productId !== product.id && routeParams.productId !== 'new')) {
-		return <FuseLoading />;
-	}
+	// if (_.isEmpty(form) || (product && routeParams.productId !== product.id && routeParams.productId !== 'new')) {
+	// 	return <FuseLoading />;
+	// }
 
-	return (
-		<FormProvider {...methods}>
-			<FusePageCarded
-				header={<AccreditationHeader />}
-				content={
-					<div className="p-16 sm:p-24 max-w-3xl space-y-24">
-						<FuseTabs
-							value={tabValue}
-							onChange={handleTabChange}
-						>
-							<FuseTab
-								value="basic-info"
-								label="Basic Info"
-							/>
-							<FuseTab
-								value="product-images"
-								label="Indicator Image and Docs"
-							/>
-							<FuseTab
-								value="pricing"
-								label="Pricing"
-							/>
-							<FuseTab
-								value="contact-info"
-								label="Contact Info"
-							/>
-							<FuseTab
-								value="shipping"
-								label="Shipping"
-							/>
-						</FuseTabs>
-						<div className="">
-							<div className={tabValue !== 'basic-info' ? 'hidden' : ''}>
-								<BasicInfoTab />
-							</div>
-
-							<div className={tabValue !== 'product-images' ? 'hidden' : ''}>
-								<ProductImagesTab />
-							</div>
-
-							<div className={tabValue !== 'pricing' ? 'hidden' : ''}>
-								<PricingTab />
-							</div>
-
-							<div className={tabValue !== 'contact-info' ? 'hidden' : ''}>
-								<ContactInfoTab />
-							</div>
-
-							<div className={tabValue !== 'shipping' ? 'hidden' : ''}>
-								<ShippingTab />
-							</div>
-						</div>
-					</div>
-				}
-				scroll={isMobile ? 'normal' : 'content'}
-			/>
-		</FormProvider>
-	);
+	// return (
+	// 	<FormProvider {...methods}>
+	// 		<FusePageCarded
+	// 			header={<AccreditationHeader />}
+	// 			content={
+	// 				<div className="p-16 sm:p-24 max-w-3xl space-y-24">
+	// 					<FuseTabs
+	// 						value={tabValue}
+	// 						onChange={handleTabChange}
+	// 					>
+	// 						<FuseTab
+	// 							value="basic-info"
+	// 							label="Basic Info"
+	// 						/>
+	// 						<FuseTab
+	// 							value="product-images"
+	// 							label="Indicator Image and Docs"
+	// 						/>
+	// 						<FuseTab
+	// 							value="pricing"
+	// 							label="Pricing"
+	// 						/>
+	// 						<FuseTab
+	// 							value="contact-info"
+	// 							label="Contact Info"
+	// 						/>
+	// 						<FuseTab
+	// 							value="shipping"
+	// 							label="Shipping"
+	// 						/>
+	// 					</FuseTabs>
+	// 					<div className="">
+	// 						<div className={tabValue !== 'basic-info' ? 'hidden' : ''}>
+	// 							<BasicInfoTab />
+	// 						</div>
+	//
+	// 						<div className={tabValue !== 'product-images' ? 'hidden' : ''}>
+	// 							<ProductImagesTab />
+	// 						</div>
+	//
+	// 						<div className={tabValue !== 'pricing' ? 'hidden' : ''}>
+	// 							<PricingTab />
+	// 						</div>
+	//
+	// 						<div className={tabValue !== 'contact-info' ? 'hidden' : ''}>
+	// 							<ContactInfoTab />
+	// 						</div>
+	//
+	// 						<div className={tabValue !== 'shipping' ? 'hidden' : ''}>
+	// 							<ShippingTab />
+	// 						</div>
+	// 					</div>
+	// 				</div>
+	// 			}
+	// 			scroll={isMobile ? 'normal' : 'content'}
+	// 		/>
+	// 	</FormProvider>
+	// );
 }
 
 export default Accreditation;

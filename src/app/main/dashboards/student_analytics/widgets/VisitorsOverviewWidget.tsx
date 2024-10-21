@@ -108,8 +108,8 @@ function EnrollmentGenderComparisonWidget() {
         const total =
           series[0].data[opts.dataPointIndex] +
           series[1].data[opts.dataPointIndex];
-        const percentage = ((val / total) * 100).toFixed(2);
-        return `${percentage}%`;
+        // const percentage = ((val / total) * 100).toFixed(2);
+        return ` %`;
       },
     },
   };

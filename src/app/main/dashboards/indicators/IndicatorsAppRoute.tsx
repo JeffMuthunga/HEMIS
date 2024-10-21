@@ -25,14 +25,14 @@ const IndicatorsAppRoute: FuseRouteItemType = {
 					path: '',
 					element: <Indicators />
 				},
-				{
-					path: ':indicatorId/:handle?',
-					element: <Indicator />
-				},
-				{
-					path: 'new',
-					element: <Indicator/>
-				}
+				// {
+				// 	path: ':indicatorId/:handle?',
+				// 	element: <Indicator />
+				// },
+				// {
+				// 	path: 'new',
+				// 	element: <Indicator/>
+				// }
 			]
 		},
 	]

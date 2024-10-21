@@ -12,9 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import * as React from 'react';
 import { useState } from 'react';
 import Alert from '@mui/material/Alert';
-import {
-	Institution,
-} from '../InstitutionsApi';
+import Application from "./Application";
 
 /**
  * The product header.
@@ -30,7 +28,7 @@ function ApplicationHeader() {
 
 	const navigate = useNavigate();
 
-	const { name, images, featuredImageId } = watch() as Institution;
+	// const { name, images, featuredImageId } = watch() as Application;
 	const [open, setOpen] = useState(false);
 
 
@@ -45,15 +43,18 @@ function ApplicationHeader() {
 	// eslint-disable-next-line react/no-unstable-nested-components
 	const action = (
 		<React.Fragment>
-			<Button color="secondary" size="large" onClick={handleClose}>
+			<Button color="secondary" size="large"
+					// onClick={handleClose}
+			>
 				UNDO
 			</Button>
 			<IconButton
 				size="small"
 				aria-label="close"
 				color="inherit"
-				onClick={handleClose}
+				// onClick={handleClose}
 			>
+
 				<CloseIcon fontSize="small" />
 			</IconButton>
 		</React.Fragment>
@@ -77,47 +78,47 @@ function ApplicationHeader() {
 					<PageBreadcrumb className="mb-8" />
 				</motion.div>
 
-				<div className="flex items-center max-w-full space-x-12">
-					<motion.div
-						className="hidden sm:flex"
-						initial={{ scale: 0 }}
-						animate={{ scale: 1, transition: { delay: 0.3 } }}
-					>
-						{images && images.length > 0 && featuredImageId ? (
-							<img
-								className="w-32 sm:w-48 rounded"
-								src={_.find(images, { id: featuredImageId })?.url}
-								alt='name'
-							/>
-						) : (
-							<img
-								className="w-32 sm:w-48 rounded"
-								src="assets/images/apps/ecommerce/product-image-placeholder.png"
-								alt='name'
-							/>
-						)}
-					</motion.div>
-					<motion.div
-						className="flex flex-col min-w-0"
-						initial={{ x: -20 }}
-						animate={{ x: 0, transition: { delay: 0.3 } }}
-					>
-						<div>
-							<Typography className="text-15 sm:text-2xl truncate font-semibold">
-								{name || 'Namibia Strathmore University'}
-							</Typography>
-							<Typography className="text-15 sm:text-2xl truncate font-medium">
-								Tracking No - <span className='text-red-900'>NCHE/HEI/Reg/0001b</span>
-							</Typography>
-						</div>
-						<Typography
-							variant="caption"
-							className="font-medium"
-						>
-							HEI Application Receiving Stage
-						</Typography>
-					</motion.div>
-				</div>
+				{/*<div className="flex items-center max-w-full space-x-12">*/}
+				{/*	<motion.div*/}
+				{/*		className="hidden sm:flex"*/}
+				{/*		initial={{ scale: 0 }}*/}
+				{/*		animate={{ scale: 1, transition: { delay: 0.3 } }}*/}
+				{/*	>*/}
+				{/*		{images && images.length > 0 && featuredImageId ? (*/}
+				{/*			<img*/}
+				{/*				className="w-32 sm:w-48 rounded"*/}
+				{/*				src={_.find(images, { id: featuredImageId })?.url}*/}
+				{/*				alt='name'*/}
+				{/*			/>*/}
+				{/*		) : (*/}
+				{/*			<img*/}
+				{/*				className="w-32 sm:w-48 rounded"*/}
+				{/*				src="assets/images/apps/ecommerce/product-image-placeholder.png"*/}
+				{/*				alt='name'*/}
+				{/*			/>*/}
+				{/*		)}*/}
+				{/*	</motion.div>*/}
+				{/*	<motion.div*/}
+				{/*		className="flex flex-col min-w-0"*/}
+				{/*		initial={{ x: -20 }}*/}
+				{/*		animate={{ x: 0, transition: { delay: 0.3 } }}*/}
+				{/*	>*/}
+				{/*		<div>*/}
+				{/*			<Typography className="text-15 sm:text-2xl truncate font-semibold">*/}
+				{/*				{name || 'Namibia Strathmore University'}*/}
+				{/*			</Typography>*/}
+				{/*			<Typography className="text-15 sm:text-2xl truncate font-medium">*/}
+				{/*				Tracking No - <span className='text-red-900'>NCHE/HEI/Reg/0001b</span>*/}
+				{/*			</Typography>*/}
+				{/*		</div>*/}
+				{/*		<Typography*/}
+				{/*			variant="caption"*/}
+				{/*			className="font-medium"*/}
+				{/*		>*/}
+				{/*			HEI Application Receiving Stage*/}
+				{/*		</Typography>*/}
+				{/*	</motion.div>*/}
+				{/*</div>*/}
 			</div>
 			<motion.div
 				className="flex flex-1 w-full"
@@ -140,9 +141,9 @@ function ApplicationHeader() {
 							color="secondary"
 							onClick={() => {
 								setOpen(true);
-								setTimeout(() => {
-									navigate('/dashboards/institutions');
-								}, [6000]);
+								// setTimeout(() => {
+								// 	navigate('/dashboards/institutions');
+								// }, [6000]);
 							}}
 						>
 							Save
@@ -153,9 +154,9 @@ function ApplicationHeader() {
 							color="primary"
 							onClick={() => {
 								setOpen(true);
-								setTimeout(() => {
-									navigate('/dashboards/institutions');
-								}, [6000]);
+								// setTimeout(() => {
+								// 	navigate('/dashboards/institutions');
+								// }, [6000]);
 							}}
 						>
 							Submit to Next Stage
@@ -170,12 +171,12 @@ function ApplicationHeader() {
 							sx={{ zIndex: 50 }}
 						>
 							<Alert
-								onClose={handleClose}
+								// onClose={handleClose}
 								severity="success"
 								variant="filled"
 								sx={{ width: '100%' }}
 							>
-								Institution Saved Successfully
+								Application Saved Successfully
 							</Alert>
 						</Snackbar>
 					</>

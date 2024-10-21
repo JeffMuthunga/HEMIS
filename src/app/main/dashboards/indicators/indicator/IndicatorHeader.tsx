@@ -30,7 +30,7 @@ function IndicatorHeader() {
 
 	const navigate = useNavigate();
 
-	const { name, images, featuredImageId } = watch() as Indicator;
+	// const { name, images, featuredImageId } = watch() as Indicator;
 
 	function handleSaveProduct() {
 		saveProduct(getValues() as Indicator);
@@ -40,7 +40,7 @@ function IndicatorHeader() {
 		createProduct(getValues() as Indicator)
 			.unwrap()
 			.then((data) => {
-				navigate(`/dashboards/indicators/indicators/${data.id}`);
+				// navigate(`/dashboards/indicators/indicators/${data.id}`);
 			});
 	}
 
@@ -66,42 +66,42 @@ function IndicatorHeader() {
 					<PageBreadcrumb className="mb-8" />
 				</motion.div>
 
-				<div className="flex items-center max-w-full space-x-12">
-					<motion.div
-						className="hidden sm:flex"
-						initial={{ scale: 0 }}
-						animate={{ scale: 1, transition: { delay: 0.3 } }}
-					>
-						{images && images.length > 0 && featuredImageId ? (
-							<img
-								className="w-32 sm:w-48 rounded"
-								src={_.find(images, { id: featuredImageId })?.url}
-								alt={name}
-							/>
-						) : (
-							<img
-								className="w-32 sm:w-48 rounded"
-								src="assets/images/apps/ecommerce/product-image-placeholder.png"
-								alt={name}
-							/>
-						)}
-					</motion.div>
-					<motion.div
-						className="flex flex-col min-w-0"
-						initial={{ x: -20 }}
-						animate={{ x: 0, transition: { delay: 0.3 } }}
-					>
-						<Typography className="text-15 sm:text-2xl truncate font-semibold">
-							{name || 'New Indicator'}
-						</Typography>
-						<Typography
-							variant="caption"
-							className="font-medium"
-						>
-							Indicator's Detail
-						</Typography>
-					</motion.div>
-				</div>
+				{/*<div className="flex items-center max-w-full space-x-12">*/}
+				{/*	<motion.div*/}
+				{/*		className="hidden sm:flex"*/}
+				{/*		initial={{ scale: 0 }}*/}
+				{/*		animate={{ scale: 1, transition: { delay: 0.3 } }}*/}
+				{/*	>*/}
+				{/*		{images && images.length > 0 && featuredImageId ? (*/}
+				{/*			<img*/}
+				{/*				className="w-32 sm:w-48 rounded"*/}
+				{/*				src={_.find(images, { id: featuredImageId })?.url}*/}
+				{/*				alt={name}*/}
+				{/*			/>*/}
+				{/*		) : (*/}
+				{/*			<img*/}
+				{/*				className="w-32 sm:w-48 rounded"*/}
+				{/*				src="assets/images/apps/ecommerce/product-image-placeholder.png"*/}
+				{/*				alt={name}*/}
+				{/*			/>*/}
+				{/*		)}*/}
+				{/*	</motion.div>*/}
+				{/*	<motion.div*/}
+				{/*		className="flex flex-col min-w-0"*/}
+				{/*		initial={{ x: -20 }}*/}
+				{/*		animate={{ x: 0, transition: { delay: 0.3 } }}*/}
+				{/*	>*/}
+				{/*		<Typography className="text-15 sm:text-2xl truncate font-semibold">*/}
+				{/*			{name || 'New Indicator'}*/}
+				{/*		</Typography>*/}
+				{/*		<Typography*/}
+				{/*			variant="caption"*/}
+				{/*			className="font-medium"*/}
+				{/*		>*/}
+				{/*			Indicator's Detail*/}
+				{/*		</Typography>*/}
+				{/*	</motion.div>*/}
+				{/*</div>*/}
 			</div>
 			<motion.div
 				className="flex flex-1 w-full"

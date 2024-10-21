@@ -30,7 +30,7 @@ function ProgrammeHeader() {
 
 	const navigate = useNavigate();
 
-	const { name, images, featuredImageId } = watch() as Programme;
+	// const { name } = watch() as Programme;
 
 	function handleSaveProduct() {
 		saveProduct(getValues() as Programme);
@@ -40,7 +40,7 @@ function ProgrammeHeader() {
 		createProduct(getValues() as Programme)
 			.unwrap()
 			.then((data) => {
-				navigate(`/dashboards/programmes/programmes/${data.id}`);
+				// navigate(`/dashboards/programmes/programmes/${data.id}`);
 			});
 	}
 
@@ -66,42 +66,42 @@ function ProgrammeHeader() {
 					<PageBreadcrumb className="mb-8" />
 				</motion.div>
 
-				<div className="flex items-center max-w-full space-x-12">
-					<motion.div
-						className="hidden sm:flex"
-						initial={{ scale: 0 }}
-						animate={{ scale: 1, transition: { delay: 0.3 } }}
-					>
-						{images && images.length > 0 && featuredImageId ? (
-							<img
-								className="w-32 sm:w-48 rounded"
-								src={_.find(images, { id: featuredImageId })?.url}
-								alt={name}
-							/>
-						) : (
-							<img
-								className="w-32 sm:w-48 rounded"
-								src="assets/images/apps/ecommerce/product-image-placeholder.png"
-								alt={name}
-							/>
-						)}
-					</motion.div>
-					<motion.div
-						className="flex flex-col min-w-0"
-						initial={{ x: -20 }}
-						animate={{ x: 0, transition: { delay: 0.3 } }}
-					>
-						<Typography className="text-15 sm:text-2xl truncate font-semibold">
-							{name || 'New Programme'}
-						</Typography>
-						<Typography
-							variant="caption"
-							className="font-medium"
-						>
-							Programme's Detail
-						</Typography>
-					</motion.div>
-				</div>
+				{/*<div className="flex items-center max-w-full space-x-12">*/}
+				{/*	<motion.div*/}
+				{/*		className="hidden sm:flex"*/}
+				{/*		initial={{ scale: 0 }}*/}
+				{/*		animate={{ scale: 1, transition: { delay: 0.3 } }}*/}
+				{/*	>*/}
+				{/*		{images && images.length > 0 && featuredImageId ? (*/}
+				{/*			<img*/}
+				{/*				className="w-32 sm:w-48 rounded"*/}
+				{/*				src={_.find(images, { id: featuredImageId })?.url}*/}
+				{/*				alt={name}*/}
+				{/*			/>*/}
+				{/*		) : (*/}
+				{/*			<img*/}
+				{/*				className="w-32 sm:w-48 rounded"*/}
+				{/*				src="assets/images/apps/ecommerce/product-image-placeholder.png"*/}
+				{/*				alt={name}*/}
+				{/*			/>*/}
+				{/*		)}*/}
+				{/*	</motion.div>*/}
+				{/*	<motion.div*/}
+				{/*		className="flex flex-col min-w-0"*/}
+				{/*		initial={{ x: -20 }}*/}
+				{/*		animate={{ x: 0, transition: { delay: 0.3 } }}*/}
+				{/*	>*/}
+				{/*		<Typography className="text-15 sm:text-2xl truncate font-semibold">*/}
+				{/*			{name || 'New Programme'}*/}
+				{/*		</Typography>*/}
+				{/*		<Typography*/}
+				{/*			variant="caption"*/}
+				{/*			className="font-medium"*/}
+				{/*		>*/}
+				{/*			Programme's Detail*/}
+				{/*		</Typography>*/}
+				{/*	</motion.div>*/}
+				{/*</div>*/}
 			</div>
 			<motion.div
 				className="flex flex-1 w-full"

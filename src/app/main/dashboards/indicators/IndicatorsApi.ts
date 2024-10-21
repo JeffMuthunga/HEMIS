@@ -38,9 +38,9 @@ const IndicatorsApi = api
 			}),
 			updateIndicator: build.mutation<UpdateIndicatorApiResponse, UpdateIndicatorApiArg>({
 				query: (indicator) => ({
-					url: `/mock-api/Indicators/all/${indicator.id}`,
-					method: 'PUT',
-					data: indicator
+					// url: `/mock-api/Indicators/all/${indicator.id}`,
+					// method: 'PUT',
+					// data: indicator
 				}),
 				invalidatesTags: ['indicator', 'indicators']
 			}),
@@ -83,16 +83,15 @@ export type IndicatorImageType = {
 
 export type Indicator = {
 	hei_name: string; // Name of the Higher Education Institution
-	admissions_rate: number; // Admissions rate
-	enrolment_rate: number; // Enrolment rate
-	graduation_rate: number; // Graduation rate
-	employment_rate: number; // Employment rate
-	staff_count: number; // Total number of staff
-	student_research_count: number; // Number of research students
-	international_students: number; // Number of international students
-	year: number; // Year of the data
-	output_students: number; // Number of students outputted
-	faculty_ratio: number; // Faculty to student ratio
+	admissions_rate: string; // Admissions rate
+	enrolment_rate: string; // Enrolment rate
+	graduation_rate: string; // Graduation rate
+	employment_rate: string; // Employment rate
+	staff_count: string; // Total string of staff
+	international_students: string; // Number of international students
+	year: string; // Year of the data
+	output_students: string; // Number of students outputted
+	faculty_ratio: string; // Faculty to student ratio
 	handle: string;
 };
 
@@ -105,6 +104,6 @@ export const {
 	useCreateIndicatorMutation
 } = IndicatorsApi;
 
-export type ECommerceApiType = {
-	[IndicatorsApi.reducerPath]: ReturnType<typeof IndicatorsApi.reducer>;
-};
+// export type ECommerceApiType = {
+// 	[IndicatorsApi.reducerPath]: ReturnType<typeof IndicatorsApi.reducer>;
+// };

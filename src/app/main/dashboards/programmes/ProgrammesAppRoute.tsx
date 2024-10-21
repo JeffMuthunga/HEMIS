@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import { FuseRouteItemType } from '@fuse/utils/FuseUtils';
 
 const ProgrammesApp = lazy(() => import('./ProgrammesApp'));
-const Programme = lazy(() => import('./programme/Programme'));
+// const Programme = lazy(() => import('./programme/Programme'));
 const Programmes = lazy(() => import('./programmes/Programmes'));
 
 
@@ -25,14 +25,14 @@ const ProgrammesAppRoute: FuseRouteItemType = {
 					path: '',
 					element: <Programmes />
 				},
-				{
-					path: ':programmeId/:handle?',
-					element: <Programme />
-				},
-				{
-					path: 'new',
-					element: <Programme/>
-				}
+				// {
+				// 	path: ':programmeId/:handle?',
+				// 	element: <Programme />
+				// },
+				// {
+				// 	path: 'new',
+				// 	element: <Programme/>
+				// }
 			]
 		},
 	]
