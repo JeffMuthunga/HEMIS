@@ -64,9 +64,9 @@ const navigationConfig: FuseNavItemType[] = [
 					},
 					{
 						id: 'institution-programmes',
-						title: 'programmes',
+						title: 'Available programmes',
 						type: 'item',
-						url: '/dashboards/institution-programmes',
+						url: '/dashboards/accreditation-programmes',
 					}
 				]
 			},
