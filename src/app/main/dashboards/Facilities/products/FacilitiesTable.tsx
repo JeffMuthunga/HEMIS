@@ -31,7 +31,7 @@ function FacilitiesTable() {
 					{row.original?.images?.length > 0 && row.original.featuredImageId ? (
 						<img
 							className="w-full max-h-36 max-w-36 block rounded"
-							src={_.find(row.original.images, { id: row.original.featuredImageId })?.url}
+							// src={_.find(row.original.images, { id: row.original.featuredImageId })?.url}
 							alt={row.original.HEIName}
 						/>
 					) : (

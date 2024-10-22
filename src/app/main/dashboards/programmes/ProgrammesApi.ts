@@ -38,9 +38,9 @@ const ProgrammesApi = api
 			}),
 			updateProgramme: build.mutation<UpdateProgrammeApiResponse, UpdateProgrammeApiArg>({
 				query: (programme) => ({
-					url: `/mock-api/Programmes/all/${programme.id}`,
-					method: 'PUT',
-					data: programme
+					// url: `/mock-api/Programmes/all/${programme.id}`,
+					// method: 'PUT',
+					// data: programme
 				}),
 				invalidatesTags: ['programme', 'programmes']
 			}),
@@ -106,6 +106,6 @@ export const {
 	useCreateProgrammeMutation
 } = ProgrammesApi;
 
-export type ECommerceApiType = {
-	[ProgrammesApi.reducerPath]: ReturnType<typeof ProgrammesApi.reducer>;
-};
+// export type ECommerceApiType = {
+// 	[ProgrammesApi.reducerPath]: ReturnType<typeof ProgrammesApi.reducer>;
+// };

@@ -1,11 +1,11 @@
 import _ from '@lodash';
 import { PartialDeep } from 'type-fest';
-import { Student } from '../../ProgrammesApi';
+import { Programme } from '../../ProgrammesApi';
 
 /**
  * The product model.
  */
-const ProgrammeModel = (data: PartialDeep<Student>) =>
+const ProgrammeModel = (data: PartialDeep<Programme>) =>
 	_.defaults(data || {}, {
 		id: _.uniqueId('student-'),
 		handle: '',

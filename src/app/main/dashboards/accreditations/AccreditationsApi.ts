@@ -38,9 +38,9 @@ const AccreditationsApi = api
 			}),
 			updateAccreditation: build.mutation<UpdateAccreditationApiResponse, UpdateAccreditationApiArg>({
 				query: (accreditation) => ({
-					url: `/mock-api/Accreditations/all/${accreditation.id}`,
-					method: 'PUT',
-					data: accreditation
+					// url: `/mock-api/Accreditations/all/${accreditation.id}`,
+					// method: 'PUT',
+					// data: accreditation
 				}),
 				invalidatesTags: ['accreditation', 'accreditations']
 			}),
@@ -105,6 +105,6 @@ export const {
 	useCreateAccreditationMutation
 } = AccreditationsApi;
 
-export type ECommerceApiType = {
-	[AccreditationsApi.reducerPath]: ReturnType<typeof AccreditationsApi.reducer>;
-};
+// export type ECommerceApiType = {
+// 	[AccreditationsApi.reducerPath]: ReturnType<typeof AccreditationsApi.reducer>;
+// };

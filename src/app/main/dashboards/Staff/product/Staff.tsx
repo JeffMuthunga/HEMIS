@@ -14,7 +14,6 @@ import { z } from 'zod';
 import FuseTabs from 'app/shared-components/tabs/FuseTabs';
 import FuseTab from 'app/shared-components/tabs/FuseTab';
 import ProductHeader from './StaffHeader';
-import BasicInfoTab from './tabs/BasicInfoTab';
 import ProductModel from './models/StaffModel';
 import {useGetStaffProductQuery} from '../StaffApi';
 
@@ -145,13 +144,13 @@ function Product() {
 								label="Shipping"
 							/>
 						</FuseTabs>
-						<div className="">
-							<div className={tabValue !== 'basic-info' ? 'hidden' : ''}>
-								<BasicInfoTab />
-							</div>
+						{/*<div className="">*/}
+						{/*	<div className={tabValue !== 'basic-info' ? 'hidden' : ''}>*/}
+						{/*		/!*<BasicInfoTab />*!/*/}
+						{/*	</div>*/}
 
-		
-						</div>
+
+						{/*</div>*/}
 					</div>
 				}
 				scroll={isMobile ? 'normal' : 'content'}

@@ -7,6 +7,7 @@ import { ApexOptions } from "apexcharts";
 function InstitutionsChart() {
   const theme = useTheme();
 
+  // Chart options and data
   const chartOptions: ApexOptions = {
     chart: {
       height: "100%",
@@ -32,10 +33,15 @@ function InstitutionsChart() {
   const institutionsByType = {
     series: [50, 30, 20], // Example data for institution types
     options: {
-      ...chartOptions,
-      labels: ["Public", "Private", "Vocational"],
-      chart: { type: "pie" as const }, // Cast to 'pie'
-    },
+      chart: {
+        ...chartOptions.chart,
+        type: "pie" as const, // Explicitly define the chart type
+      },
+      colors: chartOptions.colors,
+      dataLabels: chartOptions.dataLabels,
+      legend: chartOptions.legend,
+      labels: ["Public", "Private", "Vocational"], // This should be part of the chart options
+    } as ApexOptions, // Use type assertion for proper typing
   };
 
   const institutionsByLocation = {
@@ -46,12 +52,17 @@ function InstitutionsChart() {
       },
     ],
     options: {
-      ...chartOptions,
+      chart: {
+        ...chartOptions.chart,
+        type: "bar" as const, // Define chart type explicitly
+      },
+      colors: chartOptions.colors,
+      dataLabels: chartOptions.dataLabels,
+      legend: chartOptions.legend,
       xaxis: {
         categories: ["Ohangwena", "Zambezi", "Erongo", "Khomas", "Oshana"],
       },
-      chart: { type: "bar" as const }, // Cast to 'bar'
-    },
+    } as ApexOptions,
   };
 
   // Institution Enrollment Capacity (Heatmap)
@@ -68,51 +79,57 @@ function InstitutionsChart() {
       },
     ], // Example data for various institutions
     options: {
-      chart: { type: "heatmap" as const }, // Cast to 'heatmap'
+      chart: {
+        ...chartOptions.chart,
+        type: "heatmap" as const,
+      },
+      colors: chartOptions.colors,
+      dataLabels: chartOptions.dataLabels,
+      legend: chartOptions.legend,
       xaxis: { categories: ["2022", "2023", "2024"] },
-    },
+    } as ApexOptions,
   };
 
   return (
-    <div className="flex flex-col gap-24">
-      {/* Institutions by Type (Pie Chart) */}
-      <Paper className="flex flex-col shadow rounded-xl overflow-hidden">
-        <Typography className="text-xl font-medium m-24">
-          Institutions by Type
-        </Typography>
-        <ReactApexChart
-          options={institutionsByType.options}
-          series={institutionsByType.series}
-          type="pie"
-          height={300}
-        />
-      </Paper>
+      <div className="flex flex-col gap-24">
+        {/* Institutions by Type (Pie Chart) */}
+        <Paper className="flex flex-col shadow rounded-xl overflow-hidden">
+          <Typography className="text-xl font-medium m-24">
+            Institutions by Type
+          </Typography>
+          <ReactApexChart
+              options={institutionsByType.options}
+              series={institutionsByType.series}
+              type="pie"
+              height={300}
+          />
+        </Paper>
 
-      {/* Institutions by Location (Bar Chart) */}
-      <Paper className="flex flex-col shadow rounded-xl overflow-hidden">
-        <Typography className="text-xl font-medium m-24">
-          Institutions by Regions
-        </Typography>
-        <ReactApexChart
-          options={institutionsByLocation.options}
-          series={institutionsByLocation.series}
-          type="bar"
-          height={300}
-        />
-      </Paper>
+        {/* Institutions by Location (Bar Chart) */}
+        <Paper className="flex flex-col shadow rounded-xl overflow-hidden">
+          <Typography className="text-xl font-medium m-24">
+            Institutions by Regions
+          </Typography>
+          <ReactApexChart
+              options={institutionsByLocation.options}
+              series={institutionsByLocation.series}
+              type="bar"
+              height={300}
+          />
+        </Paper>
 
-      <Paper className="flex flex-col shadow rounded-xl overflow-hidden">
-        <Typography className="text-xl font-medium m-24">
-          Institutions Enrollment Capacity from 2022 to 2024
-        </Typography>
-        <ReactApexChart
-          options={institutionEnrollmentCapacity.options}
-          series={institutionEnrollmentCapacity.series}
-          type="heatmap"
-          height={300}
-        />
-      </Paper>
-    </div>
+        <Paper className="flex flex-col shadow rounded-xl overflow-hidden">
+          <Typography className="text-xl font-medium m-24">
+            Institutions Enrollment Capacity from 2022 to 2024
+          </Typography>
+          <ReactApexChart
+              options={institutionEnrollmentCapacity.options}
+              series={institutionEnrollmentCapacity.series}
+              type="heatmap"
+              height={300}
+          />
+        </Paper>
+      </div>
   );
 }
 

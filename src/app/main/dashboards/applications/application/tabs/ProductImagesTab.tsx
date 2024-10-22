@@ -133,7 +133,7 @@ function ProductImagesTab() {
 									}
 
 									const newFile = await readFileAsync();
-									onChange([newFile, ...(value as EcommerceProduct['images'])]);
+									// onChange([newFile, ...(value as EcommerceProduct['images'])]);
 								}}
 							/>
 							<FuseSvgIcon size={32} color="action">

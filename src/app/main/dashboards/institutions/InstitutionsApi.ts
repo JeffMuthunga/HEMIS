@@ -245,21 +245,21 @@ export type EcommerceOrder = {
 export const {
 	useGetInstitutionsQuery,
 	useGetInstitutionQuery,
-	useDeleteInstitutionMutation,
-	useUpdateInstitutionMutation,
-	useCreateInstitutionMutation,
+	// useDeleteInstitutionMutation,
+	// useUpdateInstitutionMutation,
+	// useCreateInstitutionMutation,
 	useDeleteECommerceProductsMutation,
-	useGetECommerceProductQuery,
+	// useGetECommerceProductQuery,
 	useUpdateECommerceProductMutation,
-	useDeleteECommerceProductMutation,
-	useGetECommerceOrdersQuery,
-	useGetECommerceOrderQuery,
-	useUpdateECommerceOrderMutation,
-	useDeleteECommerceOrderMutation,
-	useDeleteECommerceOrdersMutation,
+	// useDeleteECommerceProductMutation,
+	// useGetECommerceOrdersQuery,
+	// useGetECommerceOrderQuery,
+	// useUpdateECommerceOrderMutation,
+	// useDeleteECommerceOrderMutation,
+	// useDeleteECommerceOrdersMutation,
 	useCreateECommerceProductMutation
 } = InstitutionsApi;
 
-export type ECommerceApiType = {
-	[InstitutionsApi.reducerPath]: ReturnType<typeof InstitutionsApi.reducer>;
-};
+// export type ECommerceApiType = {
+// 	[InstitutionsApi.reducerPath]: ReturnType<typeof InstitutionsApi.reducer>;
+// };

@@ -1,6 +1,6 @@
 import _ from '@lodash';
 import { PartialDeep } from 'type-fest';
-import { Institution } from '../../InstitutionsApi';
+import {Institution} from "../../../institutions/InstitutionsApi";
 
 /**
  * The product model.

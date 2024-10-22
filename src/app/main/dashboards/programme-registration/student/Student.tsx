@@ -15,7 +15,6 @@ import FuseTabs from 'app/shared-components/tabs/FuseTabs';
 import FuseTab from 'app/shared-components/tabs/FuseTab';
 import StudentHeader from './StudentHeader';
 import BasicInfoTab from './tabs/BasicInfoTab';
-import ContactInfoTab from './tabs/ContactInfoTab';
 import PricingTab from './tabs/PricingTab';
 import ProductImagesTab from './tabs/ProductImagesTab';
 import ShippingTab from './tabs/ShippingTab';
@@ -114,68 +113,68 @@ function Student() {
 	/**
 	 * Wait while product data is loading and form is setted
 	 */
-	if (_.isEmpty(form) || (product && routeParams.productId !== product.id && routeParams.productId !== 'new')) {
-		return <FuseLoading />;
-	}
+	// if (_.isEmpty(form) || (product && routeParams.productId !== product.id && routeParams.productId !== 'new')) {
+	// 	return <FuseLoading />;
+	// }
 
-	return (
-		<FormProvider {...methods}>
-			<FusePageCarded
-				header={<StudentHeader />}
-				content={
-					<div className="p-16 sm:p-24 max-w-3xl space-y-24">
-						<FuseTabs
-							value={tabValue}
-							onChange={handleTabChange}
-						>
-							<FuseTab
-								value="basic-info"
-								label="Basic Info"
-							/>
-							<FuseTab
-								value="product-images"
-								label="Student Image and Docs"
-							/>
-							<FuseTab
-								value="pricing"
-								label="Pricing"
-							/>
-							<FuseTab
-								value="contact-info"
-								label="Contact Info"
-							/>
-							<FuseTab
-								value="shipping"
-								label="Shipping"
-							/>
-						</FuseTabs>
-						<div className="">
-							<div className={tabValue !== 'basic-info' ? 'hidden' : ''}>
-								<BasicInfoTab />
-							</div>
-
-							<div className={tabValue !== 'product-images' ? 'hidden' : ''}>
-								<ProductImagesTab />
-							</div>
-
-							<div className={tabValue !== 'pricing' ? 'hidden' : ''}>
-								<PricingTab />
-							</div>
-
-							<div className={tabValue !== 'contact-info' ? 'hidden' : ''}>
-								<ContactInfoTab />
-							</div>
-
-							<div className={tabValue !== 'shipping' ? 'hidden' : ''}>
-								<ShippingTab />
-							</div>
-						</div>
-					</div>
-				}
-				scroll={isMobile ? 'normal' : 'content'}
-			/>
-		</FormProvider>
-	);
+	// return (
+	// 	<FormProvider {...methods}>
+	// 		<FusePageCarded
+	// 			header={<StudentHeader />}
+	// 			content={
+	// 				<div className="p-16 sm:p-24 max-w-3xl space-y-24">
+	// 					<FuseTabs
+	// 						value={tabValue}
+	// 						onChange={handleTabChange}
+	// 					>
+	// 						<FuseTab
+	// 							value="basic-info"
+	// 							label="Basic Info"
+	// 						/>
+	// 						<FuseTab
+	// 							value="product-images"
+	// 							label="Student Image and Docs"
+	// 						/>
+	// 						<FuseTab
+	// 							value="pricing"
+	// 							label="Pricing"
+	// 						/>
+	// 						<FuseTab
+	// 							value="contact-info"
+	// 							label="Contact Info"
+	// 						/>
+	// 						<FuseTab
+	// 							value="shipping"
+	// 							label="Shipping"
+	// 						/>
+	// 					</FuseTabs>
+	// 					<div className="">
+	// 						<div className={tabValue !== 'basic-info' ? 'hidden' : ''}>
+	// 							<BasicInfoTab />
+	// 						</div>
+	//
+	// 						<div className={tabValue !== 'product-images' ? 'hidden' : ''}>
+	// 							<ProductImagesTab />
+	// 						</div>
+	//
+	// 						<div className={tabValue !== 'pricing' ? 'hidden' : ''}>
+	// 							<PricingTab />
+	// 						</div>
+	//
+	// 						<div className={tabValue !== 'contact-info' ? 'hidden' : ''}>
+	// 							<ContactInfoTab />
+	// 						</div>
+	//
+	// 						<div className={tabValue !== 'shipping' ? 'hidden' : ''}>
+	// 							<ShippingTab />
+	// 						</div>
+	// 					</div>
+	// 				</div>
+	// 			}
+	// 			scroll={isMobile ? 'normal' : 'content'}
+	// 		/>
+	// 	</FormProvider>
+	// );
 }
 
 export default Student;

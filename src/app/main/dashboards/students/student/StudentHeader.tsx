@@ -67,14 +67,16 @@ function StudentHeader() {
 	// eslint-disable-next-line react/no-unstable-nested-components
 	const action = (
 		<React.Fragment>
-			<Button color="secondary" size="large" onClick={handleClose}>
+			<Button color="secondary" size="large"
+					// onClick={handleClose}
+			>
 				UNDO
 			</Button>
 			<IconButton
 				size="small"
 				aria-label="close"
 				color="inherit"
-				onClick={handleClose}
+				// onClick={handleClose}
 			>
 				<CloseIcon fontSize="small" />
 			</IconButton>
@@ -108,7 +110,7 @@ function StudentHeader() {
 						{images && images.length > 0 && featuredImageId ? (
 							<img
 								className="w-32 sm:w-48 rounded"
-								src={_.find(images, { id: featuredImageId })?.url}
+								// src={_.find(images, { id: featuredImageId })?.url}
 								alt={name}
 							/>
 						) : (
@@ -158,9 +160,9 @@ function StudentHeader() {
 							color="secondary"
 							onClick={() => {
 								setOpen(true);
-								setTimeout(() => {
-									navigate('/dashboards/students');
-								}, [6000]);
+								// setTimeout(() => {
+								// 	navigate('/dashboards/students');
+								// }, [6000]);
 							}}
 						>
 							Save
@@ -175,7 +177,7 @@ function StudentHeader() {
 							sx={{ zIndex: 50 }}
 						>
 							<Alert
-								onClose={handleClose}
+								// onClose={handleClose}
 								severity="success"
 								variant="filled"
 								sx={{ width: '100%' }}

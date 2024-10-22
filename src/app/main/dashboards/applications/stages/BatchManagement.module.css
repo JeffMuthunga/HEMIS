@@ -1,0 +1,60 @@
+.batchManagement {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.batchOverview {
+    margin-bottom: 20px;
+}
+
+.filters {
+    margin-bottom: 10px;
+}
+
+.filters input, .filters select {
+    margin-right: 10px;
+}
+
+.batchTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.batchTable th, .batchTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.batchTable th {
+    background-color: #f2f2f2;
+}
+
+.batchDetails, .addBatchForm {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.addBatchForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.addBatchForm label {
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
