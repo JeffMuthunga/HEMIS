@@ -2,6 +2,7 @@ import { lazy } from 'react';
 import { FuseRouteItemType } from '@fuse/utils/FuseUtils';
 import { Navigate } from 'react-router-dom';
 import WorkflowForm from './tabs/home/WorkflowForm';
+import HEIRegistrationWorkflow from './HEIRegistrationWorkflow';
 
 // Fixing the component name here
 const WorkflowDashboardApp = lazy(() => import('./WorkflowDashboardApp'));
@@ -15,6 +16,10 @@ const WorkflowDashboardAppRoute: FuseRouteItemType = {
 		{
 			path: '',
 			element: <WorkflowDashboardApp />
+		},
+		{
+			path: 'hei-registration-workflows',
+			element: <HEIRegistrationWorkflow />
 		},
 		{
 			path: 'new',

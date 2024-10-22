@@ -8,6 +8,7 @@ import * as React from 'react';
 import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 // Mock data for workflows
 const workflows = [
@@ -94,6 +95,7 @@ const workflows = [
 ];
 
 function WorkflowsTable() {
+	const navigate = useNavigate();
 	const columns = useMemo<MRT_ColumnDef<typeof workflows[0]>[]>(() => [
 		{
 			accessorKey: 'name',
@@ -142,15 +144,13 @@ function WorkflowsTable() {
 					<MenuItem
 						key={0}
 						onClick={() => {
-							console.log(`Deleting workflow ID: ${row.original.id}`);
-							closeMenu();
-							table.resetRowSelection();
+							navigate(`/dashboards/workflow-mgt/hei-registration-workflows`);
 						}}
 					>
 						<ListItemIcon>
-							<FuseSvgIcon>heroicons-outline:trash</FuseSvgIcon>
+							<FuseSvgIcon>heroicons-outline:arrow-uturn-right</FuseSvgIcon>
 						</ListItemIcon>
-						Delete
+						Workflow Stages & Transitions
 					</MenuItem>
 				]}
 				renderTopToolbarCustomActions={({ table }) => {
