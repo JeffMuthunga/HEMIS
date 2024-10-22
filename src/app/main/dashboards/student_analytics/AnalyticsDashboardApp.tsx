@@ -4,13 +4,9 @@ import Typography from "@mui/material/Typography";
 import FuseLoading from "@fuse/core/FuseLoading";
 import AnalyticsDashboardAppHeader from "./AnalyticsDashboardAppHeader";
 import VisitorsOverviewWidget from "./widgets/VisitorsOverviewWidget";
-import ConversionsWidget from "./widgets/ConversionsWidget";
-import ImpressionsWidget from "./widgets/ImpressionsWidget";
-import VisitsWidget from "./widgets/VisitsWidget";
 import EnrollmentGrowth from "./widgets/EnrollmentViewsMaleVsFemale";
 import NewVsReturningWidget from "./widgets/NewVsReturningWidget";
 import AgeWidget from "./widgets/AgeWidget";
-import LanguageWidget from "./widgets/LanguageWidget";
 import GenderWidget from "./widgets/GenderWidget";
 import { useGetAnalyticsDashboardWidgetsQuery } from "./AnalyticsDashboardApi";
 import StudentCourseEnrollment from "./widgets/courseEnrollment";
@@ -56,21 +52,9 @@ function AnalyticsDashboardApp() {
             <StudentCourseEnrollment />
           </motion.div>
 
-          {/* <motion.div variants={item} className="sm:col-span-2 lg:col-span-1 ">
-            <ConversionsWidget />
-          </motion.div> */}
-
           <motion.div variants={item} className="sm:col-span-2 lg:col-span-3">
             <VisitorsOverviewWidget />
           </motion.div>
-
-          {/* <motion.div variants={item} className="sm:col-span-2 lg:col-span-1 ">
-            <ImpressionsWidget />
-          </motion.div>
-
-          <motion.div variants={item} className="sm:col-span-2 lg:col-span-1 ">
-            <VisitsWidget />
-          </motion.div> */}
 
           <div className="w-full mt-16 sm:col-span-3">
             <Typography className="text-2xl font-semibold tracking-tight leading-6">
@@ -95,9 +79,6 @@ function AnalyticsDashboardApp() {
             <motion.div variants={item}>
               <AgeWidget />
             </motion.div>
-            {/* <motion.div variants={item}>
-              <LanguageWidget />
-            </motion.div> */}
           </div>
         </motion.div>
       }
