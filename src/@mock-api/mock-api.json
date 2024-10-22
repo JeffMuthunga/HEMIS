@@ -7355,7 +7355,7 @@
             "data": {
               "displayName": "HEMIS Admin",
               "photoURL": "assets/images/avatars/brian-hughes.jpg",
-              "email": "joseph.mwita@softclans.co.ke",
+              "email": "admin@bpih.com.na",
               "settings": {
                 "layout": {},
                 "theme": {}
@@ -32167,12 +32167,12 @@
         "value": [
           {
             "uid": "XgbuVEXBU5gtSKdbQRP1Zbbby1i1",
-            "password": "5;4+0IOx:\\Dy",
+            "password": "Admin-12345",
             "role": "admin",
             "data": {
               "displayName": "HEMIS Admin",
               "photoURL": "assets/images/avatars/brian-hughes.jpg",
-              "email": "joseph.mwita@softclans.co.ke",
+              "email": "admin@bpih.com.na",
               "settings": {
                 "layout": {},
                 "theme": {}
