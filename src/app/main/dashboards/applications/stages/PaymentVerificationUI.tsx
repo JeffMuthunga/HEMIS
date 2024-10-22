@@ -52,8 +52,7 @@ function PaymentVerificationUI() {
 
 	const action = (
 		<React.Fragment>
-			<Button color="secondary" size="large"
-					// onClick={handleClose}
+			<Button color="secondary" size="large"// onClick={handleClose}
 			>
 				UNDO
 			</Button>

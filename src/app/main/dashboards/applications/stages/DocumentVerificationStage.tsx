@@ -63,14 +63,16 @@ function DocumentVerificationStage() {
 
 	const action = (
 		<React.Fragment>
-			<Button color="secondary" size="small" onClick={handleClose}>
+			<Button color="secondary" size="small"
+					// onClick={handleClose}
+			>
 				UNDO
 			</Button>
 			<IconButton
 				size="small"
 				aria-label="close"
 				color="inherit"
-				onClick={handleClose}
+				// onClick={handleClose}
 			>
 				<CloseIcon fontSize="small" />
 			</IconButton>
@@ -181,7 +183,7 @@ function DocumentVerificationStage() {
 								sx={{ zIndex: 50 }}
 							>
 								<Alert
-									onClose={handleClose}
+									// onClose={handleClose}
 									severity="success"
 									variant="filled"
 									sx={{ width: '100%' }}

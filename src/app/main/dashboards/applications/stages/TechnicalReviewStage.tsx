@@ -65,20 +65,22 @@ function TechnicalReviewStage() {
 	};
 
 	const getOverallRating = () => {
-		const totalRating = Object.values(ratings).reduce((sum: number, rating: number) => sum + rating, 0);
+		const totalRating: any = Object.values(ratings).reduce((sum: number, rating: number) => sum + rating, 0);
 		return totalRating / reviewCriteria.length;
 	};
 
 	const action = (
 		<React.Fragment>
-			<Button color="secondary" size="small" onClick={handleClose}>
+			<Button color="secondary" size="small"
+					// onClick={handleClose}
+			>
 				UNDO
 			</Button>
 			<IconButton
 				size="small"
 				aria-label="close"
 				color="inherit"
-				onClick={handleClose}
+				// onClick={handleClose}
 			>
 				<CloseIcon fontSize="small" />
 			</IconButton>
@@ -203,14 +205,14 @@ function TechnicalReviewStage() {
 							<Snackbar
 								open={open}
 								autoHideDuration={6000}
-								onClose={handleClose}
+								// onClose={handleClose}
 								message="Technical review submitted"
 								action={action}
 								anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
 								sx={{ zIndex: 50 }}
 							>
 								<Alert
-									onClose={handleClose}
+									// onClose={handleClose}
 									severity="success"
 									variant="filled"
 									sx={{ width: '100%' }}

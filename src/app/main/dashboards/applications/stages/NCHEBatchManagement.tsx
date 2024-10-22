@@ -25,7 +25,7 @@ import {
 import { motion } from 'framer-motion';
 import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
 import PageBreadcrumb from 'app/shared-components/PageBreadcrumb';
-import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import { DataGrid, GridToolbar, GridColDef } from '@mui/x-data-grid';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip as RechartsTooltip } from 'recharts';
 import { format } from 'date-fns';
 
@@ -183,27 +183,31 @@ function NCHEBatchManagement() {
 						<DataGrid
 							rows={mockBatches}
 							columns={columns}
-							pageSize={5}
-							rowsPerPageOptions={[5]}
 							checkboxSelection
-							disableSelectionOnClick
+							// disableSelectionOnClick
 							autoHeight
 							className="mt-4"
-							components={{
-								Toolbar: () => (
-									<Box className="flex justify-between items-center p-2">
-										<Typography variant="h6">Recent Batches</Typography>
-										<TextField
-											variant="outlined"
-											size="small"
-											placeholder="Search batches..."
-											InputProps={{
-												startAdornment: <FuseSvgIcon>heroicons-outline:search</FuseSvgIcon>,
-											}}
-										/>
-									</Box>
-								),
+							// rowsPerPageOptions={[5]}  // Keep this for page size options
+							initialState={{
+								pagination: {
+									paginationModel: { pageSize: 5 },  // Set initial page size here
+								},
 							}}
+							// components={{
+							// 	Toolbar: () => (
+							// 		<Box className="flex justify-between items-center p-2">
+							// 			<Typography variant="h6">Recent Batches</Typography>
+							// 			<TextField
+							// 				variant="outlined"
+							// 				size="small"
+							// 				placeholder="Search batches..."
+							// 				InputProps={{
+							// 					startAdornment: <FuseSvgIcon>heroicons-outline:search</FuseSvgIcon>,
+							// 				}}
+							// 			/>
+							// 		</Box>
+							// 	),
+							// }}
 						/>
 					</Grid>
 					<Grid item xs={12} md={4}>
