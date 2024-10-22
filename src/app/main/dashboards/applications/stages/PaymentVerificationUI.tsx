@@ -78,8 +78,16 @@ function PaymentVerificationUI() {
 					<div>
 						<PageBreadcrumb className="mb-8" />
 						<Typography className="text-4xl font-extrabold leading-none tracking-tight">
-							Payment Verification
+							Payment Verification Stage
 						</Typography>
+						<div>
+							<Typography className="text-15 sm:text-2xl truncate font-semibold">
+								Namibia University
+							</Typography>
+							<Typography className="text-15 sm:text-2xl truncate font-medium">
+								Tracking No - <span className="text-red-900">NCHE/HEI/Reg/0001b</span>
+							</Typography>
+						</div>
 					</div>
 				</motion.span>
 			</div>

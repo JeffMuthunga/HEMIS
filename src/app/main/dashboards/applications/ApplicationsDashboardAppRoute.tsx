@@ -3,7 +3,11 @@ import { FuseRouteItemType } from '@fuse/utils/FuseUtils';
 import Application from './application/Application';
 import BatchManagement from './stages/BatchManagement';
 import PaymentVerificationUI from './stages/PaymentVerificationUI';
-// import PaymentVerificationForm from './stages/PaymentVerificationForm';
+import DocumentVerificationStage from './stages/DocumentVerificationStage';
+import TechnicalReviewStage from './stages/TechnicalReviewStage';
+import FinancialEvaluationStage from './stages/FinancialEvaluationStage';
+import NotificationToApplicantStage from './stages/NotificationToApplicantStage';
+import NCHEReportConsolidation from './stages/NCHEReportConsolidation';
 
 
 const ApplicationsDashboardApp = lazy(() => import('./ApplicationsDashboardApp'));
@@ -29,16 +33,25 @@ const ApplicationsDashboardAppRoute: FuseRouteItemType = {
 			element: <PaymentVerificationUI />
 		},
 		{
-			path: 'document_verification'
+			path: 'document_verification',
+			element: <DocumentVerificationStage />
 		},
 		{
-			path: 'technical_review'
+			path: 'technical_review',
+			element: <TechnicalReviewStage />
+
 		},
 		{
-			path: 'financial_evaluation'
+			path: 'financial_evaluation',
+			element: <FinancialEvaluationStage />
 		},
 		{
-			path: 'notification_to_applicant'
+			path: 'notification_to_applicant',
+			element: <NotificationToApplicantStage />
+		},
+		{
+			path: 'report_consolidation',
+			element: <NCHEReportConsolidation />
 		}
 	]
 };

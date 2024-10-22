@@ -100,6 +100,21 @@ const applications = [
 		date_received: '12-12-2024',
 		from: 'Hemis Admin',
 		to: 'Hemis Director'
+	},
+	{
+		id: 1,
+		tracking_no: 'NCHE/HEI/Reg/0471b',
+		reference: 'NCHE-HEI-APP',
+		applicant: 'Ronald Misheveve',
+		process: 'HEI-Registration',
+		institution_registering: 'Strathmore University',
+		workflow_stage: 'NCHE Report Consolidation',
+		stage: 'report_consolidation',
+		status: 'In progress',
+		priority: 'High',
+		date_received: '12-12-2024',
+		from: 'Hemis Admin',
+		to: 'Hemis Director'
 	}
 ];
 
