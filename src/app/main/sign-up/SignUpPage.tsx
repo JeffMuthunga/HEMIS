@@ -127,7 +127,7 @@ function SignUpPage() {
 				<div className="relative z-10 w-full max-w-2xl">
 					<div className="text-7xl font-bold leading-none text-gray-100">
 						<div>Welcome to</div>
-						<div>The HEMIS portal</div>
+						<div> HEMIS </div>
 					</div>
 					<div className="mt-32 flex items-center">
 					</div>

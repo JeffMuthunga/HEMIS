@@ -49,7 +49,7 @@ function ProgramsChart() {
     options: {
       ...chartOptions,
       xaxis: { categories: ["1 Year", "2 Years", "3 Years", "4 Years"] },
-      chart: { type: "bar" },
+      chart: { type: "bar" as const },
       // title: { text: "Programs by Duration" },
     } as ApexOptions,
   };
@@ -64,11 +64,11 @@ function ProgramsChart() {
     ],
     options: {
       chart: {
-        type: "line",
+        type: "line" as const, // Casting 'line' as a constant
         height: 350,
       },
       stroke: {
-        curve: "smooth", // Optional: Makes the line smooth
+        curve: "smooth" as const, // Explicitly cast 'smooth' as a constant type
       },
       xaxis: {
         categories: [
@@ -80,7 +80,6 @@ function ProgramsChart() {
         ], // Program names as x-axis labels
       },
       title: {
-        // text: "Popular Programs by Student Enrollment",
         align: "center",
       },
       markers: {
@@ -100,7 +99,7 @@ function ProgramsChart() {
   const programsByStemType = {
     series: [28, 72], // Example data
     options: {
-      chart: { type: "pie" },
+      chart: { type: "pie" as const },
       labels: ["STEM Type", "Non-STEM type"],
       // title: { text: "Programs by STEM Type" },
     } as ApexOptions,
