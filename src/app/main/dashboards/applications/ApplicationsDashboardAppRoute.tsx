@@ -8,6 +8,7 @@ import TechnicalReviewStage from './stages/TechnicalReviewStage';
 import FinancialEvaluationStage from './stages/FinancialEvaluationStage';
 import NotificationToApplicantStage from './stages/NotificationToApplicantStage';
 import NCHEReportConsolidation from './stages/NCHEReportConsolidation';
+import NCHEBatchManagement from './stages/NCHEBatchManagement';
 
 
 const ApplicationsDashboardApp = lazy(() => import('./ApplicationsDashboardApp'));
@@ -20,9 +21,13 @@ const ApplicationsDashboardAppRoute: FuseRouteItemType = {
 			path: '',
 			element: <ApplicationsDashboardApp />
 		},
+		// {
+		// 	path: 'batch_mgt',
+		// 	element: <BatchManagement heiName="University of Namibia" currentUser="Hemis Admin"/>
+		// },
 		{
 			path: 'batch_mgt',
-			element: <BatchManagement heiName="University of Namibia" currentUser="Hemis Admin"/>
+			element: <NCHEBatchManagement />
 		},
 		{
 			path: 'receiving',
