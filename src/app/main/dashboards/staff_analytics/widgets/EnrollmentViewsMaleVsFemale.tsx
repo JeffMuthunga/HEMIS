@@ -44,7 +44,7 @@ function StaffAnalyticsWidget() {
         "Agriculture",
         "Communication Studies",
       ],
-      chart: { type: "pie" },
+      chart: { type: "pie" as const },
     },
   };
 
@@ -58,7 +58,7 @@ function StaffAnalyticsWidget() {
     options: {
       ...chartOptions,
       xaxis: { categories: ["20-30", "31-40", "41-50", "51-60", "61-70"] },
-      chart: { type: "bar" },
+      chart: { type: "bar" as const},
       // title: { text: "Staff Age Distribution" },
     },
   };
@@ -68,7 +68,7 @@ function StaffAnalyticsWidget() {
     options: {
       ...chartOptions,
       labels: ["Full-time", "Part-time", "Adjunct"],
-      chart: { type: "donut" },
+      chart: { type: "donut" as const },
     },
   };
 
@@ -77,7 +77,7 @@ function StaffAnalyticsWidget() {
     options: {
       ...chartOptions,
       labels: ["Male", "Female"],
-      chart: { type: "donut" },
+      chart: { type: "donut" as const },
     },
   };
 
@@ -86,7 +86,7 @@ function StaffAnalyticsWidget() {
     options: {
       ...chartOptions,
       labels: ["Diploma", "Undergraduate", "Masters", "PhD"],
-      chart: { type: "pie" },
+      chart: { type: "pie" as const},
     },
   };
 
@@ -111,7 +111,7 @@ function StaffAnalyticsWidget() {
           "Europe/USA & Asia",
         ],
       },
-      chart: { type: "bar" },
+      chart: { type: "bar" as const},
       title: { text: "Staff by Nationality" },
     },
   };

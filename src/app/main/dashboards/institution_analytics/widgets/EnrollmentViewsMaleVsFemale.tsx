@@ -3,7 +3,6 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
-import { useState } from "react";
 
 function InstitutionsChart() {
   const theme = useTheme();
@@ -35,7 +34,7 @@ function InstitutionsChart() {
     options: {
       ...chartOptions,
       labels: ["Public", "Private", "Vocational"],
-      chart: { type: "pie" },
+      chart: { type: "pie" as const }, // Cast to 'pie'
     },
   };
 
@@ -51,8 +50,7 @@ function InstitutionsChart() {
       xaxis: {
         categories: ["Ohangwena", "Zambezi", "Erongo", "Khomas", "Oshana"],
       },
-      chart: { type: "bar" },
-      // title: { text: "Institutions by Location" },
+      chart: { type: "bar" as const }, // Cast to 'bar'
     },
   };
 
@@ -70,9 +68,8 @@ function InstitutionsChart() {
       },
     ], // Example data for various institutions
     options: {
-      chart: { type: "heatmap" },
+      chart: { type: "heatmap" as const }, // Cast to 'heatmap'
       xaxis: { categories: ["2022", "2023", "2024"] },
-      // title: { text: "Institution Enrollment Capacity" },
     },
   };
 
@@ -111,7 +108,7 @@ function InstitutionsChart() {
         <ReactApexChart
           options={institutionEnrollmentCapacity.options}
           series={institutionEnrollmentCapacity.series}
-          type="bar"
+          type="heatmap"
           height={300}
         />
       </Paper>
