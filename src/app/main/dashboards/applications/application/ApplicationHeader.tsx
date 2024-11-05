@@ -141,6 +141,13 @@ function ApplicationHeader() {
 							color="secondary"
 							onClick={() => {
 								setOpen(true);
+								// const data  = getValues();
+								// let persist = localStorage.get('receiving');
+								// if (persist) persist = JSON.parse(persist)
+								// else persist = [];
+								// persist.push(data);
+								// localStorage.set('recieving', Json.stringify(persist));
+
 								// setTimeout(() => {
 								// 	navigate('/dashboards/institutions');
 								// }, [6000]);
