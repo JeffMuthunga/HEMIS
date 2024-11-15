@@ -66,6 +66,6 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'villazetu'
-          slot-name: 'f0d7bqfze3gbghb4'
+          slot-name:  'f0d7bqfze3gbghb4'
           package: './deploy/build'
           
