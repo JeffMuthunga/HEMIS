@@ -70,4 +70,3 @@ jobs:
           app-name: 'hemis'
           slot-name: 'Production'
           package: './build'
-          remove-previous-deployment: true
