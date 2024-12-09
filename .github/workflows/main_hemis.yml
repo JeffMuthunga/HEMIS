@@ -19,8 +19,8 @@ jobs:
         uses: azure/docker-login@v1
         with:
           login-server: crvtdfxkgx6qofq.azurecr.io
-          username: crvtdfxkgx6qofq
-          password: jYmyVGONN0WEFX2s8yfpeBXYva6Pu/f1eXDBnA4wEy+ACRCmdDfh
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
 
       # Step 3: Build and push the Docker image
       - name: Build and push Docker image
@@ -49,8 +49,8 @@ jobs:
             --name hemis \
             --docker-custom-image-name crvtdfxkgx6qofq.azurecr.io/hemis:latest \
             --docker-registry-server-url https://crvtdfxkgx6qofq.azurecr.io \
-            --docker-registry-server-user crvtdfxkgx6qofq \
-            --docker-registry-server-password jYmyVGONN0WEFX2s8yfpeBXYva6Pu/f1eXDBnA4wEy+ACRCmdDfh
+            --docker-registry-server-user ${{ secrets.ACR_USERNAME }} \
+            --docker-registry-server-password ${{ secrets.ACR_PASSWORD }}
 
       # Step 3: Restart the Azure Web App
       - name: Restart Web App
